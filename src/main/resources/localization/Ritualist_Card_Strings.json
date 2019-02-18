@@ -1,0 +1,236 @@
+{
+	"Ritualist:DefendPurple": {
+		"NAME": "Defend",
+		"DESCRIPTION": "Gain !B! Block."
+	},
+	"Ritualist:DefendRitual": {
+		"NAME": "Ritual Defend",
+		"DESCRIPTION": "Ritual. NL Gain !B! Block."
+	},
+	"Ritualist:StrikePurple": {
+		"NAME": "Strike",
+		"DESCRIPTION": "Deal !D! damage."
+	},
+	"Ritualist:StrikeRitual": {
+		"NAME": "Ritual Strike",
+		"DESCRIPTION": "Ritual. NL Deal !D! damage."
+	},
+	"Ritualist:PrepareHost": {
+		"NAME": "Prepare Host",
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Possession."
+	},
+	"Ritualist:DarkRitual": {
+		"NAME": "Dark Ritual",
+		"DESCRIPTION": "Ritual. NL Gain [G] [G] [G]. NL Reduce this card's cost by 1 this combat.",
+		"UPGRADE_DESCRIPTION": "Ritual +2. NL Gain !M! Energy. NL Reduce this card's cost by 1 this combat."
+	},
+	"Ritualist:SummonAgiel": {
+		"NAME": "Summon Agiel",
+		"DESCRIPTION": "Deal !D! damage. NL Vessel: Deal 2 damage to a random enemy. NL Exhaust."
+	},
+	"Ritualist:ScaryShank": {
+		"NAME": "Scary Shank",
+		"DESCRIPTION": "Ritual. NL Deal !D! damage. NL Apply !M! Weak."
+	},
+	"Ritualist:RitualBloodletter": {
+		"NAME": "Ritual Bloodletter",
+		"DESCRIPTION": "Ritual. NL Deal !D! damage. NL If this is your last card, gain [G] [G] and draw 2 cards. ",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL If this is your last card in hand, NL Gain [G] [G] [G] and draw 2 cards. "
+	},
+	"Ritualist:BarrierOfBone": {
+		"NAME": "Barrier of Bone",
+		"DESCRIPTION": "Gain !B! Block. NL Discard !M! cards."
+	},
+	"Ritualist:EmptyPalms": {
+		"NAME": "Empty Palms",
+		"DESCRIPTION": "Once per turn, when you have no cards in hand, gain !B! Block."
+	},
+	"Ritualist:QuickStudy": {
+		"NAME": "Quick Study",
+		"DESCRIPTION": "Ritual. NL Draw 1 card. NL If you draw a Ritual, gain !B! Block."
+	},
+	"Ritualist:ImpFeast": {
+		"NAME": "Imp Feast",
+		"DESCRIPTION": "Apply 3 Possession to all enemies. They lose !M! Strength this turn. NL Exhaust."
+	},
+	"Ritualist:CostlyPreparation": {
+		"NAME": "Costly Preparation",
+		"DESCRIPTION": "Ritual. NL Lose up to 4 Attune. Draw that many cards +1 next turn. ",
+		"UPGRADE_DESCRIPTION": "Ritual +2. NL Lose up to 4 Attune. Draw that many cards +1 next turn. "
+	},
+	"Ritualist:TemporalRites": {
+		"NAME": "Temporal Rites",
+		"DESCRIPTION": "Ritual. NL Draw all Rituals from your discard pile. NL Exhaust."
+	},
+	"Ritualist:ScoutAhead": {
+		"NAME": "Scout Ahead",
+		"DESCRIPTION": "Gain !B! Block. NL Put a card from your hand onto the top of your draw pile."
+	},
+	"Ritualist:BranchingPaths": {
+		"NAME": "Branching Paths",
+		"DESCRIPTION": "Ritual. NL Draw !M! cards. NL Put a card from your hand on top of your draw pile."
+	},
+	"Ritualist:SoulOpening": {
+		"NAME": "Soul Opening",
+		"DESCRIPTION": "Deal !D! damage NL If target is Possessed apply 3 Possession."
+	},
+	"Ritualist:TwistedEcstasy": {
+		"NAME": "Twisted Ecstasy",
+		"DESCRIPTION": "Next turn, your Rituals cost 0. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Next turn, your Rituals cost 0."
+	},
+	"Ritualist:MassDrainLife": {
+		"NAME": "Mass Drain Life",
+		"DESCRIPTION": "Deal damage equal to and remove the Possession from each enemy. Heal HP equal to 1 / !M! of it. Exhaust."
+	},
+	"Ritualist:InitiationRite": {
+		"NAME": "Initiation Rite",
+		"DESCRIPTION": "Ritual. NL Next turn gain [G].",
+		"UPGRADE_DESCRIPTION": "Ritual. NL Next turn gain [G] [G]."
+	},
+	"Ritualist:PullFromBeyond": {
+		"NAME": "Pull From Beyond",
+		"DESCRIPTION": "Ritual. NL Put a card from your exhaust pile into your deck. Draw 1 card. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Ritual. NL Put a card from your exhaust and discard pile into your deck. Draw 1 card. NL Exhaust."
+	},
+	"Ritualist:ThoughtfulArt": {
+		"NAME": "Thoughtful Art",
+		"DESCRIPTION": "Ritual. NL Gain !B! Block. NL If you've played more than !M! cards this turn, gain !B! block and draw 1 card.",
+		"EXTENDED_DESCRIPTION": [
+			" NL (",
+			" card played.)",
+			" cards played.)"
+		]
+	},
+	"Ritualist:PowerPact": {
+		"NAME": "Power Pact",
+		"DESCRIPTION": "Innate. NL Deal !D! damage and gain !M! Strength. In three turns lose !M+2! Strength. NL Exhaust.",
+		"EXTENDED DESCRIPTION":	[" Strength."]
+	},
+	"Ritualist:DeadlyVelocity": {
+		"NAME": "Deadly Velocity",
+		"DESCRIPTION": "When you play a card gain !M! Strength and Dexterity until end of turn.",
+		"UPGRADE_DESCRIPTION": "Innate. NL When you play a card gain !M! Strength and Dexterity until end of turn. "
+	},
+	"Ritualist:DemonArm": {
+		"NAME": "Demon Arm",
+		"DESCRIPTION": "Whenever you play an attack deal !M! damage to 1 random enemy."
+	},
+	"Ritualist:WinningGambit": {
+		"NAME": "Winning Gambit",
+		"DESCRIPTION": "Discard your hand. Play the top card of your draw pile. Exhaust.",
+		"UPGRADE_DESCRIPTION": "Discard your hand. Play the top card of your draw pile."
+	},
+	"Ritualist:LongCon": {
+		"NAME": "Long Con",
+		"DESCRIPTION": "Gain !B! Block. In two turns, gain [G] [G]."
+	},
+	"Ritualist:Retreat": {
+		"NAME": "Retreat",
+		"DESCRIPTION": "Gain !B! Block. NL Put !M! card from your draw pile on top of it and upgrade them."
+	},
+	"Ritualist:DrainStrength": {
+		"NAME": "Drain Strength",
+		"DESCRIPTION": " Remove all possession from an enemy. Gain that much Strength. NL Exhaust."
+	},
+	"Ritualist:CleanseByBlood": {
+		"NAME": "Cleanse By Blood",
+		"DESCRIPTION": "Deal !D! damage. Banish a summoned demon."
+	},
+	"Ritualist:GrowingRites": {
+		"NAME": "Growing Rites",
+		"DESCRIPTION": "At the start of your turn gain !M! Attunement."
+	},
+	"Ritualist:DuskSeeker": {
+		"NAME": "Dusk Seeker",
+		"DESCRIPTION": "At the start of your turn add 1 card from your deck to your hand."
+	},
+	"Ritualist:Arrival": {
+		"NAME": "Arrival",
+		"DESCRIPTION": "Ritual. NL Put 1 Summon card from your discard pile into your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Ritual. NL Put 1 Summon card from your discard and draw pile into your hand. NL Exhaust."
+	},
+	"Ritualist:TwinWave": {
+		"NAME": "Twin Wave",
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. At the start of your next turn, repeat."
+	},
+	"Ritualist:StrategicCut": {
+		"NAME": "Strategic Cut",
+		"DESCRIPTION": "Ritual. NL Deal !D! damage. NL Next turn draw !M! additional cards."
+	},
+	"Ritualist:SpreadingCurse": {
+		"NAME": "Spreading Curse",
+		"DESCRIPTION": "At the start of your turn, apply !M! Possession to ALL enemies."
+	},
+	"Ritualist:SummonBaphomet": {
+		"NAME": "Summon Baphomet",
+		"DESCRIPTION": "Play the top !M! cards of your draw pile. NL Vessel: Lose [G]. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Play the top !M! cards of your draw pile. NL Vessel: Lose [G]. NL Exhaust."
+	},
+	"Ritualist:TransientGhost": {
+		"NAME": "Transient Ghost",
+		"DESCRIPTION": "Apply !M! Possession. In 3 turns that enemy loses !M! Possession."
+	},
+	"Ritualist:Impale": {
+		"NAME": "Impale",
+		"DESCRIPTION": "Deal !D! damage. If you are a Vessel deal !M! more."
+	},
+	"Ritualist:DeadlyBlows": {
+		"NAME": "Deadly Blows",
+		"DESCRIPTION": "Deal !D! damage twice. Exhaust a random card.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage twice. Exhaust a card."
+	},
+	"Ritualist:EvilIntentions": {
+		"NAME": "Evil Intentions",
+		"DESCRIPTION": "Exhaust 2 cards. NL Gain [G] [G] [G] [G]. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Exhaust 2 cards. NL Gain [G] [G] [G] [G]."
+	},
+	"Ritualist:BloodBoil": {
+		"NAME": "Blood Boil",
+		"DESCRIPTION": "Ritual. Retain. NL Gain [G]. If you retain this card lose !M! life and gain 1 Strength."
+	},
+	"Ritualist:Momentum": {
+		"NAME": "Momentum",
+		"DESCRIPTION":  "Each time you play 3 cards in a turn gain [G].",
+		"UPGRADE_DESCRIPTION": "Innate. NL Each time you play 3 cards in a turn gain [G]."
+	},
+	"Ritualist:CostlyStrength": {
+		"NAME": "Costly Strength",
+		"DESCRIPTION": "Lose up to 5 Attunement. Gain twice that much strength next turn only. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Lose up to 5 Attunement. Gain twice that much strength next turn only."
+	},
+	"Ritualist:ShallowCut": {
+		"NAME": "Shallow Cut",
+		"DESCRIPTION":  " Ritual. NL Deal !D! Damage. NL Draw !M! card."
+	},
+	"Ritualist:SummonRerek": {
+		"NAME": "Summon Rerek",
+		"DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Vessel: Take 3 damage and gain 1 Strength. NL Exhaust."
+	},
+	"Ritualist:QuietMeditation": {
+		"NAME": "Quiet Meditation",
+		"DESCRIPTION": "Ritual. NL Gain !B! Block. NL Add !M! random Ritual card to your hand.",
+		"UPGRADE_DESCRIPTION": "Ritual. NL Gain !B! Block. NL Add !M! random Ritual cards to your hand."
+	},
+	"Ritualist:RudeInterruption": {
+		"NAME": "Rude Interruption",
+		"DESCRIPTION": "If the enemy intends to attack apply 4 Possession and they lose !M! Strength this turn."
+	},
+	"Ritualist:IndKnifing": {
+		"NAME": "Indiscriminated",
+		"DESCRIPTION": "Deal !D! damage and apply 1 Vulnerable to a random enemy !M! times."
+	},
+	"Ritualist:EarlyReturn": {
+		"NAME": "Early Return",
+		"DESCRIPTION": "Costs 1 less this turn for each Ritual played with this in hand. NL Deal !D! damage to all enemies."
+	},
+	"Ritualist:Sabbath": {
+		"NAME": "Sabbath",
+		"DESCRIPTION": "Whenever you play a Ritual draw !M! card.",
+		"UPGRADE_DESCRIPTION": "Whenever you play a Ritual draw !M! cards."
+	},
+	"Ritualist:DeepReserves": {
+		"NAME": "Deep Reserves",
+		"DESCRIPTION": "At the start of your turn, draw 2 additional cards and gain !M! Attunement."
+	}
+}

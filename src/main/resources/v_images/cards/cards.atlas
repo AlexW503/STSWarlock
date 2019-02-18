@@ -1,0 +1,2019 @@
+
+cards.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blue/skill/aggregate
+  rotate: false
+  xy: 494, 1842
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/amplify
+  rotate: false
+  xy: 986, 1842
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/auto_shields
+  rotate: false
+  xy: 248, 1658
+  size: 245, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/boot_sequence
+  rotate: false
+  xy: 494, 1474
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/chaos
+  rotate: false
+  xy: 494, 1290
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/charge_battery
+  rotate: false
+  xy: 740, 1290
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/chill
+  rotate: false
+  xy: 986, 1290
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/consume
+  rotate: false
+  xy: 248, 1106
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/coolheaded
+  rotate: false
+  xy: 494, 1106
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/darkness
+  rotate: false
+  xy: 1478, 1106
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/defend
+  rotate: false
+  xy: 740, 922
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/double_energy
+  rotate: false
+  xy: 986, 738
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/dualcast
+  rotate: false
+  xy: 2, 554
+  size: 245, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/equilibrium
+  rotate: false
+  xy: 741, 554
+  size: 245, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/fission
+  rotate: false
+  xy: 2, 370
+  size: 245, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/forcefield
+  rotate: false
+  xy: 741, 370
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/fusion
+  rotate: false
+  xy: 1233, 370
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/genetic_algorithm
+  rotate: false
+  xy: 1479, 370
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/glacier
+  rotate: false
+  xy: 2, 186
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/leap
+  rotate: false
+  xy: 494, 2
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/apotheosis
+  rotate: false
+  xy: 1232, 1842
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/apparition
+  rotate: false
+  xy: 1478, 1842
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/bandage_up
+  rotate: false
+  xy: 741, 1658
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/blind
+  rotate: false
+  xy: 1725, 1658
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/chrysalis
+  rotate: false
+  xy: 1232, 1290
+  size: 244, 182
+  orig: 250, 190
+  offset: 3, 8
+  index: -1
+colorless/skill/dark_shackles
+  rotate: false
+  xy: 1232, 1106
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/deep_breath
+  rotate: false
+  xy: 494, 922
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/discovery
+  rotate: false
+  xy: 2, 738
+  size: 244, 182
+  orig: 250, 190
+  offset: 3, 8
+  index: -1
+colorless/skill/enlightenment
+  rotate: false
+  xy: 249, 554
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/finesse
+  rotate: false
+  xy: 1726, 554
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/forethought
+  rotate: false
+  xy: 987, 370
+  size: 244, 182
+  orig: 250, 190
+  offset: 3, 8
+  index: -1
+colorless/skill/good_instincts
+  rotate: false
+  xy: 248, 186
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/impatience
+  rotate: false
+  xy: 740, 186
+  size: 244, 182
+  orig: 250, 190
+  offset: 3, 8
+  index: -1
+colorless/skill/jack_of_all_trades
+  rotate: false
+  xy: 2, 2
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/jax
+  rotate: false
+  xy: 248, 2
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/madness
+  rotate: false
+  xy: 1232, 2
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/master_of_strategy
+  rotate: false
+  xy: 1724, 2
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+curse/ascenders_bane
+  rotate: false
+  xy: 2, 1658
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+curse/clumsy
+  rotate: false
+  xy: 1724, 1290
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+curse/decay
+  rotate: false
+  xy: 248, 922
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+curse/doubt
+  rotate: false
+  xy: 1478, 738
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+curse/injury
+  rotate: false
+  xy: 1478, 186
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/acrobatics
+  rotate: false
+  xy: 2, 1842
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/adrenaline
+  rotate: false
+  xy: 248, 1842
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/alchemize
+  rotate: false
+  xy: 740, 1842
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/backflip
+  rotate: false
+  xy: 495, 1658
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/blade_dance
+  rotate: false
+  xy: 1479, 1658
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/blur
+  rotate: false
+  xy: 248, 1474
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/bouncing_flask
+  rotate: false
+  xy: 740, 1474
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/bullet_time
+  rotate: false
+  xy: 986, 1474
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/burst
+  rotate: false
+  xy: 1724, 1474
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/calculated_gamble
+  rotate: false
+  xy: 2, 1290
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/catalyst
+  rotate: false
+  xy: 248, 1290
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/cloak_and_dagger
+  rotate: false
+  xy: 1478, 1290
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/concentrate
+  rotate: false
+  xy: 2, 1106
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/corpse_explosion
+  rotate: false
+  xy: 740, 1106
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/crippling_poison
+  rotate: false
+  xy: 986, 1106
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/deadly_poison
+  rotate: false
+  xy: 2, 922
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/defend
+  rotate: false
+  xy: 986, 922
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/deflect
+  rotate: false
+  xy: 1478, 922
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/distraction
+  rotate: false
+  xy: 248, 738
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/dodge_and_roll
+  rotate: false
+  xy: 494, 738
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/doppelganger
+  rotate: false
+  xy: 740, 738
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/escape_plan
+  rotate: false
+  xy: 988, 554
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/expertise
+  rotate: false
+  xy: 1480, 554
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/leg_sweep
+  rotate: false
+  xy: 740, 2
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/malaise
+  rotate: false
+  xy: 1478, 2
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/armaments
+  rotate: false
+  xy: 1724, 1842
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/battle_trance
+  rotate: false
+  xy: 987, 1658
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/bloodletting
+  rotate: false
+  xy: 2, 1474
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/burning_pact
+  rotate: false
+  xy: 1478, 1474
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/defend
+  rotate: false
+  xy: 1232, 922
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/disarm
+  rotate: false
+  xy: 1724, 922
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/double_tap
+  rotate: false
+  xy: 1232, 738
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/dual_wield
+  rotate: false
+  xy: 1724, 738
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/entrench
+  rotate: false
+  xy: 495, 554
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/exhume
+  rotate: false
+  xy: 1234, 554
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/flame_barrier
+  rotate: false
+  xy: 249, 370
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/flex
+  rotate: false
+  xy: 495, 370
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/ghostly_armor
+  rotate: false
+  xy: 1725, 370
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/havoc
+  rotate: false
+  xy: 494, 186
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/impervious
+  rotate: false
+  xy: 986, 186
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/infernal_blade
+  rotate: false
+  xy: 1232, 186
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/intimidate
+  rotate: false
+  xy: 1724, 186
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/limit_break
+  rotate: false
+  xy: 986, 2
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+status/beta
+  rotate: false
+  xy: 1233, 1658
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+status/burn
+  rotate: false
+  xy: 1232, 1474
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+status/dazed
+  rotate: false
+  xy: 1724, 1106
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+
+cards2.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blue/power/biased_cognition
+  rotate: false
+  xy: 2, 379
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+blue/power/buffer
+  rotate: false
+  xy: 506, 376
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+blue/power/defragment
+  rotate: false
+  xy: 1766, 376
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+blue/power/electrodynamics
+  rotate: false
+  xy: 254, 192
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+blue/power/heatsinks
+  rotate: false
+  xy: 1766, 189
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+blue/power/hello_world
+  rotate: false
+  xy: 2, 5
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+blue/power/loop
+  rotate: false
+  xy: 1010, 2
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+blue/skill/multicast
+  rotate: false
+  xy: 248, 1854
+  size: 245, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/overclock
+  rotate: false
+  xy: 1725, 1854
+  size: 245, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/rainbow
+  rotate: false
+  xy: 740, 1486
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/reboot
+  rotate: false
+  xy: 986, 1486
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/recursion
+  rotate: false
+  xy: 1232, 1486
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/recycle
+  rotate: false
+  xy: 1478, 1486
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/reinforced_body
+  rotate: false
+  xy: 248, 1302
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/reprogram
+  rotate: false
+  xy: 494, 1302
+  size: 245, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/seek
+  rotate: false
+  xy: 1725, 1302
+  size: 245, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/skim
+  rotate: false
+  xy: 1232, 1118
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/stack
+  rotate: false
+  xy: 2, 934
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/steam_barrier
+  rotate: false
+  xy: 248, 934
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/tempest
+  rotate: false
+  xy: 1232, 934
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/white_noise
+  rotate: false
+  xy: 1724, 750
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+blue/skill/zap
+  rotate: false
+  xy: 494, 566
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/power/magnetism
+  rotate: false
+  xy: 1262, 2
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+colorless/power/mayhem
+  rotate: false
+  xy: 1514, 2
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+colorless/skill/metamorphosis
+  rotate: false
+  xy: 2, 1854
+  size: 244, 182
+  orig: 250, 190
+  offset: 3, 8
+  index: -1
+colorless/skill/panacea
+  rotate: false
+  xy: 248, 1670
+  size: 250, 182
+  orig: 250, 190
+  offset: 0, 8
+  index: -1
+colorless/skill/panic_button
+  rotate: false
+  xy: 500, 1670
+  size: 244, 182
+  orig: 250, 190
+  offset: 3, 8
+  index: -1
+colorless/skill/purity
+  rotate: false
+  xy: 248, 1486
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/secret_technique
+  rotate: false
+  xy: 987, 1302
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/secret_weapon
+  rotate: false
+  xy: 1233, 1302
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/the_bomb
+  rotate: false
+  xy: 1724, 934
+  size: 244, 182
+  orig: 250, 190
+  offset: 3, 8
+  index: -1
+colorless/skill/thinking_ahead
+  rotate: false
+  xy: 2, 750
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/transmutation
+  rotate: false
+  xy: 248, 750
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/trip
+  rotate: false
+  xy: 494, 750
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+colorless/skill/violence
+  rotate: false
+  xy: 986, 750
+  size: 244, 182
+  orig: 250, 190
+  offset: 3, 8
+  index: -1
+curse/necronomicurse
+  rotate: false
+  xy: 495, 1854
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+curse/normality
+  rotate: false
+  xy: 987, 1854
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+curse/pain
+  rotate: false
+  xy: 2, 1670
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+curse/parasite
+  rotate: false
+  xy: 746, 1670
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+curse/pride
+  rotate: false
+  xy: 2, 1486
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+curse/regret
+  rotate: false
+  xy: 2, 1302
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+curse/shame
+  rotate: false
+  xy: 494, 1118
+  size: 244, 182
+  orig: 250, 190
+  offset: 3, 8
+  index: -1
+curse/writhe
+  rotate: false
+  xy: 248, 566
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/power/a_thousand_cuts
+  rotate: false
+  xy: 740, 563
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+green/power/accuracy
+  rotate: false
+  xy: 992, 563
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+green/power/after_image
+  rotate: false
+  xy: 1244, 563
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+green/power/caltrops
+  rotate: false
+  xy: 758, 376
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+green/power/envenom
+  rotate: false
+  xy: 506, 189
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+green/power/footwork
+  rotate: false
+  xy: 1514, 189
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+green/power/infinite_blades
+  rotate: false
+  xy: 254, 5
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+green/skill/nightmare
+  rotate: false
+  xy: 741, 1854
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/outmaneuver
+  rotate: false
+  xy: 1479, 1854
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/phantasmal_killer
+  rotate: false
+  xy: 992, 1670
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/piercing_wail
+  rotate: false
+  xy: 1238, 1670
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/prepared
+  rotate: false
+  xy: 1730, 1670
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/reflex
+  rotate: false
+  xy: 1724, 1486
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/setup
+  rotate: false
+  xy: 248, 1118
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/storm_of_steel
+  rotate: false
+  xy: 494, 934
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/survivor
+  rotate: false
+  xy: 740, 934
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/tactician
+  rotate: false
+  xy: 986, 934
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+green/skill/terror
+  rotate: false
+  xy: 1478, 934
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/power/barricade
+  rotate: false
+  xy: 1496, 563
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+red/power/berserk
+  rotate: false
+  xy: 1748, 563
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+red/power/brutality
+  rotate: false
+  xy: 254, 379
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+red/power/combust
+  rotate: false
+  xy: 1010, 376
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+red/power/corruption
+  rotate: false
+  xy: 1262, 376
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+red/power/dark_embrace
+  rotate: false
+  xy: 1514, 376
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+red/power/demon_form
+  rotate: false
+  xy: 2, 192
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+red/power/evolve
+  rotate: false
+  xy: 758, 189
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+red/power/feel_no_pain
+  rotate: false
+  xy: 1010, 189
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+red/power/fire_breathing
+  rotate: false
+  xy: 1262, 189
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+red/power/inflame
+  rotate: false
+  xy: 506, 2
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+red/power/juggernaut
+  rotate: false
+  xy: 758, 2
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+red/power/metallicize
+  rotate: false
+  xy: 1766, 2
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+red/skill/offering
+  rotate: false
+  xy: 1233, 1854
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/power_through
+  rotate: false
+  xy: 1484, 1670
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/rage
+  rotate: false
+  xy: 494, 1486
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/second_wind
+  rotate: false
+  xy: 741, 1302
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/seeing_red
+  rotate: false
+  xy: 1479, 1302
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/sentinel
+  rotate: false
+  xy: 2, 1118
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/shockwave
+  rotate: false
+  xy: 740, 1118
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/shrug_it_off
+  rotate: false
+  xy: 986, 1118
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/spot_weakness
+  rotate: false
+  xy: 1724, 1118
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/true_grit
+  rotate: false
+  xy: 740, 750
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+red/skill/warcry
+  rotate: false
+  xy: 1478, 750
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+status/slimed
+  rotate: false
+  xy: 1478, 1118
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+status/void
+  rotate: false
+  xy: 1232, 750
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+status/wound
+  rotate: false
+  xy: 2, 566
+  size: 244, 182
+  orig: 250, 190
+  offset: 2, 8
+  index: -1
+
+cards3.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blue/attack/all_for_one
+  rotate: false
+  xy: 2, 1516
+  size: 249, 187
+  orig: 250, 190
+  offset: 1, 3
+  index: -1
+blue/attack/ball_lightning
+  rotate: false
+  xy: 254, 1705
+  size: 249, 187
+  orig: 250, 190
+  offset: 1, 3
+  index: -1
+blue/attack/barrage
+  rotate: false
+  xy: 2, 1327
+  size: 249, 187
+  orig: 250, 190
+  offset: 1, 3
+  index: -1
+blue/attack/beam_cell
+  rotate: false
+  xy: 1762, 1142
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/blizzard
+  rotate: false
+  xy: 1760, 954
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/claw
+  rotate: false
+  xy: 253, 201
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/cold_snap
+  rotate: false
+  xy: 1258, 205
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/compile_driver
+  rotate: false
+  xy: 1508, 203
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/core_surge
+  rotate: false
+  xy: 1758, 202
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/doom_and_gloom
+  rotate: false
+  xy: 505, 1705
+  size: 249, 187
+  orig: 250, 190
+  offset: 1, 3
+  index: -1
+blue/attack/ftl
+  rotate: false
+  xy: 1506, 15
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/go_for_the_eyes
+  rotate: false
+  xy: 1756, 14
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/meteor_strike
+  rotate: false
+  xy: 2, 1138
+  size: 249, 187
+  orig: 250, 190
+  offset: 1, 3
+  index: -1
+blue/attack/strike
+  rotate: false
+  xy: 505, 1516
+  size: 249, 187
+  orig: 250, 190
+  offset: 1, 3
+  index: -1
+blue/attack/sweeping_beam
+  rotate: false
+  xy: 756, 1517
+  size: 249, 187
+  orig: 250, 190
+  offset: 1, 3
+  index: -1
+blue/power/capacitor
+  rotate: false
+  xy: 253, 1517
+  size: 250, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+blue/power/creative_ai
+  rotate: false
+  xy: 2, 1705
+  size: 250, 187
+  orig: 250, 190
+  offset: 0, 3
+  index: -1
+blue/power/echo_form
+  rotate: false
+  xy: 253, 1329
+  size: 250, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+blue/power/machine_learning
+  rotate: false
+  xy: 756, 1706
+  size: 250, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+blue/power/self_repair
+  rotate: false
+  xy: 253, 1141
+  size: 250, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+blue/power/static_discharge
+  rotate: false
+  xy: 1008, 1706
+  size: 250, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+blue/power/storm
+  rotate: false
+  xy: 755, 766
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+blue/skill/hologram
+  rotate: false
+  xy: 2, 194
+  size: 245, 190
+  orig: 250, 190
+  offset: 2, 0
+  index: -1
+blue/skill/turbo
+  rotate: false
+  xy: 2, 2
+  size: 245, 190
+  orig: 250, 190
+  offset: 2, 0
+  index: -1
+colorless/attack/bite
+  rotate: false
+  xy: 1510, 579
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+colorless/attack/dramatic_entrance
+  rotate: false
+  xy: 754, 202
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+colorless/attack/flash_of_steel
+  rotate: false
+  xy: 1258, 1518
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+colorless/attack/hand_of_greed
+  rotate: false
+  xy: 1258, 1330
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+colorless/attack/mind_blast
+  rotate: false
+  xy: 1760, 1330
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+colorless/attack/ritual_dagger
+  rotate: false
+  xy: 1007, 1142
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+colorless/attack/swift_strike
+  rotate: false
+  xy: 1007, 766
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+colorless/power/panache
+  rotate: false
+  xy: 504, 954
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+colorless/power/sadistic_nature
+  rotate: false
+  xy: 1510, 1143
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+green/attack/all_out_attack
+  rotate: false
+  xy: 2, 950
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+green/attack/backstab
+  rotate: false
+  xy: 1510, 767
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+green/attack/bane
+  rotate: false
+  xy: 253, 953
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+green/attack/choke
+  rotate: false
+  xy: 1508, 391
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+green/attack/dagger_spray
+  rotate: false
+  xy: 1006, 204
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+green/attack/dagger_throw
+  rotate: false
+  xy: 1007, 1518
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+green/attack/dash
+  rotate: false
+  xy: 504, 202
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+green/attack/die_die_die
+  rotate: false
+  xy: 2, 762
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+green/attack/endless_agony
+  rotate: false
+  xy: 1511, 1706
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+green/attack/eviscerate
+  rotate: false
+  xy: 503, 14
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+green/attack/finisher
+  rotate: false
+  xy: 1007, 1330
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+green/attack/flechettes
+  rotate: false
+  xy: 2, 574
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+green/attack/flying_knee
+  rotate: false
+  xy: 1256, 17
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+green/attack/glass_knife
+  rotate: false
+  xy: 253, 577
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+green/attack/grand_finale
+  rotate: false
+  xy: 1762, 1706
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+green/attack/heel_hook
+  rotate: false
+  xy: 253, 389
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+green/attack/predator
+  rotate: false
+  xy: 504, 766
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+green/attack/skewer
+  rotate: false
+  xy: 1007, 954
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+green/attack/slice
+  rotate: false
+  xy: 1258, 955
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+green/attack/sneaky_strike
+  rotate: false
+  xy: 1509, 955
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+green/power/noxious_fumes
+  rotate: false
+  xy: 505, 1141
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+green/power/tools_of_the_trade
+  rotate: false
+  xy: 1258, 768
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+green/power/venomology
+  rotate: false
+  xy: 1006, 579
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+green/power/well_laid_plans
+  rotate: false
+  xy: 1258, 581
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+green/power/wraith_form
+  rotate: false
+  xy: 1006, 392
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+red/attack/anger
+  rotate: false
+  xy: 757, 1141
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/bash
+  rotate: false
+  xy: 1258, 393
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/blood_for_blood
+  rotate: false
+  xy: 1260, 1706
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+red/attack/bludgeon
+  rotate: false
+  xy: 1760, 766
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/body_slam
+  rotate: false
+  xy: 1760, 578
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/carnage
+  rotate: false
+  xy: 505, 1328
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+red/attack/clash
+  rotate: false
+  xy: 1758, 390
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/cleave
+  rotate: false
+  xy: 249, 13
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/clothesline
+  rotate: false
+  xy: 756, 1329
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+red/attack/drop_kick
+  rotate: false
+  xy: 253, 765
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+red/attack/feed
+  rotate: false
+  xy: 753, 14
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/fiend_fire
+  rotate: false
+  xy: 1004, 16
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/headbutt
+  rotate: false
+  xy: 1509, 1518
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+red/attack/heavy_blade
+  rotate: false
+  xy: 2, 386
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+red/attack/immolate
+  rotate: false
+  xy: 1509, 1330
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+red/attack/iron_wave
+  rotate: false
+  xy: 1760, 1518
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+red/attack/rampage
+  rotate: false
+  xy: 504, 578
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+red/attack/reaper
+  rotate: false
+  xy: 504, 390
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+red/attack/searing_blow
+  rotate: false
+  xy: 756, 953
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+red/attack/uppercut
+  rotate: false
+  xy: 755, 578
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+red/attack/wild_strike
+  rotate: false
+  xy: 755, 390
+  size: 249, 186
+  orig: 250, 190
+  offset: 0, 4
+  index: -1
+red/power/rupture
+  rotate: false
+  xy: 1258, 1143
+  size: 250, 185
+  orig: 250, 190
+  offset: 0, 5
+  index: -1
+
+cards4.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+blue/attack/hyper_beam
+  rotate: false
+  xy: 2, 566
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/lock_on
+  rotate: false
+  xy: 252, 754
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/melter
+  rotate: false
+  xy: 252, 566
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/rebound
+  rotate: false
+  xy: 252, 190
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/rip_and_tear
+  rotate: false
+  xy: 1002, 754
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/scrape
+  rotate: false
+  xy: 252, 2
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/streamline
+  rotate: false
+  xy: 1002, 566
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/sunder
+  rotate: false
+  xy: 1002, 378
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+blue/attack/thunder_strike
+  rotate: false
+  xy: 752, 2
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+colorless/attack/shiv
+  rotate: false
+  xy: 752, 378
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+green/attack/masterful_stab
+  rotate: false
+  xy: 2, 378
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+green/attack/neutralize
+  rotate: false
+  xy: 502, 754
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+green/attack/poisoned_stab
+  rotate: false
+  xy: 252, 378
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+green/attack/quick_slash
+  rotate: false
+  xy: 2, 2
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+green/attack/riddle_with_holes
+  rotate: false
+  xy: 752, 566
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+green/attack/strike
+  rotate: false
+  xy: 1252, 754
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+green/attack/sucker_punch
+  rotate: false
+  xy: 752, 190
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+green/attack/unload
+  rotate: false
+  xy: 1252, 378
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/hemokinesis
+  rotate: false
+  xy: 2, 754
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/perfected_strike
+  rotate: false
+  xy: 2, 190
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/pommel_strike
+  rotate: false
+  xy: 502, 566
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/pummel
+  rotate: false
+  xy: 752, 754
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/reckless_charge
+  rotate: false
+  xy: 502, 378
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/sever_soul
+  rotate: false
+  xy: 502, 190
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/strike
+  rotate: false
+  xy: 502, 2
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/sword_boomerang
+  rotate: false
+  xy: 1252, 566
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/thunder_clap
+  rotate: false
+  xy: 1502, 754
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/twin_strike
+  rotate: false
+  xy: 1002, 190
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1
+red/attack/whirlwind
+  rotate: false
+  xy: 1502, 566
+  size: 248, 186
+  orig: 250, 190
+  offset: 1, 4
+  index: -1

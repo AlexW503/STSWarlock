@@ -1,0 +1,101 @@
+{
+    "Ritualist:PossessionPower": {
+      "NAME": "Possession",
+      "DESCRIPTIONS": [
+        "At the start of the turn, lose #b",
+        " HP."
+      ]
+    },
+    "Ritualist:AttunePower": {
+      "NAME": "Attunement",
+      "DESCRIPTIONS": [
+        "Increases effect of summon cards. They consume all attunement."
+      ]
+    },
+    "Ritualist:EmptyPalmsPower": {
+      "NAME": "Empty Palms",
+      "DESCRIPTIONS": [
+        "Once per turn, when you have no cards in hand, Gain #b",
+        " Block."
+      ]
+    },
+    "Ritualist:ApplyTwistedPower": {
+      "NAME": "Apply Twisted Ecstasy",
+      "DESCRIPTIONS": [ "Next turn your Rituals cost 0." ]
+    },
+    "Ritualist:TwistedPower": {
+      "NAME": "Twisted Ecstasy",
+      "DESCRIPTIONS": ["Your Rituals cost 0 this turn." ]
+    },
+    "Ritualist:DelayedStrengthRemovePower": {
+      "NAME": "Strength Remove",
+      "DESCRIPTIONS": ["In #b",
+                        " turns, lose #y",
+                        " Strength."]
+    },
+    "Ritualist:DeadlyVelocityPower": {
+      "NAME": "Deadly Velocity",
+      "DESCRIPTIONS": [
+        "When you play a card gain #y",
+        " Strength and Dexterity until end of turn."]
+    },
+      "Ritualist:DemonArmPower": {
+      "NAME": "Demon Arm",
+      "DESCRIPTIONS": [
+        "When you play an attack deal #y",
+        " damage to #b",
+        " random enemies."]
+    },
+    "Ritualist:DemonArmUpgPower": {
+    "NAME": "Demon Arm+",
+    "DESCRIPTIONS": [
+      "When you play an attack deal #y",
+      " damage to #b",
+      " random enemies."]
+  },
+  "Ritualist:ApplyEnergizedPower": {
+    "NAME": "Apply Energized",
+    "DESCRIPTIONS": [
+      "In two turns gain #y",
+      " Energy."]
+  },
+  "Ritualist:GrowingRitesPower": {
+    "NAME": "Growing Rites",
+    "DESCRIPTIONS": [
+      "At the start of your turn gain #b",
+      " Attunement."]
+  },
+  "Ritualist:DuskSeekerPower": {
+    "NAME": "Dusk Seeker",
+    "DESCRIPTIONS": [
+      "At the start of your turn add #b",
+      " card from your draw pile into your hand."]
+  },
+  "Ritualist:TwinWavePower": {
+    "NAME": "Twin Wave",
+    "DESCRIPTIONS": [
+      "At the start of your turn deal #y",
+      " damage to all enemies."]
+  },
+  "Ritualist:SpreadingCursePower": {
+    "NAME": "Spreading Curse",
+    "DESCRIPTIONS": [
+      "At the start of your turn apply #b",
+      " possess to all enemies."]
+  },
+  "Ritualist:DelayedPossessionRemovePower": {
+    "NAME": "Possession Remove",
+    "DESCRIPTIONS": ["Remove #b"," possess this turn."," possess in "," turn."," turns."]
+  },
+  "Ritualist:MomentumPower": {
+    "NAME": "Momentum",
+    "DESCRIPTIONS": [
+      "Play #b",
+      " more cards to gain #y",
+      " energy."]
+  },
+  "Ritualist:ApplyStrengthPower": {
+    "NAME": "Apply Temp. Strength",
+    "DESCRIPTIONS": ["Next turn gain "," temporary Strength."]
+  }
+}

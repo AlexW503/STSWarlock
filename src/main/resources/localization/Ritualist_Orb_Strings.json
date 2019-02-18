@@ -1,0 +1,32 @@
+{
+  "Empty": {
+    "NAME": "Orb Slot",
+    "DESCRIPTION": [
+      "Orbs can be channeled into these slots."
+    ]
+  },
+  "Ritualist:AgielOrb": {
+    "NAME": "Agiel",
+    "DESCRIPTION": [
+      "#yPassive: At the start of your turn, deal #b",
+      " damage to a random enemy. NL #yBanish: Deal #b",
+      " damage to a random enemy. "
+    ]
+  },
+  "Ritualist:BaphOrb": {
+    "NAME": "Baphomet",
+    "DESCRIPTION": [
+      "#yPassive: At the start of your turn, lose #b",
+      " energy. NL #yBanish: Gain #b",
+      " energy. "
+    ]
+  },
+  "Ritualist:RerekOrb": {
+    "NAME": "Rerek",
+    "DESCRIPTION": [
+      "#yPassive: At the start of your turn, take #b",
+      " damage and gain 1 Strength NL #yBanish: Heal #b",
+      " life. "
+    ]
+  }
+}
