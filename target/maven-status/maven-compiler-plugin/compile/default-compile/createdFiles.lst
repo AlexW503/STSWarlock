@@ -9,6 +9,7 @@ powers\SpreadingCursePower.class
 cards\EvilIntentions.class
 powers\ApplyEnergizedPower.class
 variables\Attune_Val.class
+powers\DeepReservesPower.class
 cards\BloodBoil.class
 cards\ThoughtfulArt.class
 cards\ShallowCut.class
@@ -51,11 +52,13 @@ powers\DemonArmUpgPower.class
 powers\TwistedPower.class
 cards\TransientGhost.class
 cards\Impale.class
+cards\DeepReserves.class
 powers\EmptyPalmsPower.class
 actions\HandDiscardAction.class
 cards\PowerPact.class
 cards\RudeInterruption.class
 cards\DefendPurple.class
+cards\Sabbath.class
 powers\DuskSeekerPower.class
 cards\SoulOpening.class
 powers\ApplyTwistedPower.class
@@ -73,6 +76,7 @@ cards\Retreat.class
 variables\MagicPlus2.class
 cards\DarkRitual.class
 cards\TemporalRites.class
+powers\SabbathPower.class
 cards\StrikeRitual.class
 cards\DeadlyBlows.class
 actions\ArrivalAction.class

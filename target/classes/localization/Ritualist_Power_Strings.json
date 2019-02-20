@@ -97,5 +97,18 @@
   "Ritualist:ApplyStrengthPower": {
     "NAME": "Apply Temp. Strength",
     "DESCRIPTIONS": ["Next turn gain "," temporary Strength."]
+  },
+  "Ritualist:SabbathPower": {
+    "NAME": "Sabbath",
+    "DESCRIPTIONS": [
+      "Whenever you play a Ritual draw #b",
+      " cards."]
+  },
+  "Ritualist:DeepReservesPower": {
+    "NAME": "Deep Reserves",
+    "DESCRIPTIONS": [
+      "At the start of your turn draw #b",
+      " cards and gain #y",
+      " Attunement."]
   }
 }

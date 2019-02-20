@@ -55,8 +55,8 @@
 	},
 	"Ritualist:CostlyPreparation": {
 		"NAME": "Costly Preparation",
-		"DESCRIPTION": "Ritual. NL Lose up to 5 Attune. Draw that many cards next turn. ",
-		"UPGRADE_DESCRIPTION": "Ritual +2. NL Lose up to 5 Attune. Draw that many cards next turn. "
+		"DESCRIPTION": "Ritual. NL Lose up to 4 Attune. Draw that many cards +1 next turn. ",
+		"UPGRADE_DESCRIPTION": "Ritual +2. NL Lose up to 4 Attune. Draw that many cards +1 next turn. "
 	},
 	"Ritualist:TemporalRites": {
 		"NAME": "Temporal Rites",
@@ -147,8 +147,8 @@
 	},
 	"Ritualist:Arrival": {
 		"NAME": "Arrival",
-		"DESCRIPTION": "Put 1 Summon card from your discard pile into your hand. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Put 1 Summon card from your discard and draw pile into your hand. NL Exhaust."
+		"DESCRIPTION": "Ritual. NL Put 1 Summon card from your discard pile into your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Ritual. NL Put 1 Summon card from your discard and draw pile into your hand. NL Exhaust."
 	},
 	"Ritualist:TwinWave": {
 		"NAME": "Twin Wave",
@@ -187,12 +187,12 @@
 	},
 	"Ritualist:BloodBoil": {
 		"NAME": "Blood Boil",
-		"DESCRIPTION": "Ritual. Retain. NL Gain [G]. If you retain this card lose 3 life and gain !M! attunement."
+		"DESCRIPTION": "Ritual. Retain. NL Gain [G]. If you retain this card lose !M! life and gain 1 Strength."
 	},
 	"Ritualist:Momentum": {
 		"NAME": "Momentum",
-		"DESCRIPTION":  " Ethereal. NL Each time you play 3 cards in a turn gain [G].",
-		"UPGRADE_DESCRIPTION": "Innate. Ethereal. NL Each time you play 4 cards in a turn gain [G]."
+		"DESCRIPTION":  "Each time you play 3 cards in a turn gain [G].",
+		"UPGRADE_DESCRIPTION": "Innate. NL Each time you play 3 cards in a turn gain [G]."
 	},
 	"Ritualist:CostlyStrength": {
 		"NAME": "Costly Strength",
@@ -223,5 +223,14 @@
 	"Ritualist:EarlyReturn": {
 		"NAME": "Early Return",
 		"DESCRIPTION": "Costs 1 less this turn for each Ritual played with this in hand. NL Deal !D! damage to all enemies."
+	},
+	"Ritualist:Sabbath": {
+		"NAME": "Sabbath",
+		"DESCRIPTION": "Whenever you play a Ritual draw !M! card.",
+		"UPGRADE_DESCRIPTION": "Whenever you play a Ritual draw !M! cards."
+	},
+	"Ritualist:DeepReserves": {
+		"NAME": "Deep Reserves",
+		"DESCRIPTION": "At the start of your turn, draw 2 additional cards and gain !M! Attunement."
 	}
 }
