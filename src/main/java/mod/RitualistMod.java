@@ -230,6 +230,7 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         BaseMod.addCard(new EarlyReturn());
         BaseMod.addCard(new Sabbath());
         BaseMod.addCard(new DeepReserves());
+        BaseMod.addCard(new SummonMaat());
 
         logger.info("Unlocking cards");
         //Unlock the cards
@@ -286,6 +287,7 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         UnlockTracker.unlockCard(EarlyReturn.ID);
         UnlockTracker.unlockCard(Sabbath.ID);
         UnlockTracker.unlockCard(DeepReserves.ID);
+        UnlockTracker.unlockCard(SummonMaat.ID);
 
         logger.info("Done adding cards");
     }

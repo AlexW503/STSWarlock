@@ -232,5 +232,9 @@
 	"Ritualist:DeepReserves": {
 		"NAME": "Deep Reserves",
 		"DESCRIPTION": "At the start of your turn, draw 2 additional cards and gain !M! Attunement."
+	},
+	"Ritualist:SummonMaat": {
+		"NAME": "Summon Ma'at",
+		"DESCRIPTION": "Gain !B! Block and !M! Plated Armor. NL Vessel: Lose 1 Plated Armor. NL Banish: Turn your Plated Armor into Dexterity. NL Exhaust."
 	}
 }

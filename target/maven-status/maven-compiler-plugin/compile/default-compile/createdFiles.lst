@@ -7,6 +7,7 @@ cards\SummonAgiel.class
 cards\ImpFeast.class
 powers\SpreadingCursePower.class
 cards\EvilIntentions.class
+orbs\MaatOrb.class
 powers\ApplyEnergizedPower.class
 variables\Attune_Val.class
 powers\DeepReservesPower.class
@@ -52,6 +53,7 @@ powers\DemonArmUpgPower.class
 powers\TwistedPower.class
 cards\TransientGhost.class
 cards\Impale.class
+cards\SummonMaat.class
 cards\DeepReserves.class
 powers\EmptyPalmsPower.class
 actions\HandDiscardAction.class

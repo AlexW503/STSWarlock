@@ -28,5 +28,13 @@
       " damage and gain 1 Strength NL #yBanish: Heal #b",
       " life. "
     ]
+  },
+  "Ritualist:MaatOrb": {
+    "NAME": "Ma'at",
+    "DESCRIPTION": [
+      "#yPassive: At the start of your turn, lose #b",
+      " Plated Armor and gain 1 Strength NL #yBanish: Heal #b",
+      " life. "
+    ]
   }
 }

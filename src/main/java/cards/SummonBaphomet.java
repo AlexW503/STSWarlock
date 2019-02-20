@@ -56,6 +56,7 @@ public class SummonBaphomet extends CustomCard {
         baseMagicNumber = BASE;
         magicNumber = baseMagicNumber;
         exhaust = true;
+        tags.add(MainEnum.SUMMON_CARD);
 
     }
     @Override
