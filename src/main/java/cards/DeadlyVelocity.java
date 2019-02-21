@@ -41,7 +41,8 @@ public class DeadlyVelocity extends CustomCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = MainEnum.PURPLE;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
+    private static final int UPG = 1;
     private static final int AMOUNT = 1;
 
     // /Stat Declaration/
@@ -72,9 +73,9 @@ public class DeadlyVelocity extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            isInnate = true;
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(UPG);
+           // rawDescription = UPGRADE_DESCRIPTION;
+         //   initializeDescription();
         }
     }
 

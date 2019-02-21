@@ -17,7 +17,7 @@ import mod.RitualistMod;
 import patches.MainEnum;
 import powers.PossessionPower;
 
-public class ScaryShank extends AbstractCard {
+public class ScaryShank extends CustomCard {
 
     /*
     * COMMON Scary Shank

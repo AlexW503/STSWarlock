@@ -41,9 +41,9 @@ public class Impale extends CustomCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 9;
-    private static final int BONUS = 9;
-    private static final int UPGRADE_DMG = 1;
-    private static final int UPG_MAGIC = 2;
+    private static final int BONUS = 6;
+    private static final int UPGRADE_DMG = 0;
+    private static final int UPG_MAGIC = 4;
 
 
     // /Stat Declaration/

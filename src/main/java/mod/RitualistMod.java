@@ -325,7 +325,7 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
             final String[] AttuneKW = { "attune", "Attune", "Attunement", "attunement" };
             BaseMod.addKeyword(AttuneKW, "Used to summon demons.");
             final String[] VesselKW = { "Vessel:", "Vessel", "vessel"};
-            BaseMod.addKeyword(VesselKW, "Effect only removable by banishment. Can only be vessel for one demon at a time.");
+            BaseMod.addKeyword(VesselKW, "Fills an orb slot. Evoked by Banish cards or other summons. Can only be vessel for one demon at a time.");
             final String[] BanishKW = { "Banish", "Banishment", "banish"};
             BaseMod.addKeyword(BanishKW, "Removes a summoned demon using you as it's vessel.");
 

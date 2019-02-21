@@ -191,8 +191,8 @@
 	},
 	"Ritualist:Momentum": {
 		"NAME": "Momentum",
-		"DESCRIPTION":  "Each time you play 3 cards in a turn gain [G].",
-		"UPGRADE_DESCRIPTION": "Innate. NL Each time you play 3 cards in a turn gain [G]."
+		"DESCRIPTION":  "Each time you play 5 cards gain [G].",
+		"UPGRADE_DESCRIPTION": "Innate. NL Each time you play 5 cards gain [G]."
 	},
 	"Ritualist:CostlyStrength": {
 		"NAME": "Costly Strength",

@@ -40,7 +40,7 @@ public class TwistedEcstasy extends CustomCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = MainEnum.PURPLE;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
 
     // /Stat Declaration/
 

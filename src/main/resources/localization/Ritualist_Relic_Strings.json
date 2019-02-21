@@ -3,7 +3,7 @@
     "NAME": "Book of Incantations",
     "FLAVOR": "A tome of rituals.",
     "DESCRIPTIONS": [
-        "At the start of your turn gain 1 Attune"
+        "At the start of your turn gain 1 Attunement."
     ]
   },
   "Ritualist:EnergyExampleRelic": {
