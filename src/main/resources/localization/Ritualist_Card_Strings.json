@@ -231,8 +231,7 @@
 	},
 	"Ritualist:DeepReserves": {
 		"NAME": "Deep Reserves",
-		"DESCRIPTION": "At the start of your turn, draw 2 additional cards and gain !M! Attunement.",
-
+		"DESCRIPTION": "At the start of your turn, draw 2 additional cards and gain !M! Attunement."
 
 	},
 	"Ritualist:SummonMaat": {

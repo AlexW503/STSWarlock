@@ -65,8 +65,8 @@ public class SummonMaat extends CustomCard {
         if (AbstractDungeon.player.hasPower(AttunePower.POWER_ID)) {
             ATT = AbstractDungeon.player.getPower(AttunePower.POWER_ID).amount;
             baseBlock = BASE + ATT/DIV;
-         //   if(upgraded)
-             //   baseBlock = BASE + ATT/DIV + UPG;
+            if(upgraded)
+               baseBlock += UPG;
 
             block = baseBlock;
             baseMagicNumber = block/3;
@@ -79,7 +79,7 @@ public class SummonMaat extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, baseMagicNumber), baseMagicNumber));
         AbstractDungeon.actionManager.addToBottom(new SetPowerZeroAction(p, p, AttunePower.POWER_ID));
         AbstractDungeon.actionManager.addToBottom(new ChannelAction(new MaatOrb()));
     }
@@ -96,8 +96,6 @@ public class SummonMaat extends CustomCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPG);
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
         }
     }
 

@@ -50,7 +50,7 @@ public class EvilIntentions extends CustomCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
-        exhaust = !upgraded;
+        exhaust = true;
 
     }
     // Actions the card should do.
@@ -73,6 +73,7 @@ public class EvilIntentions extends CustomCard {
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
+            exhaust = false;
         }
     }
 

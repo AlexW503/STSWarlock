@@ -41,11 +41,11 @@ public class SummonAgiel extends CustomCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = MainEnum.PURPLE;
     private static final int UPGRADE_COST = 1;
-    private static final int MULTI = 3;
+    private static final int MULTI = 2;
 
     private int ATT = 0; //player's attune
     private static final int COST = 2;
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 8;
 
 
     // /Stat Declaration/

@@ -38,7 +38,7 @@ public class DuskSeeker extends CustomCard {
 
     private static final int COST = 1;
     private static final int MAGIC = 1;
-    private static final int UPG = 1;
+    private static final int UPG = 0;
 
 
     // /Stat Declaration/

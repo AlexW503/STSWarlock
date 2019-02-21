@@ -44,12 +44,12 @@ public class SummonRerek extends CustomCard {
     public static final CardColor COLOR = MainEnum.PURPLE;
     private static final int UPGRADE_COST = 1;
     private static final int MULTI = 2;
-    private static final int COUNT = 6;
+    private static final int COUNT = 4;
 
 
     private int ATT = 0; //player's attune
     private static final int COST = 2;
-    private static final int DAMAGE = 0;
+    private static final int DAMAGE = 1;
     private static final int UPG = 2;
 
 
