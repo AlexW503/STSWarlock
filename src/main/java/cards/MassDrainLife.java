@@ -71,6 +71,8 @@ public class MassDrainLife extends CustomCard {
         int total = 0; //for healing
         Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
+
+
         AbstractMonster mo;
         while(var3.hasNext()) {
             mo = (AbstractMonster)var3.next();

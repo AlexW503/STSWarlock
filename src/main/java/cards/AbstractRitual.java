@@ -11,6 +11,7 @@ public abstract class AbstractRitual extends CustomCard {
 
     @Override
     public void applyPowers() {
+        super.applyPowers();
         if(AbstractDungeon.player.hasPower(TwistedPower.POWER_ID) && costForTurn != 0)
             costForTurn = 0;
 

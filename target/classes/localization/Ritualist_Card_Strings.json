@@ -22,7 +22,7 @@
 	"Ritualist:DarkRitual": {
 		"NAME": "Dark Ritual",
 		"DESCRIPTION": "Ritual. NL Gain [G] [G] [G]. NL Reduce this card's cost by 1 this combat.",
-		"UPGRADE_DESCRIPTION": "Ritual +2. NL Gain !M! Energy. NL Reduce this card's cost by 1 this combat."
+		"UPGRADE_DESCRIPTION": "Ritual +2. NL Gain [G] [G] [G]. NL Reduce this card's cost by 1 this combat."
 	},
 	"Ritualist:SummonAgiel": {
 		"NAME": "Summon Agiel",
@@ -210,7 +210,7 @@
 	"Ritualist:QuietMeditation": {
 		"NAME": "Quiet Meditation",
 		"DESCRIPTION": "Ritual. NL Gain !B! Block. NL Add !M! random Ritual card to your hand.",
-		"UPGRADE_DESCRIPTION": "Ritual. NL Gain !B! Block. NL Add !M! random Ritual cards to your hand."
+		"UPGRADE_DESCRIPTION": "Ritual. NL Gain !B! Block. NL Add !M! random Ritual card to your hand."
 	},
 	"Ritualist:RudeInterruption": {
 		"NAME": "Rude Interruption",
@@ -227,11 +227,13 @@
 	"Ritualist:Sabbath": {
 		"NAME": "Sabbath",
 		"DESCRIPTION": "Whenever you play a Ritual draw !M! card.",
-		"UPGRADE_DESCRIPTION": "Whenever you play a Ritual draw !M! cards."
+		"UPGRADE_DESCRIPTION": "Whenever you play a Ritual draw !M! card."
 	},
 	"Ritualist:DeepReserves": {
 		"NAME": "Deep Reserves",
-		"DESCRIPTION": "At the start of your turn, draw 2 additional cards and gain !M! Attunement."
+		"DESCRIPTION": "At the start of your turn, draw 2 additional cards and gain !M! Attunement.",
+
+
 	},
 	"Ritualist:SummonMaat": {
 		"NAME": "Summon Ma'at",

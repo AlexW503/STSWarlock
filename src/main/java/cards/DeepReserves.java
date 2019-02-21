@@ -70,7 +70,6 @@ public class DeepReserves extends CustomCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPG);
-            rawDescription = UPGRADE_DESC;
             initializeDescription();
         }
     }

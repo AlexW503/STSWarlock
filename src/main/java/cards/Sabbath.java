@@ -37,9 +37,9 @@ public class Sabbath extends CustomCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = MainEnum.PURPLE;
 
-    private static final int COST = 1;
+    private static final int COST = 3;
     private static final int MAGIC = 1;
-    private static final int UPG = 1;
+    private static final int UPG = 2;
 
 
     // /Stat Declaration/
@@ -68,7 +68,7 @@ public class Sabbath extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG);
+            upgradeBaseCost(UPG);
             rawDescription = UPGRADE_DESC;
             initializeDescription();
         }

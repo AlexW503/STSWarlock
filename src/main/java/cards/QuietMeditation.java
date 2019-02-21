@@ -36,8 +36,8 @@ public class QuietMeditation extends AbstractRitual {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = MainEnum.PURPLE;
-    private static final int BLOCK = 8;
-    private static final int UPG_BLOCK_AMT = 1;
+    private static final int BLOCK = 3;
+    private static final int UPG_BLOCK_AMT = 3;
     private static final int COST = 1;
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
@@ -74,7 +74,7 @@ public class QuietMeditation extends AbstractRitual {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG_MAGIC);
+         //   upgradeMagicNumber(UPG_MAGIC);
             upgradeBlock(UPG_BLOCK_AMT);
             rawDescription = UPGRADE_DESC;
             initializeDescription();

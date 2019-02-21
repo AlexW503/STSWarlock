@@ -22,7 +22,7 @@ public class MomentumPower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
     public int energy = 1;
-    public int maxPlay = 3;
+    public int maxPlay = 5;
 
     public MomentumPower(final AbstractCreature owner) {
         name = NAME;
@@ -49,10 +49,8 @@ public class MomentumPower extends AbstractPower {
         description = DESCRIPTIONS[0] + (maxPlay-amount) + DESCRIPTIONS[1] + energy + DESCRIPTIONS[2];
     }
 
-    @Override
-    public void atStartOfTurn() {
-        amount = 0;
-    }
+   // @Override
+  //  public void atStartOfTurn() {amount = 0;}
 
    @Override
     public void onUseCard(AbstractCard card, UseCardAction action){
