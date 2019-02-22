@@ -7,5 +7,5 @@
   "sts_version": "01-23-2019",
   "mts_version": "3.8.0",
   "dependencies": ["basemod"],
-  "update_json": ""
+  "update_json": "https://api.github.com/repos/AlexW503/STSWarlock/releases/latest"
 }

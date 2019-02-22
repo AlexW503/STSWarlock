@@ -22,7 +22,7 @@ public class SummonAgiel extends CustomCard {
     /*
     * STARTER Summon Agiel
     * 2E
-    * Deal 8+Att*2 damage. Summons a demon which causes you 3 damage per turn
+    * Deal 8+Att*2 damage. Summons a demon which deals 2+Att/5 damage per turn
      */
 
     //Text Declaration
@@ -79,7 +79,7 @@ public class SummonAgiel extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
        // AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, AttunePower.POWER_ID));
         AbstractDungeon.actionManager.addToBottom(new SetPowerZeroAction(p, p, AttunePower.POWER_ID));
-        AbstractDungeon.actionManager.addToBottom(new ChannelAction(new AgielOrb()));
+        AbstractDungeon.actionManager.addToBottom(new ChannelAction(new AgielOrb(ATT)));
     }
     @Override
     public AbstractCard makeCopy() { return new SummonAgiel(); }

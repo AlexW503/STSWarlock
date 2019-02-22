@@ -50,7 +50,7 @@ public class MaatOrb extends AbstractOrb {
 
     public void updateDescription() {
         applyFocus();
-        description = DESC[0] + passiveAmount + DESC[1] + evokeAmount + DESC[2];
+        description = DESC[0] + passiveAmount + DESC[1];
     }
 
     public void onEvoke() {

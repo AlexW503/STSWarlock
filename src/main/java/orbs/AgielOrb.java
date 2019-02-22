@@ -31,14 +31,16 @@ public class AgielOrb extends AbstractOrb {
     private static final float ORB_BORDER_SCALE = 1.2F;
     private float vfxTimer = 0.5F;
     private static final float VFX_INTERVAL_TIME = 0.25F;
+    int att = 0;
 
-    public AgielOrb(){
+    public AgielOrb(int amount){
         ID = "Agiel";
+        att = amount;
         img = ImageMaster.ORB_DARK;
         name = orbString.NAME;
-        baseEvokeAmount = 4;
+        baseEvokeAmount = 6+(att/5);
         evokeAmount = baseEvokeAmount;
-        basePassiveAmount = 2;
+        basePassiveAmount = 2+(att/5);
         passiveAmount = basePassiveAmount;
         updateDescription();
         channelAnimTimer = 0.5F;
@@ -96,6 +98,6 @@ public class AgielOrb extends AbstractOrb {
     }
 
     public AbstractOrb makeCopy() {
-        return new AgielOrb();
+        return new AgielOrb(att);
     }
 }

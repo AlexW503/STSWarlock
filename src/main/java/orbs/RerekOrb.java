@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.unique.SwordBoomerangAction;
@@ -16,6 +17,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
 import mod.RitualistMod;
@@ -28,16 +30,16 @@ public class RerekOrb extends AbstractOrb {
     private float vfxTimer = 0.5F;
     private static final float VFX_INTERVAL_TIME = 0.25F;
     AbstractPlayer p = AbstractDungeon.player;
-    private static final int STR = 1;
+    int att = 0;
 
-
-    public RerekOrb(){
+    public RerekOrb(int amount){
         ID = "Rerek";
+        att = amount;
         img = ImageMaster.ORB_DARK;
         name = orbString.NAME;
-        baseEvokeAmount = 6;
+        baseEvokeAmount = 0 + (att/2);
         evokeAmount = baseEvokeAmount;
-        basePassiveAmount = 3;
+        basePassiveAmount = 1 + (att/5);
         passiveAmount = basePassiveAmount;
         updateDescription();
         channelAnimTimer = 0.5F;
@@ -45,11 +47,11 @@ public class RerekOrb extends AbstractOrb {
 
     public void updateDescription() {
         applyFocus();
-        description = DESC[0] + passiveAmount + DESC[1] + evokeAmount + DESC[2];
+        description = DESC[0] + passiveAmount + DESC[1] + passiveAmount + DESC[2] + evokeAmount + DESC[3];
     }
 
     public void onEvoke() {
-        AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, baseEvokeAmount));
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p,  DamageInfo.createDamageMatrix(evokeAmount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
 
     }
 
@@ -58,9 +60,9 @@ public class RerekOrb extends AbstractOrb {
         if (Settings.FAST_MODE) {
             speedTime = 0.0F;
         }
-
-        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, passiveAmount, AbstractGameAction.AttackEffect.POISON));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, STR), STR));
+        //AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, passiveAmount, AbstractGameAction.AttackEffect.POISON));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, -passiveAmount), -passiveAmount));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, passiveAmount), passiveAmount));
         updateDescription();
 
     }
@@ -92,6 +94,6 @@ public class RerekOrb extends AbstractOrb {
     }
 
     public AbstractOrb makeCopy() {
-        return new RerekOrb();
+        return new RerekOrb(att);
     }
 }

@@ -82,7 +82,7 @@ public class SummonRerek extends CustomCard {
 
         AbstractDungeon.actionManager.addToBottom(new SwordBoomerangAction(AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng), new DamageInfo(p, baseDamage), magicNumber));
         AbstractDungeon.actionManager.addToBottom(new SetPowerZeroAction(p, p, AttunePower.POWER_ID));
-        AbstractDungeon.actionManager.addToBottom(new ChannelAction(new RerekOrb()));
+        AbstractDungeon.actionManager.addToBottom(new ChannelAction(new RerekOrb(ATT)));
     }
     @Override
     public AbstractCard makeCopy() { return new SummonRerek(); }
