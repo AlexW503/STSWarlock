@@ -1,7 +1,0 @@
-Card BG Red -> Green Conversion:
-110 Hue
--34 Saturation
--8 Lightness
-
-Card BG Red -> Colorless Conversion:
-Set Saturation to 0
