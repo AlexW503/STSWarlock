@@ -1,6 +1,6 @@
 package cards;
 
-import actions.HandDiscardAction;
+
 import actions.SetPowerZeroAction;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
@@ -12,9 +12,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import mod.RitualistMod;
-import orbs.AgielOrb;
-import orbs.BaphOrb;
 import patches.MainEnum;
+import orbs.BaphOrb;
 import powers.AttunePower;
 
 public class SummonBaphomet extends CustomCard {
@@ -41,10 +40,10 @@ public class SummonBaphomet extends CustomCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = MainEnum.PURPLE;
 
-    private static final int COST = 3;
+    private static final int COST = 4;
     private static final int DIV = 1;
     private static final int UPG = 3;
-    private static final int BASE = 3;
+    private static final int BASE = 2;
     private int ATT = 0; //player's attune
     private boolean exhaustCards = false;
 
@@ -57,7 +56,6 @@ public class SummonBaphomet extends CustomCard {
         magicNumber = baseMagicNumber;
         exhaust = true;
         tags.add(MainEnum.SUMMON_CARD);
-
     }
     @Override
     public void applyPowers() {
@@ -75,8 +73,16 @@ public class SummonBaphomet extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractCard card;
         for(int i = magicNumber; i > 0; i--) {
-            AbstractDungeon.actionManager.addToBottom(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), exhaustCards));
+            card = p.drawPile.getTopCard();
+            if(card.hasTag(MainEnum.SUMMON_CARD)){
+                p.drawPile.removeCard(card);
+                p.discardPile.addToRandomSpot(card);
+                i++;
+            }
+            else
+                AbstractDungeon.actionManager.addToBottom(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), exhaustCards));
         }
 
         AbstractDungeon.actionManager.addToBottom(new SetPowerZeroAction(p, p, AttunePower.POWER_ID));

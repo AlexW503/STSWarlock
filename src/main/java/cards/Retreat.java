@@ -29,6 +29,7 @@ public class Retreat extends CustomCard {
     public static final String IMG = RitualistMod.makePath("customImages/defend.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /Text Declaration/
     //Stat Declaration
@@ -74,6 +75,7 @@ public class Retreat extends CustomCard {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
             upgradeMagicNumber(UPGRADE_MAGIC);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

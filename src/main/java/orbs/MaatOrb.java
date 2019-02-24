@@ -59,7 +59,8 @@ public class MaatOrb extends AbstractOrb {
             amount = p.getPower(P_ID).amount;
             amount /= baseEvokeAmount;
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, P_ID));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, amount), amount));
+            if(amount > 0)
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, amount), amount));
         }
     }
     public void onStartOfTurn() {

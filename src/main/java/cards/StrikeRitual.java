@@ -2,6 +2,7 @@ package cards;
 
 import actions.GainAttuneAction;
 import basemod.abstracts.CustomCard;
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -49,6 +50,7 @@ public class StrikeRitual extends AbstractRitual {
         baseDamage = DAMAGE;
         tags.add(MainEnum.RITUAL_CARD);
         this.tags.add(AbstractCard.CardTags.STRIKE);
+        tags.add(BaseModCardTags.BASIC_STRIKE);
 
     }
 

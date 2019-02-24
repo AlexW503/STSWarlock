@@ -4,6 +4,7 @@ import actions.SetPowerZeroAction;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.unique.SwordBoomerangAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -44,12 +45,12 @@ public class SummonRerek extends CustomCard {
     public static final CardColor COLOR = MainEnum.PURPLE;
     private static final int UPGRADE_COST = 1;
     private static final int MULTI = 2;
-    private static final int COUNT = 4;
+    private static final int COUNT = 3;
 
 
     private int ATT = 0; //player's attune
     private static final int COST = 2;
-    private static final int DAMAGE = 1;
+    private static final int DAMAGE = 2;
     private static final int UPG = 2;
 
 
@@ -79,8 +80,9 @@ public class SummonRerek extends CustomCard {
     //Actions the card does
     @Override
     public void use(AbstractPlayer p, AbstractMonster m){
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p,  DamageInfo.createDamageMatrix(damage, true), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
 
-        AbstractDungeon.actionManager.addToBottom(new SwordBoomerangAction(AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng), new DamageInfo(p, baseDamage), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new SwordBoomerangAction(AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng), new DamageInfo(p, damage), magicNumber));
         AbstractDungeon.actionManager.addToBottom(new SetPowerZeroAction(p, p, AttunePower.POWER_ID));
         AbstractDungeon.actionManager.addToBottom(new ChannelAction(new RerekOrb(ATT)));
     }

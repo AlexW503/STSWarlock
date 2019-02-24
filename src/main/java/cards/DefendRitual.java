@@ -2,6 +2,7 @@ package cards;
 
 import actions.GainAttuneAction;
 import basemod.abstracts.CustomCard;
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -47,6 +48,8 @@ public class DefendRitual extends AbstractRitual {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         tags.add(MainEnum.RITUAL_CARD);
+        tags.add(BaseModCardTags.BASIC_DEFEND);
+
     }
     // Actions the card should do.
     @Override

@@ -1,5 +1,6 @@
 package cards;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -49,6 +50,8 @@ public class StrikePurple extends CustomCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.tags.add(AbstractCard.CardTags.STRIKE);
+        tags.add(BaseModCardTags.BASIC_STRIKE);
+
 
     }
 

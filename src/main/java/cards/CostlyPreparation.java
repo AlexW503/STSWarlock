@@ -45,7 +45,7 @@ public class CostlyPreparation extends AbstractRitual {
     private static int MAX = 4;
     private static int MAGIC = 1;
     private static int BONUS = 1;
-    private static int UPG_M = 2;
+    private static int UPG_M = 1;
     private static final int COST = 0;
 
     // /Stat Declaration/

@@ -69,7 +69,8 @@ public class IndiscriminateKnifing extends CustomCard {
         AbstractMonster mo;
 
         for(int i = magicNumber; i>0; i--) {
-            mo = AbstractDungeon.getRandomMonster();
+            mo = AbstractDungeon.getMonsters().getRandomMonster();
+
             AbstractDungeon.actionManager.addToBottom(new DamageAction(mo, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new VulnerablePower(mo, STACKS, false), STACKS));
         }

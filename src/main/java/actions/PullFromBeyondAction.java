@@ -21,7 +21,8 @@ public class PullFromBeyondAction extends AbstractGameAction {
     private AbstractPlayer p;
     private final boolean upgrade;
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhumeAction");
-    public static final String[] TEXT = uiStrings.TEXT;
+   // public static final String[] TEXT = uiStrings.TEXT;
+    public static final String TEXT = "Select a card to add to your deck.";
 
     public PullFromBeyondAction(boolean upgrade) {
         this.upgrade = upgrade;
@@ -68,7 +69,7 @@ public class PullFromBeyondAction extends AbstractGameAction {
                     this.isDone = true;
                     return;
                 } else {
-                    AbstractDungeon.gridSelectScreen.open(this.p.exhaustPile, 1, TEXT[0], false);
+                    AbstractDungeon.gridSelectScreen.open(this.p.exhaustPile, 1, TEXT, false);
                     this.tickDuration();
                 }
             }

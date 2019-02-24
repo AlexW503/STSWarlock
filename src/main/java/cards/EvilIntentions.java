@@ -41,7 +41,7 @@ public class EvilIntentions extends CustomCard {
     public static final CardColor COLOR = MainEnum.PURPLE;
 
     private static final int COST = 1;
-    private static final int MAGIC = 4;
+    private static final int MAGIC = 3;
 
     // /Stat Declaration/
 

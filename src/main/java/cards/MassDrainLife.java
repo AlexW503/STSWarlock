@@ -49,7 +49,7 @@ public class MassDrainLife extends CustomCard {
     public static final CardColor COLOR = MainEnum.PURPLE;
 
     private static final int COST = 2;
-    private static final int MAGIC = 2; // total/magic is healing
+    private static final int MAGIC = 1; // total/magic is healing
     private static final int UPG_COST = 1;
     private static int DMG = 0;
     // /Stat Declaration/

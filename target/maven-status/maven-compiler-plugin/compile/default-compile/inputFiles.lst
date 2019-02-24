@@ -1,4 +1,5 @@
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\actions\GainAttuneAction.java
+C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\powers\SymbioteFormPower.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\Retreat.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\DrainStrength.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\ShallowCut.java
@@ -13,6 +14,7 @@ C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\powers\DuskSeekerPower.j
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\actions\GetRandomRitualAction.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\TwinWave.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\ImpFeast.java
+C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\HeavyInfection.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\powers\SabbathPower.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\ScaryShank.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\orbs\RerekOrb.java
@@ -73,6 +75,7 @@ C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\CleanseByBlood.jav
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\variables\AttuneMagic_Val.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\QuickStudy.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\variables\Attune_Val.java
+C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\RotInPieces.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\RudeInterruption.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\StrikeRitual.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\actions\ArrivalDrawAction.java
@@ -80,8 +83,11 @@ C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\actions\CarefulStudyActi
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\DarkRitual.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\MassDrainLife.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\BarrierOfBone.java
+C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\SoulBurst.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\powers\GrowingRitesPower.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\GrowingRites.java
+C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\cards\SymbioteForm.java
+C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\powers\SoulRotPower.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\powers\DeepReservesPower.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\actions\DiscardPileToDrawAction.java
 C:\STS MODDING\my_mods\RitualistCharacter\src\main\java\powers\DeadlyVelocityPower.java

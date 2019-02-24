@@ -110,5 +110,18 @@
       "At the start of your turn draw #b",
       " cards and gain #y",
       " Attunement."]
+  },
+  "Ritualist:SoulRotPower": {
+    "NAME": "Soul Rot",
+    "DESCRIPTIONS": [
+      "At the start of the turn, gain #b",
+      " Possession."
+    ]
+  },
+    "Ritualist:SymbioteFormPower": {
+      "NAME": "Symbiote Form",
+      "DESCRIPTIONS": [
+        "Summons refund half Attunement and don't exhaust."
+      ]
   }
 }

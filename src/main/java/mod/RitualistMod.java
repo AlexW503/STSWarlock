@@ -231,6 +231,10 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         BaseMod.addCard(new Sabbath());
         BaseMod.addCard(new DeepReserves());
         BaseMod.addCard(new SummonMaat());
+        BaseMod.addCard(new HeavyInfection());
+        BaseMod.addCard(new SoulBurst());
+        BaseMod.addCard(new RotInPieces());
+        BaseMod.addCard(new SymbioteForm());
 
         logger.info("Unlocking cards");
         //Unlock the cards
@@ -288,6 +292,10 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         UnlockTracker.unlockCard(Sabbath.ID);
         UnlockTracker.unlockCard(DeepReserves.ID);
         UnlockTracker.unlockCard(SummonMaat.ID);
+        UnlockTracker.unlockCard(SoulBurst.ID);
+        UnlockTracker.unlockCard(RotInPieces.ID);
+        UnlockTracker.unlockCard(HeavyInfection.ID);
+        UnlockTracker.unlockCard(SymbioteForm.ID);
 
         logger.info("Done adding cards");
     }
@@ -319,15 +327,15 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
     @Override
     public void receiveEditKeywords() {
             final String[] RitualKW = { "ritual", "rituals", "Ritual", "Rituals", "Ritual." };
-            BaseMod.addKeyword(RitualKW, "Whenever you play a ritual, gain 1 Attunement.");
+            BaseMod.addKeyword("warlock", "Ritual", RitualKW, "Whenever you play a ritual, gain 1 Attunement. Attunement increases the effects of Summons.");
             final String[] PossessKW = { "possess", "possession", "Possession", "possessed" };
-            BaseMod.addKeyword(PossessKW, "At the start of turn, take damage equal to your possession.");
+            BaseMod.addKeyword("warlock", "Possess", PossessKW, "At the start of turn, take damage equal to your possession.");
             final String[] AttuneKW = { "attune", "Attune", "Attunement", "attunement" };
-            BaseMod.addKeyword(AttuneKW, "Used to summon demons.");
+            BaseMod.addKeyword("warlock", "Attune", AttuneKW, "Used to summon demons.");
             final String[] VesselKW = { "Vessel:", "Vessel", "vessel"};
-            BaseMod.addKeyword(VesselKW, "Fills an orb slot. Evoked by Banish cards or other summons. Can only be vessel for one demon at a time.");
+            BaseMod.addKeyword("warlock", "Vessel", VesselKW, "Fills an orb slot. Evoked by Banish cards or other summons. Can only be vessel for one demon at a time.");
             final String[] BanishKW = { "Banish", "Banishment", "banish"};
-            BaseMod.addKeyword(BanishKW, "Removes a summoned demon using you as it's vessel.");
+            BaseMod.addKeyword("warlock", "Banish", BanishKW, "Removes a summoned demon from it's orb slot");
 
     }
     // ================ /LOAD THE KEYWORDS/ ===================

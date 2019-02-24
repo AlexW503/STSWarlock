@@ -13,6 +13,7 @@ powers\SpreadingCursePower.class
 cards\PowerPact.class
 cards\EvilIntentions.class
 orbs\MaatOrb.class
+cards\RotInPieces.class
 cards\RudeInterruption.class
 powers\ApplyEnergizedPower.class
 variables\Attune_Val.class
@@ -25,6 +26,7 @@ actions\ThoughtfulArtAction.class
 cards\QuickStudy.class
 cards\GrowingRites.class
 cards\Sabbath.class
+powers\SymbioteFormPower.class
 cards\StrategicCut.class
 cards\CostlyStrength.class
 powers\DuskSeekerPower.class
@@ -44,6 +46,7 @@ orbs\RerekOrb.class
 actions\DiscardPileToDrawAction.class
 cards\DefendRitual.class
 actions\GainAttuneAction.class
+powers\SoulRotPower.class
 cards\Momentum.class
 orbs\BaphOrb.class
 actions\UpgradeTopDrawAction.class
@@ -73,6 +76,7 @@ powers\DeadlyVelocityPower.class
 cards\CostlyPreparation.class
 variables\AttuneMagic_Val.class
 patches\MainEnum.class
+cards\SymbioteForm.class
 cards\SummonBaphomet.class
 cards\Arrival.class
 cards\DemonArm.class
@@ -81,6 +85,7 @@ cards\RitualBloodletter.class
 powers\ApplyStrengthPower.class
 cards\DeadlyVelocity.class
 cards\MassDrainLife.class
+cards\SoulBurst.class
 actions\SetPowerZeroAction.class
 actions\GetRandomRitualAction.class
 cards\EarlyReturn.class
@@ -95,6 +100,7 @@ cards\DrainStrength.class
 powers\PossessionPower.class
 actions\ModifyMagicNumAction.class
 cards\TransientGhost.class
+cards\HeavyInfection.class
 cards\PullFromBeyond.class
 cards\Impale.class
 powers\DelayedStrengthRemovePower.class

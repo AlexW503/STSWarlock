@@ -57,7 +57,7 @@ public class DarkRitual extends AbstractRitual{
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if(upgraded)
-            AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(2));
+            AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
 
         AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new AdrenalineEffect(), 0.15F));

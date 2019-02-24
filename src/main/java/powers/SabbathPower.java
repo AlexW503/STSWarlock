@@ -41,7 +41,7 @@ public class SabbathPower extends AbstractPower {
     }
 
     @Override
-    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+    public void onUseCard(AbstractCard card, UseCardAction action) {
         if(card.hasTag(RITUAL_CARD))
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, amount));
     }

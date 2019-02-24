@@ -17,11 +17,11 @@ import mod.RitualistMod;
 import patches.MainEnum;
 import powers.PossessionPower;
 
-public class ScaryShank extends CustomCard {
+public class ScaryShank extends AbstractRitual {
 
     /*
     * COMMON Scary Shank
-    * 1E
+    * 1E Ritual
     * Deal 3 damage apply 2 weak.
      */
 

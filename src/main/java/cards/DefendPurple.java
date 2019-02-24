@@ -1,5 +1,6 @@
 package cards;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -46,6 +47,7 @@ public class DefendPurple extends CustomCard {
     public DefendPurple() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
+        tags.add(BaseModCardTags.BASIC_DEFEND);
 
     }
     // Actions the card should do.
