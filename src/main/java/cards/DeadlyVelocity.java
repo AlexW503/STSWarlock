@@ -27,7 +27,7 @@ public class DeadlyVelocity extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("DeadlyVelocity");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/power.png");
+    public static final String IMG = RitualistMod.makePath("customImages/velocity.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

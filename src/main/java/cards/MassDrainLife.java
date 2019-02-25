@@ -36,7 +36,7 @@ public class MassDrainLife extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("MassDrainLife");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/aoe.png");
+    public static final String IMG = RitualistMod.makePath("customImages/mass.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -80,7 +80,7 @@ public class MassDrainLife extends CustomCard {
             {
                 DMG = mo.getPower(PossessionPower.POWER_ID).amount;
                 total += DMG;
-                AbstractDungeon.actionManager.addToBottom(new  com.megacrit.cardcrawl.actions.common.DamageAction(mo, new DamageInfo(p, DMG, damageTypeForTurn),
+                AbstractDungeon.actionManager.addToBottom(new  com.megacrit.cardcrawl.actions.common.DamageAction(mo, new DamageInfo(p, DMG, DamageInfo.DamageType.NORMAL),
                         AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(mo, mo, PossessionPower.POWER_ID));
 

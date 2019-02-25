@@ -38,7 +38,7 @@ public class ThoughtfulArt extends AbstractRitual {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = MainEnum.PURPLE;
-    private static final int BLOCK = 3;
+    private static final int BLOCK = 2;
     private static final int UPG_BLOCK_AMT = 2;
     private static final int COST = 0;
     private static final int MAGIC = 4;

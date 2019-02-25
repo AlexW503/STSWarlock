@@ -19,14 +19,14 @@ public class Impale extends CustomCard {
     /*
     * COMMON Attack
     * 1E
-    * Deal 9 damage. If you are a vessel deal 12.
+    * Deal 9 damage. If you are a Summon deal 12.
      */
 
     //Text Declaration
 
     public static final String ID = RitualistMod.makeID("Impale");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/strike.png");
+    public static final String IMG = RitualistMod.makePath("customImages/impale.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   //  static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

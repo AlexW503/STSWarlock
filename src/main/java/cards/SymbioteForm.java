@@ -19,7 +19,7 @@ public class SymbioteForm extends CustomCard {
     /*
     * RARE Power
     * 3E
-    * Gain 1(2) Vessel slot(s). Summons refund half their Attunement and no longer exhaust.
+    * Gain 1(2) Summon slot(s). Summons refund half their Attunement and no longer exhaust.
      */
 
     //Text Declaration

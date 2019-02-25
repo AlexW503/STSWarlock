@@ -24,7 +24,7 @@ public class DemonArm extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("DemonArm");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/power.png");
+    public static final String IMG = RitualistMod.makePath("customImages/arm.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -38,7 +38,7 @@ public class DemonArm extends CustomCard {
 
     private static final int COST = 1;
     private static final int AMOUNT = 1;
-    private static final int DMG = 5;
+    private static final int DMG = 4;
     private static final int UPG_DMG = 2;
 
     // /Stat Declaration/

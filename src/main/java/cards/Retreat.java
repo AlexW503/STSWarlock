@@ -26,7 +26,7 @@ public class Retreat extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("Retreat");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/defend.png");
+    public static final String IMG = RitualistMod.makePath("customImages/retreat.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

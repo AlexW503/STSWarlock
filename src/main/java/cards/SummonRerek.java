@@ -25,7 +25,7 @@ public class SummonRerek extends CustomCard {
     /*
     * UNC Summon Rerek
     * 2E
-    * Deal Att/2 damage to a random enemy 6 times. VESSEL: Take 2 damage and gain 1 strength.
+    * Deal Att/2 damage to a random enemy 6 times. Summon: Take 2 damage and gain 1 strength.
      */
 
     //Text Declaration

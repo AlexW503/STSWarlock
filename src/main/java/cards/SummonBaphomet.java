@@ -20,7 +20,7 @@ public class SummonBaphomet extends CustomCard {
     /*
     * Rare Skill
     * 3E Summon
-    * Play the top ATT/2 cards of your deck. VESSEL: Lose 1E.
+    * Play the top ATT/2 cards of your deck. Summon: Lose 1E.
      */
 
     //Text Declaration
@@ -43,7 +43,7 @@ public class SummonBaphomet extends CustomCard {
     private static final int COST = 4;
     private static final int DIV = 1;
     private static final int UPG = 3;
-    private static final int BASE = 2;
+    private static final int BASE = 0;
     private int ATT = 0; //player's attune
     private boolean exhaustCards = false;
 
@@ -100,7 +100,7 @@ public class SummonBaphomet extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG);
+            upgradeBaseCost(UPG);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
             exhaustCards = false;

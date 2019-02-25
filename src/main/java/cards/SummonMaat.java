@@ -23,7 +23,7 @@ public class SummonMaat extends CustomCard {
     /*
     * Rare Skill
     * 2E Summon
-    * Gain ATT block. Next turn gain ATT/3 plated armor. Vessel: Lose 2 plated
+    * Gain ATT block. Next turn gain ATT/3 plated armor. Summon: Lose 2 plated
      */
 
     //Text Declaration

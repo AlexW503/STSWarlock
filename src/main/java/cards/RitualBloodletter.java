@@ -28,7 +28,7 @@ public class RitualBloodletter extends AbstractRitual {
 
     public static final String ID = RitualistMod.makeID("RitualBloodletter");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/strike.png");
+    public static final String IMG = RitualistMod.makePath("customImages/bloodletter.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

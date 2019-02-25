@@ -136,6 +136,7 @@ public class Ritualist extends CustomPlayer{
         return retVal;
     }
 
+
     //Character Select Screen Effect
     @Override
     public void doCharSelectScreenSelectEffect() {
@@ -183,7 +184,7 @@ public class Ritualist extends CustomPlayer{
     //Which card should be obtainable from the Match and Keep event? *CHANGE*
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new StrikePurple();
+        return new InitiationRite();
     }
 
     // The class name as it appears next to your player name in-game

@@ -43,7 +43,7 @@ public class ShallowCut extends AbstractRitual {
     public static final CardColor COLOR = MainEnum.PURPLE;
 
     private static final int COST = 0;
-    private static final int DAMAGE = 1;
+    private static final int DAMAGE = 0;
     private static final int UPGRADE_PLUS_DMG = 3;
     private static final int MAGIC = 1;
 

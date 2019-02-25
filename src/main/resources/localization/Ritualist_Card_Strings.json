@@ -22,11 +22,11 @@
 	"Ritualist:DarkRitual": {
 		"NAME": "Dark Ritual",
 		"DESCRIPTION": "warlock:Ritual. NL Gain [G] [G] [G]. NL Reduce this card's cost by 1 this combat.",
-		"UPGRADE_DESCRIPTION": "Ritual +1. NL Gain [G] [G] [G]. NL Reduce this card's cost by 1 this combat."
+		"UPGRADE_DESCRIPTION": "warlock:Ritual +1. NL Gain [G] [G] [G]. NL Reduce this card's cost by 1 this combat."
 	},
 	"Ritualist:SummonAgiel": {
 		"NAME": "Summon Agiel",
-		"DESCRIPTION": "Deal !D! damage. NL warlock:Vessel: Deal 2 damage to a random enemy. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage. NL warlock:Summon: Deal 2 damage to a random enemy. NL Exhaust."
 	},
 	"Ritualist:ScaryShank": {
 		"NAME": "Scary Shank",
@@ -56,7 +56,7 @@
 	"Ritualist:CostlyPreparation": {
 		"NAME": "Costly Preparation",
 		"DESCRIPTION": "warlock:Ritual. NL Lose up to 4 warlock:Attunement. Draw that many cards +1 next turn.",
-		"UPGRADE_DESCRIPTION": "Ritual +1. NL Lose up to 4 warlock:Attunement. Draw that many cards +1 next turn."
+		"UPGRADE_DESCRIPTION": "warlock:Ritual +1. NL Lose up to 4 warlock:Attunement. Draw that many cards +1 next turn."
 	},
 	"Ritualist:TemporalRites": {
 		"NAME": "Temporal Rites",
@@ -165,8 +165,8 @@
 	},
 	"Ritualist:SummonBaphomet": {
 		"NAME": "Summon Baphomet",
-		"DESCRIPTION": "Play the top !M! cards of your draw pile. NL warlock:Vessel: Lose [G]. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Play the top !M! cards of your draw pile. NL warlock:Vessel: Lose [G]. NL Exhaust."
+		"DESCRIPTION": "Play the top !M! cards of your draw pile. NL warlock:Summon: Lose [G]. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Play the top !M! cards of your draw pile. NL warlock:Summon: Lose [G]. NL Exhaust."
 	},
 	"Ritualist:TransientGhost": {
 		"NAME": "Transient Ghost",
@@ -174,7 +174,7 @@
 	},
 	"Ritualist:Impale": {
 		"NAME": "Impale",
-		"DESCRIPTION": "Deal !D! damage. If you are a warlock:Vessel, deal !M! more."
+		"DESCRIPTION": "Deal !D! damage. If you have an active warlock:Summon, deal !M! more."
 	},
 	"Ritualist:DeadlyBlows": {
 		"NAME": "Deadly Blows",
@@ -197,8 +197,8 @@
 	},
 	"Ritualist:CostlyStrength": {
 		"NAME": "Costly Strength",
-		"DESCRIPTION": "Lose up to 5 warlock:Attunement. Gain twice that much strength next turn only. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Lose up to 5 warlock:Attunement. Gain twice that much strength for next turn only."
+		"DESCRIPTION": "Lose up to 5 warlock:Attunement. Gain twice that much Strength next turn only. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Lose up to 5 warlock:Attunement. Gain twice that much Strength for next turn only."
 	},
 	"Ritualist:ShallowCut": {
 		"NAME": "Shallow Cut",
@@ -206,12 +206,12 @@
 	},
 	"Ritualist:SummonRerek": {
 		"NAME": "Summon Rerek",
-		"DESCRIPTION": "Deal !D! damage to all enemies, then deal !D! damage to a random enemy !M! times. NL warlock:Vessel: Lose 1 Dexterity and gain 1 Strength. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage to all enemies, then deal !D! damage to a random enemy !M! times. NL warlock:Summon: Lose 1 Dexterity and gain 1 Strength. NL Exhaust."
 	},
 	"Ritualist:QuietMeditation": {
 		"NAME": "Quiet Meditation",
 		"DESCRIPTION": "warlock:Ritual. NL Gain !B! Block. NL Add !M! random Ritual card to your hand.",
-		"UPGRADE_DESCRIPTION": "warlock:Ritual. NL Gain !B! Block. NL Add !M! random Ritual cards to your hand."
+		"UPGRADE_DESCRIPTION": "warlock:Ritual. NL Gain !B! Block. NL Add !M! random Ritual card to your hand."
 	},
 	"Ritualist:RudeInterruption": {
 		"NAME": "Rude Interruption",
@@ -237,7 +237,7 @@
 	},
 	"Ritualist:SummonMaat": {
 		"NAME": "Summon Ma'at",
-		"DESCRIPTION": "Gain !B! Block and !M! Plated Armor. NL warlock:Vessel: Lose 1 Plated Armor. NL warlock:Banish: Turn your Plated Armor into Dexterity. NL Exhaust."
+		"DESCRIPTION": "Gain !B! Block and !M! Plated Armor. NL warlock:Summon: Lose 1 Plated Armor. NL warlock:Banish: Turn your Plated Armor into Dexterity. NL Exhaust."
 	},
 	"Ritualist:SoulBurst": {
 		"NAME": "Soul Burst",
@@ -253,7 +253,11 @@
 	},
 	"Ritualist:SymbioteForm": {
 		"NAME": "Symbiote Form",
-		"DESCRIPTION": "Gain !M! Vessel slot. Summons refund half their warlock:Attunement cost and don't exhaust.",
-		"UPGRADE_DESCRIPTION": "Gain !M! Vessel slots. Summons refund half their warlock:Attunement cost and don't exhaust."
+		"DESCRIPTION": "Gain !M! Summon slot. Summons refund half their warlock:Attunement cost and don't exhaust.",
+		"UPGRADE_DESCRIPTION": "Gain !M! Summon slots. Summons refund half their warlock:Attunement cost and don't exhaust."
+	},
+	"Ritualist:Extradition": {
+		"NAME": "Extradition",
+		"DESCRIPTION": "Deal !D! damage. If the enemy dies before your next turn transfer their Possession to a random enemy."
 	}
 }

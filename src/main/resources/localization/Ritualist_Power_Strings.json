@@ -123,5 +123,12 @@
       "DESCRIPTIONS": [
         "Summons refund half Attunement and don't exhaust."
       ]
+  },
+  "Ritualist:ExtraditionPower": {
+    "NAME": "Extradition Power",
+    "DESCRIPTIONS": [
+      "If the enemy dies by the end of #b",
+      " turns spread their Possession to a random enemy."
+    ]
   }
 }
