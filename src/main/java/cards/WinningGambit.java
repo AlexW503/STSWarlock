@@ -45,8 +45,7 @@ public class WinningGambit extends CustomCard {
 
     public WinningGambit() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        if(!upgraded)
-            exhaust = true;
+        exhaust = true;
 
     }
     // Actions the card should do.
@@ -71,6 +70,7 @@ public class WinningGambit extends CustomCard {
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
+            exhaust = false;
         }
     }
 

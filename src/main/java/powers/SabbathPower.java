@@ -1,8 +1,7 @@
 package powers;
 
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.defect.SeekAction;
+import actions.RandomDrawFetchAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -43,7 +42,7 @@ public class SabbathPower extends AbstractPower {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if(card.hasTag(RITUAL_CARD))
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, amount));
+            AbstractDungeon.actionManager.addToBottom(new RandomDrawFetchAction(amount));
     }
 
 

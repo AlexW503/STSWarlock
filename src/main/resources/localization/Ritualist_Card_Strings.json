@@ -21,8 +21,8 @@
 	},
 	"Ritualist:DarkRitual": {
 		"NAME": "Dark Ritual",
-		"DESCRIPTION": "warlock:Ritual. NL Gain [G] [G] [G]. NL Reduce this card's cost by 1 this combat.",
-		"UPGRADE_DESCRIPTION": "warlock:Ritual +1. NL Gain [G] [G] [G]. NL Reduce this card's cost by 1 this combat."
+		"DESCRIPTION": "warlock:Ritual. NL Gain [G] [G]. NL Reduce this card's cost by 1 this combat.",
+		"UPGRADE_DESCRIPTION": "2 warlock:Ritual. NL Gain [G] [G]. NL Reduce this card's cost by 1 this combat."
 	},
 	"Ritualist:SummonAgiel": {
 		"NAME": "Summon Agiel",
@@ -56,7 +56,7 @@
 	"Ritualist:CostlyPreparation": {
 		"NAME": "Costly Preparation",
 		"DESCRIPTION": "warlock:Ritual. NL Lose up to 4 warlock:Attunement. Draw that many cards +1 next turn.",
-		"UPGRADE_DESCRIPTION": "warlock:Ritual +1. NL Lose up to 4 warlock:Attunement. Draw that many cards +1 next turn."
+		"UPGRADE_DESCRIPTION": "warlock:2 Ritual. NL Lose up to 4 warlock:Attunement. Draw that many cards +1 next turn."
 	},
 	"Ritualist:TemporalRites": {
 		"NAME": "Temporal Rites",
@@ -77,7 +77,7 @@
 	"Ritualist:TwistedEcstasy": {
 		"NAME": "Twisted Ecstasy",
 		"DESCRIPTION": "Next turn, your Rituals cost 0. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Next turn, your Rituals cost 0."
+		"UPGRADE_DESCRIPTION": "Next turn, your Rituals cost 0. NL Exhaust."
 	},
 	"Ritualist:MassDrainLife": {
 		"NAME": "Mass Drain Life",
@@ -132,7 +132,7 @@
 	},
 	"Ritualist:DrainStrength": {
 		"NAME": "Drain Strength",
-		"DESCRIPTION": " Remove all warlock:Possession from an enemy. Gain that much Strength. NL Exhaust."
+		"DESCRIPTION": " Remove up to !M! warlock:Possession from an enemy. Gain that much Strength. NL Exhaust."
 	},
 	"Ritualist:CleanseByBlood": {
 		"NAME": "Cleanse By Blood",
@@ -223,12 +223,12 @@
 	},
 	"Ritualist:EarlyReturn": {
 		"NAME": "Early Return",
-		"DESCRIPTION": "Costs 1 less this turn for each Ritual played with this in hand. NL Deal !D! damage to all enemies."
+		"DESCRIPTION": "Costs 1 less this turn for each Ritual played this turn. NL Deal !D! damage to all enemies."
 	},
 	"Ritualist:Sabbath": {
 		"NAME": "Sabbath",
-		"DESCRIPTION": "Whenever you play a Ritual draw !M! card.",
-		"UPGRADE_DESCRIPTION": "Whenever you play a Ritual draw !M! card."
+		"DESCRIPTION": "Whenever you play a Ritual add !M! random card from your draw pile to your hand.",
+		"UPGRADE_DESCRIPTION": "Whenever you play a Ritual add !M! random card from your draw pile to your hand."
 	},
 	"Ritualist:DeepReserves": {
 		"NAME": "Deep Reserves",
@@ -259,5 +259,19 @@
 	"Ritualist:Extradition": {
 		"NAME": "Extradition",
 		"DESCRIPTION": "Deal !D! damage. If the enemy dies before your next turn transfer their Possession to a random enemy."
+	},
+	"Ritualist:EnergyGem": {
+		"NAME": "Energy Gem",
+		"DESCRIPTION": " Gain [G]. NL Draw !M! card. ",
+		"UPGRADE_DESCRIPTION":" Gain [G]. NL Draw !M! cards. "
+
+	},
+	"Ritualist:FuturePlans": {
+		"NAME": "Future Sight",
+		"DESCRIPTION": "Shuffle !M! Energy Gems into your draw pile. Energy Gems cost 0, gain you [G] , and draw 1 card. NL Exhaust."
+	},
+	"Ritualist:DevilWill": {
+		"NAME": "Devil's Will",
+		"DESCRIPTION": "Lose !M! HP. NL Draw cards from your discard pile until your hand is full. NL Exhaust."
 	}
 }

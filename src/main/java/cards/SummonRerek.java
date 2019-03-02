@@ -50,7 +50,7 @@ public class SummonRerek extends CustomCard {
 
     private int ATT = 0; //player's attune
     private static final int COST = 2;
-    private static final int DAMAGE = 2;
+    private static final int DAMAGE = 3;
     private static final int UPG = 2;
 
 

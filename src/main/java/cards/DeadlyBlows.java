@@ -26,7 +26,7 @@ public class DeadlyBlows extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("DeadlyBlows");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/strike.png");
+    public static final String IMG = RitualistMod.makePath("customImages/deadly.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

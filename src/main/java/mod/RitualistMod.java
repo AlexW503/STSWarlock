@@ -236,6 +236,8 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         BaseMod.addCard(new RotInPieces());
         BaseMod.addCard(new SymbioteForm());
         BaseMod.addCard(new Extradition());
+        BaseMod.addCard(new FuturePlans());
+        BaseMod.addCard(new DevilWill());
 
         logger.info("Unlocking cards");
         //Unlock the cards
@@ -298,6 +300,8 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         UnlockTracker.unlockCard(HeavyInfection.ID);
         UnlockTracker.unlockCard(SymbioteForm.ID);
         UnlockTracker.unlockCard(Extradition.ID);
+        UnlockTracker.unlockCard(FuturePlans.ID);
+        UnlockTracker.unlockCard(DevilWill.ID);
 
         logger.info("Done adding cards");
     }

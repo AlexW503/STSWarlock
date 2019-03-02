@@ -39,7 +39,7 @@ public class DarkRitual extends AbstractRitual{
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = MainEnum.PURPLE;
-    private static final int ENERGY = 3;
+    private static final int ENERGY = 2;
 
     private static final int COST = 3;
 
@@ -80,6 +80,8 @@ public class DarkRitual extends AbstractRitual{
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
+            tags.add(MainEnum.RITUAL_CARD);
+
         }
     }
 

@@ -18,7 +18,7 @@ import java.util.Iterator;
 
 public class TwistedEcstasy extends CustomCard {
     /*
-    * UNC Power
+    * R Skill
     * 1E
     * Next turn your Rituals cost 0 [G]
      */
@@ -40,7 +40,8 @@ public class TwistedEcstasy extends CustomCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = MainEnum.PURPLE;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
+    private static final int UPG = 1;
 
     // /Stat Declaration/
 
@@ -68,7 +69,7 @@ public class TwistedEcstasy extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            exhaust = false;
+            upgradeBaseCost(UPG);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
 

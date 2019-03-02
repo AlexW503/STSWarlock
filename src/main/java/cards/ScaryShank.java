@@ -29,7 +29,7 @@ public class ScaryShank extends AbstractRitual {
 
     public static final String ID = RitualistMod.makeID("ScaryShank");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/strikeRit.png");
+    public static final String IMG = RitualistMod.makePath("customImages/scary.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   //  static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

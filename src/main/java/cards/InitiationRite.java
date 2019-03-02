@@ -26,7 +26,7 @@ public class InitiationRite extends AbstractRitual{
 
     public static final String ID = RitualistMod.makeID("InitiationRite");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/skill.png");
+    public static final String IMG = RitualistMod.makePath("customImages/init.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -57,8 +57,6 @@ public class InitiationRite extends AbstractRitual{
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
-        if(upgraded)
-            AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedPower(p, magicNumber), magicNumber));
 

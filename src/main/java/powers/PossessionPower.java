@@ -1,6 +1,8 @@
 package powers;
 
 
+import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.*;
@@ -12,7 +14,9 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import mod.RitualistMod;
 
-public class PossessionPower extends AbstractPower {
+import static javafx.scene.paint.Color.GREY;
+
+public class PossessionPower extends AbstractPower implements HealthBarRenderPower {
     public AbstractCreature source;
 
     public static final String POWER_ID = RitualistMod.makeID("PossessionPower");
@@ -20,6 +24,7 @@ public class PossessionPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESC = powerStrings.DESCRIPTIONS;
     public static final String IMG = RitualistMod.makePath("customImages/debuffPower.png");
+    Color healthColor;
 
     public PossessionPower(final AbstractCreature owner, AbstractCreature source, final int amount) {
         name = NAME;
@@ -32,7 +37,22 @@ public class PossessionPower extends AbstractPower {
         img = new Texture(IMG);
         this.source = source;
 
+
+
     }
+
+    @Override
+    public int getHealthBarAmount()
+    {
+        return amount;
+    }
+
+    @Override
+    public Color getColor()
+    {
+        return healthColor.GRAY;
+    }
+
 
     @Override 
     public void updateDescription() {

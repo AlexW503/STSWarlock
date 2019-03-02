@@ -25,7 +25,7 @@ public class BranchingPaths extends AbstractRitual {
 
     public static final String ID = RitualistMod.makeID("BranchingPaths");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/skill.png");
+    public static final String IMG = RitualistMod.makePath("customImages/branching.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 

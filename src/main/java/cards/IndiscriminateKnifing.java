@@ -1,5 +1,6 @@
 package cards;
 
+import actions.IndKnifeAction;
 import actions.SetPowerZeroAction;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -66,14 +67,7 @@ public class IndiscriminateKnifing extends CustomCard {
     //Actions the card does
     @Override
     public void use(AbstractPlayer p, AbstractMonster m){
-        AbstractMonster mo;
-
-        for(int i = magicNumber; i>0; i--) {
-            mo = AbstractDungeon.getMonsters().getRandomMonster();
-
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(mo, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new VulnerablePower(mo, STACKS, false), STACKS));
-        }
+        AbstractDungeon.actionManager.addToBottom(new IndKnifeAction(AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng), new DamageInfo(p, this.baseDamage), this.magicNumber, STACKS));
 
 
 

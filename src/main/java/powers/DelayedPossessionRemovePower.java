@@ -77,7 +77,7 @@ public class DelayedPossessionRemovePower extends AbstractPower {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flashWithoutSound();
             if (amounts[0] > 0) {
-                AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(amounts[0]));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new PossessionPower(owner, owner, -amounts[0]), -amounts[0]));
             }
             // shift one over
             for (int i = 1; i < amounts.length; ++i) {

@@ -39,7 +39,7 @@ public class RerekOrb extends AbstractOrb {
         name = orbString.NAME;
         baseEvokeAmount = 0 + (att/2);
         evokeAmount = baseEvokeAmount;
-        basePassiveAmount = 1 + (att/5);
+        basePassiveAmount = 1 + (att/6);
         passiveAmount = basePassiveAmount;
         updateDescription();
         channelAnimTimer = 0.5F;

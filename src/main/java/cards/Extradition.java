@@ -57,9 +57,8 @@ public class Extradition extends CustomCard {
     //Actions the card does
     @Override
     public void use(AbstractPlayer p, AbstractMonster m){
-
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new ExtraditionPower(m, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
     @Override
     public AbstractCard makeCopy() { return new Extradition(); }

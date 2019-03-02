@@ -66,10 +66,10 @@ public class RudeInterruption extends CustomCard {
             AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT, true));
         }
         else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PossessionPower(m, p, POS), POS));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m, -magicNumber), -magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-           // if (!m.hasPower("Artifact")) {
+                if (!m.hasPower("Artifact"))
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new GainStrengthPower(m, magicNumber), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PossessionPower(m, p, POS), POS));
 
 
         }

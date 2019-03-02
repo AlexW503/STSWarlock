@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import mod.RitualistMod;
 import patches.MainEnum;
-import sun.applet.Main;
 
 public class DefendRitual extends AbstractRitual {
     /*

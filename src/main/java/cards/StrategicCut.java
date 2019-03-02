@@ -45,7 +45,7 @@ public class StrategicCut extends AbstractRitual {
     private static final int COST = 1;
     private static final int DAMAGE = 6;
     private static final int MAGIC = 2;
-    private static final int UPG_DMG = 1;
+    private static final int UPG_DMG = 3;
     private static final int UPGRADE_MAGIC = 1;
 
     // /Stat Declaration/
@@ -75,7 +75,6 @@ public class StrategicCut extends AbstractRitual {
         if(!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DMG);
-            upgradeMagicNumber(UPGRADE_MAGIC);
         }
     }
 

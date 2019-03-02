@@ -75,7 +75,7 @@ public class Impale extends CustomCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_DMG);
+          //  upgradeDamage(UPGRADE_DMG);
             upgradeMagicNumber(UPG_MAGIC);
         }
     }

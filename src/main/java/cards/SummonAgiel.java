@@ -45,7 +45,7 @@ public class SummonAgiel extends CustomCard {
 
     private int ATT = 0; //player's attune
     private static final int COST = 2;
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 10;
 
 
     // /Stat Declaration/

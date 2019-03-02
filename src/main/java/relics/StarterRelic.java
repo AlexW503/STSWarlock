@@ -3,6 +3,7 @@ package relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import mod.RitualistMod;
@@ -15,6 +16,7 @@ public class StarterRelic extends CustomRelic {
     public static final String ID = RitualistMod.makeID("StarterRelic");
     public static final String IMG = RitualistMod.makePath("customImages/bookOfIncantations.png");
     public static final String OUTLINE = RitualistMod.makePath(RitualistMod.BASE_RELIC_OUTLINE);
+    boolean turnCount = true;
 
     public StarterRelic() {
         super(ID, new Texture(IMG), new Texture(OUTLINE), RelicTier.STARTER, LandingSound.MAGICAL);
@@ -25,8 +27,13 @@ public class StarterRelic extends CustomRelic {
     @Override
     public void atTurnStart() {
         flash();
-      AbstractDungeon.actionManager.addToTop(
-              new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AttunePower(AbstractDungeon.player, 1), 1));
+        //draw one card every other turn
+        if(turnCount == true) {
+            AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, 1));
+            turnCount = false;
+        }
+        else
+            turnCount = true;
     }
 
     //Description

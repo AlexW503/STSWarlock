@@ -47,12 +47,17 @@ public class DrainStrength extends CustomCard {
 
     private static final int COST = 1;
     private static final int UPG_COST = 0;
+    private static final int MAGIC = 10;
+    private static final int UPG = 5;
+
 
     // /Stat Declaration/
 
 
     public DrainStrength() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
+        baseMagicNumber = MAGIC;
+        magicNumber = baseMagicNumber;
         exhaust = true;
     }
     // Actions the card should do.
@@ -66,8 +71,13 @@ public class DrainStrength extends CustomCard {
         if(m.hasPower(PossessionPower.POWER_ID))
         {
             str = m.getPower(PossessionPower.POWER_ID).amount;
+            if(str > baseMagicNumber)
+                str = baseMagicNumber;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, str), str));
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(m, m, PossessionPower.POWER_ID));
+            if(m.getPower(PossessionPower.POWER_ID).amount <= str)
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(m, m, PossessionPower.POWER_ID));
+            else
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new PossessionPower(m, m, -str), -str));
 
         }
 
@@ -87,7 +97,7 @@ public class DrainStrength extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPG_COST);
+            upgradeMagicNumber(UPG);
             initializeDescription();
         }
     }

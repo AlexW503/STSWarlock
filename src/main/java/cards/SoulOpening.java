@@ -26,7 +26,7 @@ public class SoulOpening extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("SoulOpening");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/strike.png");
+    public static final String IMG = RitualistMod.makePath("customImages/opening.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   //  static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

@@ -32,7 +32,7 @@ public class ImpFeast extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("ImpFeast");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/aoeS.png");
+    public static final String IMG = RitualistMod.makePath("customImages/feast.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -72,20 +72,14 @@ public class ImpFeast extends CustomCard {
         //apply debuffs to all enemies
         AbstractMonster mo;
         while(var3.hasNext()) {
-            mo = (AbstractMonster)var3.next();
+            mo = (AbstractMonster) var3.next();
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new StrengthPower(mo, -magicNumber), -magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new PossessionPower(mo, p, POS), POS));
-           // AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new GainStrengthPower(mo, magicNumber), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-        }
-         //if artifact, don't regain strength
-        var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
-        while(var3.hasNext()) {
-            mo = (AbstractMonster)var3.next();
             if (!mo.hasPower("Artifact")) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new GainStrengthPower(mo, magicNumber), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
             }
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new PossessionPower(mo, p, POS), POS));
 
+            //if artifact, don't regain strength
         }
     }
 

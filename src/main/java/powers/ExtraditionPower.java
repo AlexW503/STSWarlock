@@ -1,6 +1,7 @@
 package powers;
 
 
+import actions.ExtraditionAction;
 import actions.GainAttuneAction;
 import characters.Ritualist;
 import com.badlogic.gdx.graphics.Texture;
@@ -8,6 +9,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPoisonOnRandomMonsterAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.unique.SwordBoomerangAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -38,7 +41,7 @@ public class ExtraditionPower extends AbstractPower {
         type = PowerType.BUFF;
         isTurnBased = true;
         //img = new Texture(IMG);
-        this.loadRegion("poison");
+        this.loadRegion("accuracy");
        // source = source;
 
     }
@@ -52,11 +55,11 @@ public class ExtraditionPower extends AbstractPower {
         if (owner.hasPower(PossessionPower.POWER_ID)) {
             int pos = owner.getPower(PossessionPower.POWER_ID).amount;
             if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-                AbstractMonster m = (AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng));
                 this.flash();
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, owner, new PossessionPower(m, owner, pos), pos));
+                AbstractDungeon.actionManager.addToBottom(new ExtraditionAction(AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng), pos));
+
             } else {
-                RitualistMod.logger.info("no target for the specimen");
+                RitualistMod.logger.info("no target for the extradition");
             }
         }
     }
