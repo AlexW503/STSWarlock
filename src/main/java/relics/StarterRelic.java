@@ -16,19 +16,24 @@ public class StarterRelic extends CustomRelic {
     public static final String ID = RitualistMod.makeID("StarterRelic");
     public static final String IMG = RitualistMod.makePath("customImages/bookOfIncantations.png");
     public static final String OUTLINE = RitualistMod.makePath(RitualistMod.BASE_RELIC_OUTLINE);
-    boolean turnCount = true;
+    private boolean turnCount = true;
 
     public StarterRelic() {
         super(ID, new Texture(IMG), new Texture(OUTLINE), RelicTier.STARTER, LandingSound.MAGICAL);
 
     }
 
+    @Override
+    public void onVictory() {
+        turnCount = true;
+    }
     // Flash and add stack at turn start
     @Override
     public void atTurnStart() {
-        flash();
+
         //draw one card every other turn
         if(turnCount == true) {
+            flash();
             AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, 1));
             turnCount = false;
         }

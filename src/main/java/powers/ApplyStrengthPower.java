@@ -34,6 +34,8 @@ public class ApplyStrengthPower extends AbstractPower {
        // source = source;
 
     }
+
+
     @Override
     public void updateDescription(){
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
@@ -43,9 +45,9 @@ public class ApplyStrengthPower extends AbstractPower {
     @Override
     public void atStartOfTurn() { //Remove this power and add Twisted Ecstasy
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount), amount));
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
+        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
+        addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount), amount));
+        addToBot(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
 
 
     }

@@ -1,5 +1,5 @@
 {
-	"Ritualist:DefendPurple": {
+	"Ritualist:DefendMagenta": {
 		"NAME": "Defend",
 		"DESCRIPTION": "Gain !B! Block."
 	},
@@ -7,7 +7,7 @@
 		"NAME": "Ritual Defend",
 		"DESCRIPTION": "warlock:Ritual. NL Gain !B! Block."
 	},
-	"Ritualist:StrikePurple": {
+	"Ritualist:StrikeMagenta": {
 		"NAME": "Strike",
 		"DESCRIPTION": "Deal !D! damage."
 	},
@@ -19,14 +19,18 @@
 		"NAME": "Prepare Host",
 		"DESCRIPTION": "Deal !D! damage. NL Apply !M! warlock:Possession."
 	},
+	"Ritualist:Vendetta": {
+		"NAME": "Vendetta",
+		"DESCRIPTION": "Every time you play 3 Attacks in a single turn, apply !M! warlock:Possession to all enemies and gain 2 warlock:Attunement. "
+	},
 	"Ritualist:DarkRitual": {
 		"NAME": "Dark Ritual",
-		"DESCRIPTION": "warlock:Ritual. NL Gain [G] [G]. NL Reduce this card's cost by 1 this combat.",
+		"DESCRIPTION": "2 warlock:Ritual. NL Gain [G] [G]. NL Reduce this card's cost by 1 this combat.",
 		"UPGRADE_DESCRIPTION": "2 warlock:Ritual. NL Gain [G] [G]. NL Reduce this card's cost by 1 this combat."
 	},
 	"Ritualist:SummonAgiel": {
 		"NAME": "Summon Agiel",
-		"DESCRIPTION": "Deal !D! damage. NL warlock:Summon: Deal 2 damage to a random enemy. NL Exhaust."
+		"DESCRIPTION": "warlock:Agiel. Deal !D! damage. NL warlock:Banish: Deal !M! damage to a random enemy. NL Exhaust."
 	},
 	"Ritualist:ScaryShank": {
 		"NAME": "Scary Shank",
@@ -35,28 +39,36 @@
 	"Ritualist:RitualBloodletter": {
 		"NAME": "Ritual Bloodletter",
 		"DESCRIPTION": "warlock:Ritual. NL Deal !D! damage. NL If this is your last card, gain [G] [G] and draw 2 cards. ",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL If this is your last card in hand, NL Gain [G] [G] [G] and draw 2 cards. "
+		"UPGRADE_DESCRIPTION": "warlock:Ritual. NL Deal !D! damage. NL If this is your last card in hand, NL Gain [G] [G] [G] and draw 2 cards. "
+	},
+	"Ritualist:CutOut": {
+		"NAME": "Cut Out",
+		"DESCRIPTION": "Exhaust all non-Ritual cards in your hand. Deal !D! damage. If this is your last card, gain !M! HP."
 	},
 	"Ritualist:BarrierOfBone": {
 		"NAME": "Barrier of Bone",
-		"DESCRIPTION": "Gain !B! Block. NL Discard !M! cards."
+		"DESCRIPTION": "warlock:Banish. NL Gain !B! Block. NL Discard !M! cards. "
 	},
 	"Ritualist:EmptyPalms": {
 		"NAME": "Empty Palms",
-		"DESCRIPTION": "Once per turn, when you have no cards in hand, gain !B! Block."
+		"DESCRIPTION": "Once per turn, when you have no cards in hand, gain !M! Block."
 	},
 	"Ritualist:QuickStudy": {
 		"NAME": "Quick Study",
 		"DESCRIPTION": "warlock:Ritual. NL Draw 1 card. NL If you draw a Ritual, gain !B! Block."
 	},
-	"Ritualist:ImpFeast": {
+	"Ritualist:ImpFeast": { 
 		"NAME": "Imp Feast",
-		"DESCRIPTION": "Apply 3 warlock:Possession to all enemies. They lose !M! Strength this turn. NL Exhaust."
+		"DESCRIPTION": "All enemies lose 7 Strength this turn and gain !M! warlock:Possession. NL Exhaust."
+	},
+	"Ritualist:Celerity": {
+		"NAME": "Celerity",
+		"DESCRIPTION": "Gain !M! Dexterity. This card triggers it's effects when discarded or exhausted by another card. NL Exhaust."
 	},
 	"Ritualist:CostlyPreparation": {
 		"NAME": "Costly Preparation",
-		"DESCRIPTION": "warlock:Ritual. NL Lose up to 4 warlock:Attunement. Draw that many cards +1 next turn.",
-		"UPGRADE_DESCRIPTION": "warlock:2 Ritual. NL Lose up to 4 warlock:Attunement. Draw that many cards +1 next turn."
+		"DESCRIPTION": "warlock:Ritual. NL Lose up to 3 warlock:Attunement. Draw that many cards +1 next turn.",
+		"UPGRADE_DESCRIPTION": "2 warlock:Ritual. NL Lose up to 3 warlock:Attunement. Draw that many cards +1 next turn."
 	},
 	"Ritualist:TemporalRites": {
 		"NAME": "Temporal Rites",
@@ -81,7 +93,8 @@
 	},
 	"Ritualist:MassDrainLife": {
 		"NAME": "Mass Drain Life",
-		"DESCRIPTION": "Deal damage equal to and consume all warlock:Possession from each enemy. Heal HP equal to the amount consumed. NL Exhaust."
+		"DESCRIPTION": "Deal damage equal to and consume all warlock:Possession from each enemy. Heal HP equal to the amount consumed. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Deal damage (+ !M!) equal to and consume all warlock:Possession from each enemy. Heal HP equal to the amount consumed. NL Exhaust."
 	},
 	"Ritualist:InitiationRite": {
 		"NAME": "Initiation Rite",
@@ -95,7 +108,7 @@
 	},
 	"Ritualist:ThoughtfulArt": {
 		"NAME": "Thoughtful Art",
-		"DESCRIPTION": "warlock:Ritual. NL Gain !B! Block. NL If you've played more than !M! cards this turn, gain !B! block again and draw 1 card.",
+		"DESCRIPTION": "warlock:Ritual. NL Gain !B! Block. NL If you've played more than !M! cards this turn, gain !B! Block again and draw 1 card.",
 		"EXTENDED_DESCRIPTION": [
 			" NL (",
 			" card played.)",
@@ -109,8 +122,8 @@
 	},
 	"Ritualist:DeadlyVelocity": {
 		"NAME": "Deadly Velocity",
-		"DESCRIPTION": "Whenever you play a card, gain !M! Strength and Dexterity until the end of the turn.",
-		"UPGRADE_DESCRIPTION": "Whenever you play a card, gain !M! Strength and Dexterity until the end of the turn."
+		"DESCRIPTION": "When you play a card gain !M! Strength and every 3 cards gain !M! Dexterity, until the end of the turn.",
+		"UPGRADE_DESCRIPTION": "When you play a card gain !M! Strength and every 2 cards gain !M! Dexterity, until the end of the turn."
 	},
 	"Ritualist:DemonArm": {
 		"NAME": "Demon Arm",
@@ -118,8 +131,8 @@
 	},
 	"Ritualist:WinningGambit": {
 		"NAME": "Winning Gambit",
-		"DESCRIPTION": "Discard your hand. Play the top card of your draw pile. Exhaust.",
-		"UPGRADE_DESCRIPTION": "Discard your hand. Play the top card of your draw pile."
+		"DESCRIPTION": "warlock:Ritual. NL Discard your hand. Play the top card of your draw pile.",
+		"UPGRADE_DESCRIPTION": "warlock:Ritual. NL Discard your hand. Play the top card of your draw pile."
 	},
 	"Ritualist:LongCon": {
 		"NAME": "Long Con",
@@ -136,20 +149,21 @@
 	},
 	"Ritualist:CleanseByBlood": {
 		"NAME": "Cleanse By Blood",
-		"DESCRIPTION": "Deal !D! damage. warlock:Banish a summoned demon."
+		"DESCRIPTION": "warlock:Banish. NL Deal !D! damage and gain !B! Block."
 	},
 	"Ritualist:GrowingRites": {
 		"NAME": "Growing Rites",
-		"DESCRIPTION": "At the start of your turn, gain !M! warlock:Attunement."
+		"DESCRIPTION": "At the start of your turn, gain !M! warlock:Attunement.",
+		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! warlock:Attunement."
 	},
 	"Ritualist:DuskSeeker": {
 		"NAME": "Dusk Seeker",
-		"DESCRIPTION": "At the start of your turn, add 1 card from your deck to your hand."
+		"DESCRIPTION": "You choose !M! card you draw each turn."
 	},
 	"Ritualist:Arrival": {
 		"NAME": "Arrival",
-		"DESCRIPTION": "warlock:Ritual. NL Put 1 Summon card from your discard pile into your hand. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "warlock:Ritual. NL Put 1 Summon card from your discard and draw pile into your hand. NL Exhaust."
+		"DESCRIPTION": "warlock:Ritual. Retain. NL Put 1 Summon card from your discard pile into your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Retain. warlock:Ritual. NL Put 1 Summon card from your discard and draw pile into your hand. NL Exhaust."
 	},
 	"Ritualist:TwinWave": {
 		"NAME": "Twin Wave",
@@ -161,12 +175,13 @@
 	},
 	"Ritualist:SpreadingCurse": {
 		"NAME": "Spreading Curse",
-		"DESCRIPTION": "At the start of your turn, apply !M! warlock:Possession to ALL enemies."
+		"DESCRIPTION": "At the start of your turn, apply !M! warlock:Possession to ALL enemies.",
+		"UPGRADE_DESCRIPTION": "At the end of your turn, apply !M! warlock:Possession to ALL enemies."
 	},
 	"Ritualist:SummonBaphomet": {
 		"NAME": "Summon Baphomet",
-		"DESCRIPTION": "Play the top !M! cards of your draw pile. NL warlock:Summon: Lose [G]. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Play the top !M! cards of your draw pile. NL warlock:Summon: Lose [G]. NL Exhaust."
+		"DESCRIPTION": "warlock:Baphomet. Play the top !M! cards of your draw pile. NL warlock:Summon: Play the top card of your draw pile. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Play the top !M! cards of your draw pile. NL warlock:Summon: Play the top card of your draw pile. NL Exhaust."
 	},
 	"Ritualist:TransientGhost": {
 		"NAME": "Transient Ghost",
@@ -188,25 +203,25 @@
 	},
 	"Ritualist:BloodBoil": {
 		"NAME": "Blood Boil",
-		"DESCRIPTION": "warlock:Ritual. Retain. NL Gain [G] . If you retain this card lose !M! life and gain 1 Strength."
+		"DESCRIPTION": "warlock:Ritual. Retain. NL Gain [G] . If you retain this card lose !M! life and gain 1 Strength. NL Exhaustive !stslib:ex!."
 	},
 	"Ritualist:Momentum": {
 		"NAME": "Momentum",
-		"DESCRIPTION":  "Each time you play 5 cards gain [G].",
-		"UPGRADE_DESCRIPTION": "Innate. NL Each time you play 5 cards gain [G]."
+		"DESCRIPTION":  "Each time you play !M! c0ards gain [G].",
+		"UPGRADE_DESCRIPTION": "Innate. NL Each time you play !M! cards gain [G]."
 	},
 	"Ritualist:CostlyStrength": {
 		"NAME": "Costly Strength",
-		"DESCRIPTION": "Lose up to 5 warlock:Attunement. Gain twice that much Strength next turn only. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Lose up to 5 warlock:Attunement. Gain twice that much Strength for next turn only."
+		"DESCRIPTION": "warlock:Ritual. NL Lose up to 5 warlock:Attunement. Gain twice that much Strength next turn only.",
+		"UPGRADE_DESCRIPTION": "2 warlock:Ritual. NL Lose up to 5 warlock:Attunement. Gain twice that much Strength next turn only."
 	},
 	"Ritualist:ShallowCut": {
 		"NAME": "Shallow Cut",
-		"DESCRIPTION":  " warlock:Ritual. NL Deal !D! Damage. NL Draw !M! card."
+		"DESCRIPTION":  "warlock:Ritual. NL Deal !D! Damage. NL Draw !M! card."
 	},
 	"Ritualist:SummonRerek": {
 		"NAME": "Summon Rerek",
-		"DESCRIPTION": "Deal !D! damage to all enemies, then deal !D! damage to a random enemy !M! times. NL warlock:Summon: Lose 1 Dexterity and gain 1 Strength. NL Exhaust."
+		"DESCRIPTION": "warlock:Rerek. Deal !D! damage to all enemies, then deal !D! damage to a random enemy 3 times. NL warlock:Banish: Deal !M! to all enemies. NL Exhaust."
 	},
 	"Ritualist:QuietMeditation": {
 		"NAME": "Quiet Meditation",
@@ -215,63 +230,151 @@
 	},
 	"Ritualist:RudeInterruption": {
 		"NAME": "Rude Interruption",
-		"DESCRIPTION": "If the enemy intends to attack, apply 4 warlock:Possession and they lose !M! Strength this turn."
+		"DESCRIPTION": "If the enemy intends to attack, they lose !M! Strength this turn and apply 4 warlock:Possession."
 	},
 	"Ritualist:IndKnifing": {
 		"NAME": "Indiscriminated",
 		"DESCRIPTION": "Deal !D! damage and apply 1 Vulnerable to a random enemy !M! times."
 	},
+	"Ritualist:Repatriate": {
+		"NAME": "Repatriate",
+		"DESCRIPTION": "warlock:Banish !M! times. Channel a random demon with the same warlock:Attunement. NL Exhaust."
+	},
 	"Ritualist:EarlyReturn": {
 		"NAME": "Early Return",
-		"DESCRIPTION": "Costs 1 less this turn for each Ritual played this turn. NL Deal !D! damage to all enemies."
+		"DESCRIPTION": "warlock:Banish. NL Costs 1 less this turn for each warlock:Ritual played this turn. NL Deal !D! damage to all enemies. "
 	},
 	"Ritualist:Sabbath": {
 		"NAME": "Sabbath",
-		"DESCRIPTION": "Whenever you play a Ritual add !M! random card from your draw pile to your hand.",
-		"UPGRADE_DESCRIPTION": "Whenever you play a Ritual add !M! random card from your draw pile to your hand."
+		"DESCRIPTION": "Whenever you play a warlock:Ritual, gain !M! warlock:Attunement.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a warlock:Ritual, gain !M! warlock:Attunement."
 	},
 	"Ritualist:DeepReserves": {
 		"NAME": "Deep Reserves",
-		"DESCRIPTION": "At the start of your turn, draw 2 additional cards and gain !M! warlock:Attunement."
+		"DESCRIPTION": "Increase your max hand size by !M!. At the start of your turn, draw 2 additional cards."
 
 	},
 	"Ritualist:SummonMaat": {
 		"NAME": "Summon Ma'at",
-		"DESCRIPTION": "Gain !B! Block and !M! Plated Armor. NL warlock:Summon: Lose 1 Plated Armor. NL warlock:Banish: Turn your Plated Armor into Dexterity. NL Exhaust."
+		"DESCRIPTION": "warlock:Ma'at. Gain !B! Block and !M! Thorns at the end of your next 3 turns. Lose the gained Thorns after. NL warlock:Banish: Gain !B! Block. NL Exhaust."
 	},
-	"Ritualist:SoulBurst": {
-		"NAME": "Soul Burst",
-		"DESCRIPTION": "Apply !M! Possession to all enemies, then apply !M! Possession to the target enemy."
+	"Ritualist:SummonNergal": {
+		"NAME": "Summon Nergal",
+		"DESCRIPTION": "warlock:Nergal. Apply !M! Weak, Vulnerable, warlock:Possession, and Strength down(for one turn) to all enemies. NL warlock:Banish: Apply !M! warlock:Possession to all enemies. NL Exhaust."
+	},
+	"Ritualist:BurstParasite": {
+		"NAME": "Burst Parasite",
+		"DESCRIPTION": "Infect the target with a parasite. Whenever they have  warlock:Possession applied to them, deal !M! damage to all enemies. NL Exhaust."
 	},
 	"Ritualist:HeavyInfection": {
 		"NAME": "Heavy Infection",
-		"DESCRIPTION": "Apply !D! Possession. NL This card functions as an attack, and scales with Strength."
+		"DESCRIPTION": "Apply !D! warlock:Possession. NL This card functions as an attack, and scales with Strength."
 	},
-	"Ritualist:RotInPieces": {
-		"NAME": "Rot In Pieces",
-		"DESCRIPTION": "Turn all enemies' Possession into Soul Rot. NL Soul Rot applies that much Possession at the start of each of their turns. NL Exhaust."
+	"Ritualist:SoulParasite": {
+		"NAME": "Soul Parasite",
+		"DESCRIPTION": "All enemies gain Soul Parasites equal to their possession. NL Soul Rot applies Possession at the start of each of their turns. NL Exhaust."
 	},
-	"Ritualist:SymbioteForm": {
-		"NAME": "Symbiote Form",
-		"DESCRIPTION": "Gain !M! Summon slot. Summons refund half their warlock:Attunement cost and don't exhaust.",
-		"UPGRADE_DESCRIPTION": "Gain !M! Summon slots. Summons refund half their warlock:Attunement cost and don't exhaust."
+	"Ritualist:DarkMasterForm": {
+		"NAME": "Dark Master Form",
+		"DESCRIPTION": "warlock:Summons cost 1 less. When you play a warlock:Summon, add 1 random warlock:Summon to your deck and gain !M! warlock:Attunement."
 	},
 	"Ritualist:Extradition": {
 		"NAME": "Extradition",
-		"DESCRIPTION": "Deal !D! damage. If the enemy dies before your next turn transfer their Possession to a random enemy."
+		"DESCRIPTION": "Deal !D! damage. If the enemy dies before your next turn transfer their warlock:Possession to a random enemy."
 	},
 	"Ritualist:EnergyGem": {
 		"NAME": "Energy Gem",
-		"DESCRIPTION": " Gain [G]. NL Draw !M! card. ",
-		"UPGRADE_DESCRIPTION":" Gain [G]. NL Draw !M! cards. "
+		"DESCRIPTION": " Gain [G]. NL Draw !M! card. NL Exhaust.",
+		"UPGRADE_DESCRIPTION":" Gain [G]. NL Draw !M! cards. NL Exhaust."
 
 	},
 	"Ritualist:FuturePlans": {
 		"NAME": "Future Sight",
-		"DESCRIPTION": "Shuffle !M! Energy Gems into your draw pile. Energy Gems cost 0, gain you [G] , and draw 1 card. NL Exhaust."
+		"DESCRIPTION": "warlock:Ritual. NL Shuffle !M! Energy Gems into your draw pile. NL Exhaust."
 	},
 	"Ritualist:DevilWill": {
 		"NAME": "Devil's Will",
 		"DESCRIPTION": "Lose !M! HP. NL Draw cards from your discard pile until your hand is full. NL Exhaust."
+	},
+	"Ritualist:PoweredBarrier": {
+		"NAME": "Powered Barrier",
+		"DESCRIPTION": "At the end of your turn, convert your remaining [G] into !M! Block each."
+	},
+	"Ritualist:ViolentFlux": {
+		"NAME": "Violent Flux",
+		"DESCRIPTION": "Deal !D! Damage to the closest enemy, then deal that damage plus !M! to the next enemy, repeating."
+	},
+	"Ritualist:Symbiote": {
+		"NAME": "Symbiote",
+		"DESCRIPTION": "Select a warlock:Summon. This combat, it doesn't exhaust and returns it's warlock:Attunement cost at the end of your turn.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Select a warlock:Summon. This combat, it doesn't exhaust and returns it's warlock:Attunement cost at the end of your turn."
+
+	},
+	"Ritualist:BloodyVigor": {
+		"NAME": "Bloody Vigor",
+		"DESCRIPTION": "At the start of your turn, discard 1 card and gain !M! Strength."
+	},
+	"Ritualist:DeliriumWill": {
+		"NAME": "Delirium Will",
+		"DESCRIPTION": "3 warlock:Ritual. NL Add 2 Soul Wards to your hand. At the start of your next !M! turns, add a Soul Ward to your hand.",
+		"UPGRADE_DESCRIPTION": "3 warlock:Ritual. NL Add 2 Soul Wards+ to your hand. At the start of your next !M! turns, add a Soul Ward+ to your hand."
+	},
+	"Ritualist:SoulWard": {
+		"NAME": "Soul Ward",
+		"DESCRIPTION": "Gain !B! Block. NL Exhaust."
+	},
+	"Ritualist:SmokeRises": {
+		"NAME": "Smoke Rises",
+		"DESCRIPTION": "Deal !D! damage. Permanently increase this card's Damage by !M!. NL Exhaustive !stslib:ex!."
+	},
+	"Ritualist:Precognition": {
+		"NAME": "Precognition",
+		"DESCRIPTION": "Next turn, gain !B! block."
+	},
+	"Ritualist:Galvanize": {
+		"NAME": "Galvanize",
+		"DESCRIPTION": "Deal !D! damage. Increase your warlock:Attunement by !M!%. NL Exhaust."
+	},
+	"Ritualist:Peace": {
+		"NAME": "Peace",
+		"DESCRIPTION": "Retain. NL Gain !M! Intangible. Until the end of your next turn, you can't block. NL Exhaust."
+	},
+	"Ritualist:ThroughTheBreach":{
+		"NAME": "Through the Breach",
+		"DESCRIPTION": "Play the top !M! cards of your deck. Shuffle a Summon Baphomet into your discard pile. NL Exhaust."
+	},
+	"Ritualist:Tenderize":{
+		"NAME": "Tenderize",
+		"DESCRIPTION": "Retain. NL Deal !D! damage. NL Apply !M! Vulnerable."
+	},
+	"Ritualist:StygianWellspring":{
+		"NAME": "Stygian Wellspring",
+		"DESCRIPTION": "Add a random Warlock card to your hand at the start of your next X turns, it costs 0. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Add a random Warlock card to your hand at the start of your next X+1 turns, it costs 0. NL Exhaust."
+	},
+	"Ritualist:Hex":{
+		"NAME": "Hex",
+		"DESCRIPTION": "Apply !M! warlock:Possession, exhaust a card. If that card is a Curse, apply 4 warlock:Possession again."
+	},
+	"Ritualist:Ouroboros":{
+		"NAME": "Ouroboros",
+		"DESCRIPTION": "Cycle between gaining !M! Block and dealing !M! damage to a random enemy at the end of your turn. Increases by 1 every cycle.",
+		"UPGRADE_DESCRIPTION": "Cycle between gaining !M! Block and dealing !M! damage to a random enemy at the end of your turn. Increases by 1 every cycle."
+	},
+	"Ritualist:BookOfNames":{
+		"NAME": "Book Of Names",
+		"DESCRIPTION": "!M! warlock:Ritual. NL Add a copy of each warlock:Summon to your discard pile. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "!M! warlock:Ritual. NL Add a copy of each warlock:Summon to your discard pile."
+	},
+	"Ritualist:DoubleVision":{
+		"NAME": "Double Vision",
+		"DESCRIPTION": "The next !M! warlock:Summon you play this turn is played twice. NL Exhaust."
 	}
 }
+
+
+
+
+
+
+

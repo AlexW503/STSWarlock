@@ -35,7 +35,7 @@ public class BranchingPaths extends AbstractRitual {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
     private static final int DRAW = 3;
@@ -54,10 +54,10 @@ public class BranchingPaths extends AbstractRitual {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new PutOnDeckAction(p, p, 1, false));
-      //  AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, 1, false));
+        addToBot(new GainAttuneAction(1));
+        addToBot(new DrawCardAction(p, magicNumber));
+        addToBot(new PutOnDeckAction(p, p, 1, false));
+      //  addToBot(new DiscardAction(p, p, 1, false));
     }
 
     // Which card to return when making a copy of this card.

@@ -29,7 +29,7 @@ public class GrowingRitesPower extends AbstractPower {
         type = PowerType.BUFF;
         isTurnBased = false;
         //img = new Texture(IMG);
-        loadRegion("hello");
+        loadRegion("nightmare");
        // source = source;
 
     }
@@ -39,9 +39,9 @@ public class GrowingRitesPower extends AbstractPower {
     }
 
     @Override
-    public void atStartOfTurn() { //Remove this power and add Twisted Ecstasy
+    public void atStartOfTurn() {
 
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(this.amount));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AttunePower(AbstractDungeon.player, amount), amount));
 
 
     }

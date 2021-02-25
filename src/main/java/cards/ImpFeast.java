@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import mod.RitualistMod;
 import patches.MainEnum;
 import powers.PossessionPower;
+import powers.StrengthDownSpecial;
 
 import java.util.Iterator;
 
@@ -39,14 +40,14 @@ public class ImpFeast extends CustomCard {
     // /Text Declaration/
     //Stat Declaration
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 2;
-    private static final int STR = 6;
-    private static final int UPGRADE_MAG = 3;
+    private static final int STR = 7;
+    private static final int UPGRADE_MAG = 2;
     private static final int POS = 3;
 
     // /Stat Declaration/
@@ -54,33 +55,32 @@ public class ImpFeast extends CustomCard {
 
     public ImpFeast() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = STR;
+        baseMagicNumber = POS;
         magicNumber = baseMagicNumber;
         exhaust = true;
     }
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_PIERCING_WAIL"));
+        addToBot(new SFXAction("ATTACK_PIERCING_WAIL"));
         if (Settings.FAST_MODE) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Settings.GREEN_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.3F));
+            addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Settings.GREEN_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.3F));
         } else {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Settings.GREEN_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 1.5F));
+            addToBot(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Settings.GREEN_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 1.5F));
         }
 
-        Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-        //apply debuffs to all enemies
-        AbstractMonster mo;
-        while(var3.hasNext()) {
-            mo = (AbstractMonster) var3.next();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new StrengthPower(mo, -magicNumber), -magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            addToBot(new ApplyPowerAction(mo, p, new StrengthPower(mo, -STR), -STR, true, AbstractGameAction.AttackEffect.NONE));
+        }
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!mo.hasPower("Artifact")) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new GainStrengthPower(mo, magicNumber), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                addToBot(new ApplyPowerAction(mo, p, new GainStrengthPower(mo, STR), STR, true, AbstractGameAction.AttackEffect.NONE));
             }
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new PossessionPower(mo, p, POS), POS));
-
-            //if artifact, don't regain strength
         }
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            addToBot(new ApplyPowerAction(mo, p, new PossessionPower(mo, p, magicNumber), magicNumber));
+        }
+
     }
 
     // Which card to return when making a copy of this card.

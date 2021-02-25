@@ -41,12 +41,12 @@ public class RudeInterruption extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
-    private static final int UPG = 4;
+    private static final int UPG = 3;
     private static final int POS = 4;
-    private static final int STR = 8;
+    private static final int STR = 6;
 
 
 
@@ -66,10 +66,10 @@ public class RudeInterruption extends CustomCard {
             AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT, true));
         }
         else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new StrengthPower(m, -magicNumber), -magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+            addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -magicNumber), -magicNumber, true, AbstractGameAction.AttackEffect.NONE));
                 if (!m.hasPower("Artifact"))
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new GainStrengthPower(m, magicNumber), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PossessionPower(m, p, POS), POS));
+            addToBot(new ApplyPowerAction(m, p, new GainStrengthPower(m, magicNumber), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+            addToBot(new ApplyPowerAction(m, p, new PossessionPower(m, p, POS), POS));
 
 
         }

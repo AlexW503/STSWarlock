@@ -16,6 +16,8 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.OfferingEffect;
 import mod.RitualistMod;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import patches.MainEnum;
 import powers.DelayedStrengthRemovePower;
 
@@ -31,9 +33,9 @@ public class PowerPact extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("PowerPact");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/strike.png");
+    public static final String IMG = RitualistMod.makePath("customImages/pact.png");
     public static final String NAME = cardStrings.NAME;
-
+    public static final Logger logger = LogManager.getLogger(RitualistMod.class.getName());
     static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     public  static final String DESCRIPTION = cardStrings.DESCRIPTION;
     // /Text Declaration/
@@ -42,13 +44,14 @@ public class PowerPact extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 0;
     private static final int DAMAGE = 7;
     private static final int UPGRADE_PLUS_DMG = 2;
     private static final int UPGRADE_MAGIC= 1;
     private static int MAGIC = 2;
+    private static int reduceBy = 2;
     private static int reduce = 2;
 
 
@@ -62,7 +65,8 @@ public class PowerPact extends CustomCard {
 
         isInnate = true;
         exhaust = true;
-        reduce = magicNumber+2;
+
+        reduce = baseMagicNumber+reduceBy;
 
 
     }
@@ -70,10 +74,10 @@ public class PowerPact extends CustomCard {
     //Actions the card does
     @Override
     public void use(AbstractPlayer p, AbstractMonster m){
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new OfferingEffect(), 0.5F));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DelayedStrengthRemovePower(p, 3, reduce)));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        addToBot(new VFXAction(new OfferingEffect(), 0.5F));
+        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new DelayedStrengthRemovePower(p, 2, reduce)));
         initializeDescription();
     }
 

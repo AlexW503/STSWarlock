@@ -29,7 +29,7 @@ public class ShallowCut extends AbstractRitual {
 
     public static final String ID = RitualistMod.makeID("ShallowCut");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/strike.png");
+    public static final String IMG = RitualistMod.makePath("customImages/shallow.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   //  static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -40,10 +40,10 @@ public class ShallowCut extends AbstractRitual {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 0;
-    private static final int DAMAGE = 0;
+    private static final int DAMAGE = 1;
     private static final int UPGRADE_PLUS_DMG = 3;
     private static final int MAGIC = 1;
 
@@ -61,9 +61,9 @@ public class ShallowCut extends AbstractRitual {
     //Actions the card does
     @Override
     public void use(AbstractPlayer p, AbstractMonster m){
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
+        addToBot(new GainAttuneAction(1));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        addToBot(new DrawCardAction(p, magicNumber));
 
     }
     @Override

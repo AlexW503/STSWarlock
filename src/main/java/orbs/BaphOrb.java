@@ -1,12 +1,8 @@
 package orbs;
 
+import actions.BaphometAction;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,8 +12,9 @@ import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
 import mod.RitualistMod;
+import powers.SymbiotePower;
 
-public class BaphOrb extends AbstractOrb {
+public class BaphOrb extends AbstractDemonOrb {
     public static final String ORB_ID =  RitualistMod.makeID("BaphOrb");
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String[] DESC = orbString.DESCRIPTION;
@@ -43,7 +40,17 @@ public class BaphOrb extends AbstractOrb {
     }
 
     public void onEvoke() {
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(evokeAmount));
+        logger.info("evoked " + ID);
+       // if(AbstractDungeon.player.hasPower(SymbiotePower.POWER_ID) && !isBanished)
+         //   AbstractDungeon.actionManager.addToBottom(new BaphometAction(evokeAmount));
+
+
+    }
+
+    public void onBanish() {
+        logger.info("banished " + ID);
+        AbstractDungeon.actionManager.addToBottom(new BaphometAction(evokeAmount));
+        isBanished = true;
     }
 
     public void onStartOfTurn() {
@@ -52,7 +59,9 @@ public class BaphOrb extends AbstractOrb {
             speedTime = 0.0F;
         }
 
-        AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(passiveAmount));
+        //addToBot(new LoseEnergyAction(passiveAmount));
+        AbstractDungeon.actionManager.addToBottom(new BaphometAction(passiveAmount));
+
         updateDescription();
 
     }

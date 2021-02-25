@@ -25,7 +25,7 @@ public class DemonArmPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     public static final String IMG = RitualistMod.makePath("customImages/buffPower.png");
-    public int damage = 5;
+    public int damage = 4;
 
     public DemonArmPower(final AbstractCreature owner, final int amount, final int dmg) {
         name = NAME;
@@ -48,7 +48,7 @@ public class DemonArmPower extends AbstractPower {
    @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action){
         if(card.type == AbstractCard.CardType.ATTACK) { //deal damage to number of enemies based on power stack
-            AbstractDungeon.actionManager.addToBottom(new RipAndTearAction(AbstractDungeon.getMonsters().getRandomMonster(null,
+            addToBot(new RipAndTearAction(AbstractDungeon.getMonsters().getRandomMonster(null,
                     true, AbstractDungeon.cardRandomRng),
                     new DamageInfo(owner, damage, DamageInfo.DamageType.THORNS), amount));
         }

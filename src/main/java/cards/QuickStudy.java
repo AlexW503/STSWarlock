@@ -35,7 +35,7 @@ public class QuickStudy extends AbstractRitual {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
     private static final int BLOCK = 3;
     private static final int UPG_BLOCK_AMT = 2;
     private static final int COST = 0;
@@ -53,13 +53,13 @@ public class QuickStudy extends AbstractRitual {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
+        addToBot(new GainAttuneAction(1));
         if (AbstractDungeon.player.drawPile.isEmpty()) {
-            AbstractDungeon.actionManager.addToBottom(new EmptyDeckShuffleAction());
+            addToBot(new EmptyDeckShuffleAction());
         }
 
-        AbstractDungeon.actionManager.addToBottom(new CarefulStudyAction(block));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        addToBot(new CarefulStudyAction(block));
+        addToBot(new DrawCardAction(p, 1));
 
     }
 

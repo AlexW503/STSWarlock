@@ -15,7 +15,7 @@ import patches.MainEnum;
 import powers.ApplyStrengthPower;
 import powers.AttunePower;
 
-public class CostlyStrength extends CustomCard {
+public class CostlyStrength extends AbstractRitual {
     /*
     * Uncommon Skill
     * 0E Ritual
@@ -26,7 +26,7 @@ public class CostlyStrength extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("CostlyStrength");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/skill.png");
+    public static final String IMG = RitualistMod.makePath("customImages/strength.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -37,10 +37,11 @@ public class CostlyStrength extends CustomCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
     private int ATT = 0;
-    private static int MAGIC = 0;
-    private static int UPG_MAGIC = 3;
+    private static final int MAGIC = 1;
+    private static final int MAX = 5;
+    private static final int UPG_MAGIC = 1;
     private static final int COST = 0;
 
     // /Stat Declaration/
@@ -50,28 +51,28 @@ public class CostlyStrength extends CustomCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
-     //   tags.add(MainEnum.RITUAL_CARD);
-        exhaust = true;
+        tags.add(MainEnum.RITUAL_CARD);
+      //   exhaust = true;
 
     }
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //Find number of attune stacks with max of 5, then draw and reduce by it.
-       // AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
+        addToBot(new GainAttuneAction(magicNumber));
         if(p.hasPower(AttunePower.POWER_ID)) {
             ATT = p.getPower(AttunePower.POWER_ID).amount;
 
-            if (ATT > 5)
-                ATT = 5;
+            if (ATT > MAX)
+                ATT = MAX;
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new AttunePower(AbstractDungeon.player, -ATT), -ATT));
+            addToBot(new ApplyPowerAction(p, p, new AttunePower(AbstractDungeon.player, -ATT), -ATT));
 
             ATT *= 2;
             //if(upgraded)
               //  ATT += baseMagicNumber;
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ApplyStrengthPower(p, ATT), ATT));
+            addToBot(new ApplyPowerAction(p, p, new ApplyStrengthPower(p, ATT), ATT));
 
         }
 
@@ -88,7 +89,7 @@ public class CostlyStrength extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            exhaust = false;
+            //exhaust = false;
             upgradeMagicNumber(UPG_MAGIC);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

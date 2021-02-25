@@ -1,8 +1,10 @@
 package cards;
 
 
+import actions.BaphometAction;
 import actions.SetPowerZeroAction;
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -16,7 +18,7 @@ import patches.MainEnum;
 import orbs.BaphOrb;
 import powers.AttunePower;
 
-public class SummonBaphomet extends CustomCard {
+public class SummonBaphomet extends AbstractSummon {
     /*
     * Rare Skill
     * 3E Summon
@@ -27,7 +29,7 @@ public class SummonBaphomet extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("SummonBaphomet");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/summon.png");
+    public static final String IMG = RitualistMod.makePath("customImages/baphomet.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -35,15 +37,15 @@ public class SummonBaphomet extends CustomCard {
     // /Text Declaration/
     //Stat Declaration
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
-    private static final int COST = 4;
+    private static final int COST = 3;
     private static final int DIV = 1;
     private static final int UPG = 3;
-    private static final int BASE = 0;
+    private static final int BASE = 3;
     private int ATT = 0; //player's attune
     private boolean exhaustCards = false;
 
@@ -73,20 +75,12 @@ public class SummonBaphomet extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard card;
-        for(int i = magicNumber; i > 0; i--) {
-            card = p.drawPile.getTopCard();
-            if(card.hasTag(MainEnum.SUMMON_CARD)){
-                p.drawPile.removeCard(card);
-                p.discardPile.addToRandomSpot(card);
-                i++;
-            }
-            else
-                AbstractDungeon.actionManager.addToBottom(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), exhaustCards));
-        }
+        if(p.drawPile.size() == 0)
+            addToBot(new EmptyDeckShuffleAction());
 
-        AbstractDungeon.actionManager.addToBottom(new SetPowerZeroAction(p, p, AttunePower.POWER_ID));
-        AbstractDungeon.actionManager.addToBottom(new ChannelAction(new BaphOrb()));
+        addToBot(new SetPowerZeroAction(p, p, AttunePower.POWER_ID));
+        addToBot(new BaphometAction(magicNumber));
+        addToBot(new ChannelAction(new BaphOrb()));
     }
 
     // Which card to return when making a copy of this card.

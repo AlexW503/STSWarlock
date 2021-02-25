@@ -38,7 +38,7 @@ public class EvilIntentions extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
     private static final int MAGIC = 3;
@@ -56,8 +56,8 @@ public class EvilIntentions extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ExhaustAction(p, p, 2, false));
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(magicNumber));
+        addToBot(new ExhaustAction(p, p, 2, false));
+        addToBot(new GainEnergyAction(magicNumber));
     }
 
     // Which card to return when making a copy of this card.

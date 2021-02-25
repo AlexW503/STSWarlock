@@ -28,7 +28,7 @@ public class PrepareHost extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("PrepareHost");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/strike.png");
+    public static final String IMG = RitualistMod.makePath("customImages/prepare.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   //  static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -39,11 +39,11 @@ public class PrepareHost extends CustomCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 0;
-    private static final int DAMAGE = 1;
-    private static final int POS_AMT = 3;
+    private static final int DAMAGE = 3;
+    private static final int POS_AMT = 2;
     private static final int UPGRADE_PLUS_DMG = 1;
     private static final int UPGRADE_MAGIC= 1;
 
@@ -59,10 +59,10 @@ public class PrepareHost extends CustomCard {
     //Actions the card does
     @Override
     public void use(AbstractPlayer p, AbstractMonster m){
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
+        addToBot(new DamageAction(m,
                         new DamageInfo(p, damage, damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PossessionPower(m, p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(m, p, new PossessionPower(m, p, magicNumber), magicNumber));
 
     }
     @Override

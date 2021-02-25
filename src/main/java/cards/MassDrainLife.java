@@ -46,11 +46,12 @@ public class MassDrainLife extends CustomCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
-    private static final int COST = 2;
-    private static final int MAGIC = 1; // total/magic is healing
-    private static final int UPG_COST = 1;
+    private static final int COST = 1;
+    private static final int MAGIC = 0; // bonus dmg
+    private static final int UPG_COST = 0;
+    private static final int UPG_MAG =1;
     private static int DMG = 0;
     // /Stat Declaration/
 
@@ -66,7 +67,7 @@ public class MassDrainLife extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new ReaperEffect()));
+        addToBot(new VFXAction(new ReaperEffect()));
 
         int total = 0; //for healing
         Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
@@ -79,16 +80,16 @@ public class MassDrainLife extends CustomCard {
             if(mo.hasPower(PossessionPower.POWER_ID))
             {
                 DMG = mo.getPower(PossessionPower.POWER_ID).amount;
+                DMG += magicNumber;
                 total += DMG;
-                AbstractDungeon.actionManager.addToBottom(new  com.megacrit.cardcrawl.actions.common.DamageAction(mo, new DamageInfo(p, DMG, DamageInfo.DamageType.NORMAL),
+                addToBot(new  com.megacrit.cardcrawl.actions.common.DamageAction(mo, new DamageInfo(p, DMG, DamageInfo.DamageType.NORMAL),
                         AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(mo, mo, PossessionPower.POWER_ID));
+                addToBot(new RemoveSpecificPowerAction(mo, mo, PossessionPower.POWER_ID));
 
             }
         }
 
-        total = total/magicNumber;
-        AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, total));
+        addToBot(new HealAction(p, p, total));
 
 
     }
@@ -104,7 +105,7 @@ public class MassDrainLife extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPG_COST);
+            upgradeMagicNumber(UPG_MAG);
             initializeDescription();
         }
     }

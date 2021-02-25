@@ -35,8 +35,8 @@ public class Ritualist extends CustomPlayer{
     // =============== BASE STATS =================
 
     public static final int ENERGY_PER_TURN = 3;
-    public static final int STARTING_HP = 70;
-    public static final int MAX_HP = 70;
+    public static final int STARTING_HP = 78;
+    public static final int MAX_HP = 78;
     public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 1;
@@ -97,7 +97,7 @@ public class Ritualist extends CustomPlayer{
     //Starting description/loadout
     @Override
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo("Warlock", "The sinister Warlock. NL Dark arts, possession, and demon summoning.",
+        return new CharSelectInfo("Warlock", "A dark sorcerer from the Black Swamp. Fights with their dagger and contracted demons.",
                 STARTING_HP, MAX_HP, ORB_SLOTS, STARTING_GOLD, CARD_DRAW, this, getStartingRelics(),
                 getStartingDeck(), false);
 
@@ -110,14 +110,14 @@ public class Ritualist extends CustomPlayer{
         logger.info("Loading starter deck strings");
 
 
-        retVal.add(StrikePurple.ID);
-        retVal.add(StrikePurple.ID);
-        retVal.add(StrikePurple.ID);
-        retVal.add(StrikeRitual.ID);
-        retVal.add(DefendPurple.ID);
-        retVal.add(DefendPurple.ID);
-        retVal.add(DefendPurple.ID);
-        retVal.add(DefendRitual.ID);
+        retVal.add(StrikeMagenta.ID);
+        retVal.add(StrikeMagenta.ID);
+        retVal.add(StrikeMagenta.ID);
+        retVal.add(StrikeMagenta.ID);
+        retVal.add(DefendMagenta.ID);
+        retVal.add(DefendMagenta.ID);
+        retVal.add(DefendMagenta.ID);
+        retVal.add(DefendMagenta.ID);
         retVal.add(InitiationRite.ID);
         retVal.add(SummonAgiel.ID);
 
@@ -159,13 +159,13 @@ public class Ritualist extends CustomPlayer{
     // Should return the card color enum to be associated with your character.
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return MainEnum.PURPLE;
+        return MainEnum.Magenta;
     }
 
     // Should return a color object to be used to color the trail of moving cards
     @Override
     public Color getCardTrailColor() {
-        return RitualistMod.PURPLE;
+        return RitualistMod.Magenta;
     }
 
     // Should return a BitmapFont object that you can use to customize how your
@@ -202,14 +202,14 @@ public class Ritualist extends CustomPlayer{
     // Should return a Color object to be used to color the miniature card images in run history.
     @Override
     public Color getCardRenderColor() {
-        return RitualistMod.PURPLE;
+        return RitualistMod.Magenta;
     }
 
     // Should return a Color object to be used as screen tint effect when your
     // character attacks the heart.
     @Override
     public Color getSlashAttackColor() {
-        return RitualistMod.PURPLE;
+        return RitualistMod.Magenta;
     }
 
     // Should return an AttackEffect array of any size greater than 0. These effects
@@ -236,7 +236,7 @@ public class Ritualist extends CustomPlayer{
     // the full text that will be displayed as the first screen of the vampires event.
     @Override
     public String getVampireText() {
-        return "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. " +
+        return "Navigating an unlit street, you come across several hooded figures in the midst of some dark business. As you approach, they turn to you in eerie unison. " +
                 "The tallest among them approaches you with a solemn countenance. NL ~\"The~ ~taint~ ~is~ ~strong~ ~on~ ~you,~ ~but~ ~we~ ~will~ ~trade~ ~all~ ~the~ ~same~.\"~";
     }
 

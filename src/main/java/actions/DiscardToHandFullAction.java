@@ -41,6 +41,8 @@ public class DiscardToHandFullAction extends AbstractGameAction {
                 c = p.discardPile.getRandomCard(true);
                 p.discardPile.removeCard(c);
                 p.hand.addToTop(c);
+                c.lighten(false);
+                c.unhover();
 
             }
         }

@@ -1,71 +1,66 @@
 package cards;
 
+import actions.GainAttuneAction;
+import actions.StygianWellspringAction;
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.defect.ReinforcedBodyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import mod.RitualistMod;
 import patches.MainEnum;
-import powers.MomentumPower;
-import powers.SymbioteFormPower;
+import powers.DeliriumWillPower;
+import powers.StygianWellspringPower;
 
-public class SymbioteForm extends CustomCard {
+public class StygianWellspring extends CustomCard {
     /*
-    * RARE Power
+    * UNC Skill
     * 3E
-    * Gain 1(2) Summon slot(s). Summons refund half their Attunement and no longer exhaust.
+    * Add 3 Soul Wards to your hand. At the start of your next !M! turns, add a Soul Ward to your hand.
      */
 
     //Text Declaration
 
-    public static final String ID = RitualistMod.makeID("SymbioteForm");
+    public static final String ID = RitualistMod.makeID("StygianWellspring");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/power.png");
+    public static final String IMG = RitualistMod.makePath("customImages/stygian.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
 
     // /Text Declaration/
     //Stat Declaration
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    private static final CardType TYPE = CardType.SKILL;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
-    private static final int COST = 3;
-    private static final int MAGIC = 1;
-    private static final int UPG = 1;
+    private static final int COST = -1;
 
 
     // /Stat Declaration/
 
 
-    public SymbioteForm() {
+    public StygianWellspring() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = MAGIC;
-        magicNumber = baseMagicNumber;
-        tags.add(BaseModCardTags.FORM);
+        this.exhaust = true;
     }
-
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new IncreaseMaxOrbAction(magicNumber));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SymbioteFormPower(p)));
+        this.addToBot(new StygianWellspringAction(p, this.freeToPlayOnce, this.energyOnUse, this.upgraded));
     }
 
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new SymbioteForm();
+        return new StygianWellspring();
     }
 
     //Upgraded stats.
@@ -73,8 +68,8 @@ public class SymbioteForm extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG);
             rawDescription = UPGRADE_DESCRIPTION;
+
             initializeDescription();
         }
     }

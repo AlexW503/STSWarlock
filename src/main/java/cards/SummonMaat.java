@@ -16,24 +16,31 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import mod.RitualistMod;
 import orbs.BaphOrb;
 import orbs.MaatOrb;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import patches.MainEnum;
 import powers.AttunePower;
+import powers.MaatPower;
+import powers.MaatThornPower;
+import variables.MagicPlus2;
 
-public class SummonMaat extends CustomCard {
+public class SummonMaat extends AbstractSummon {
     /*
     * Rare Skill
     * 2E Summon
-    * Gain ATT block. Next turn gain ATT/3 plated armor. Summon: Lose 2 plated
+    * Gain ATT block at the end of the next 3 turns.  Summon: Gain ATT/5 thorns. Banishes after 3 turns.
      */
 
     //Text Declaration
 
     public static final String ID = RitualistMod.makeID("SummonMaat");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/summon.png");
+    public static final String IMG = RitualistMod.makePath("customImages/maat.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final Logger logger = LogManager.getLogger(RitualistMod.class.getName());
+
 
     // /Text Declaration/
     //Stat Declaration
@@ -41,20 +48,22 @@ public class SummonMaat extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 2;
-    private static final int DIV = 1;
-    private static final int UPG = 6;
-    private static final int BASE = 1;
-    private int ATT = 0; //player's attune
+    private static final int TURNS = 3;
+    private static final int DIV = 4;
+    private static final int UPG = 2;
+    private static final int BASE = 2;
+    private int ATT = 1; //player's attune
     // /Stat Declaration/
 
 
     public SummonMaat() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BASE;
-        baseMagicNumber = block/3;
+        baseMagicNumber = 1; //gonna be att/div
+        magicNumber = baseMagicNumber;
         exhaust = true;
         tags.add(MainEnum.SUMMON_CARD);
 
@@ -64,12 +73,10 @@ public class SummonMaat extends CustomCard {
         super.applyPowers();
         if (AbstractDungeon.player.hasPower(AttunePower.POWER_ID)) {
             ATT = AbstractDungeon.player.getPower(AttunePower.POWER_ID).amount;
-            baseBlock = BASE + ATT/DIV;
+            baseBlock = BASE + ATT;
             if(upgraded)
                baseBlock += UPG;
-
-            block = baseBlock;
-            baseMagicNumber = block/3;
+            baseMagicNumber = 1+(ATT/DIV);
 
 
         }
@@ -77,11 +84,14 @@ public class SummonMaat extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        magicNumber = baseMagicNumber;
+       // logger.info(magicNumber);
 
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, baseMagicNumber), baseMagicNumber));
-        AbstractDungeon.actionManager.addToBottom(new SetPowerZeroAction(p, p, AttunePower.POWER_ID));
-        AbstractDungeon.actionManager.addToBottom(new ChannelAction(new MaatOrb()));
+        addToBot(new ApplyPowerAction(p, p, new MaatPower(p, block, TURNS), block));
+        addToBot(new ApplyPowerAction(p, p, new MaatThornPower(p, magicNumber, TURNS), magicNumber));
+
+        addToBot(new ChannelAction(new MaatOrb(block)));
+        addToBot(new SetPowerZeroAction(p, p, AttunePower.POWER_ID));
     }
 
     // Which card to return when making a copy of this card.

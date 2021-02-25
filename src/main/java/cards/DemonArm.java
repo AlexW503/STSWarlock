@@ -34,12 +34,12 @@ public class DemonArm extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
     private static final int AMOUNT = 1;
     private static final int DMG = 4;
-    private static final int UPG_DMG = 2;
+    private static final int UPG_DMG = 1;
 
     // /Stat Declaration/
 
@@ -54,9 +54,9 @@ public class DemonArm extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if(!upgraded)
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DemonArmPower(p, AMOUNT, magicNumber), AMOUNT));
+            addToBot(new ApplyPowerAction(p, p, new DemonArmPower(p, AMOUNT, magicNumber), AMOUNT));
         else
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DemonArmUpgPower(p, AMOUNT, magicNumber), AMOUNT));
+            addToBot(new ApplyPowerAction(p, p, new DemonArmUpgPower(p, AMOUNT, magicNumber), AMOUNT));
     }
 
     // Which card to return when making a copy of this card.

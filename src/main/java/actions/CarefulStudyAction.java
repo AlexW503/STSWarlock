@@ -22,7 +22,7 @@ public class CarefulStudyAction extends AbstractGameAction {
         } else {
             AbstractCard card = AbstractDungeon.player.drawPile.getTopCard();
             if (card.hasTag(MainEnum.RITUAL_CARD)) {
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.blockGain));
+                addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.blockGain));
             }
 
             isDone = true;

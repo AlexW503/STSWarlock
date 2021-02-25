@@ -38,7 +38,7 @@ public class InitiationRite extends AbstractRitual{
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
     private static final int ENERGY = 1;
     private static final int COST = 0;
     private static final int UPG = 1;
@@ -56,9 +56,8 @@ public class InitiationRite extends AbstractRitual{
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
-
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedPower(p, magicNumber), magicNumber));
+        addToBot(new GainAttuneAction(1));
+        addToBot(new ApplyPowerAction(p, p, new EnergizedPower(p, magicNumber), magicNumber));
 
     }
 

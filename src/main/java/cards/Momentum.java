@@ -16,7 +16,7 @@ import powers.MomentumPower;
 public class Momentum extends CustomCard {
     /*
     * RARE Power
-    * 2E
+    * 1E
     * Each time you play 4 cards in a turn gain [G]. Ethereal.
      */
 
@@ -36,11 +36,11 @@ public class Momentum extends CustomCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
-    private static final int MAGIC = 3;
-    private static final int UPG = 1;
+    private static final int MAGIC = 8;
+    private static final int UPG = -2;
 
 
     // /Stat Declaration/
@@ -55,7 +55,7 @@ public class Momentum extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MomentumPower(p), 1));
+            addToBot(new ApplyPowerAction(p, p, new MomentumPower(p, magicNumber), 1));
     }
 
     // Which card to return when making a copy of this card.
@@ -69,9 +69,10 @@ public class Momentum extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            isInnate = true;
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(UPG);
+            //isInnate = true;
+            //rawDescription = UPGRADE_DESCRIPTION;
+           // initializeDescription();
         }
     }
 

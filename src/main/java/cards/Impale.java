@@ -37,12 +37,12 @@ public class Impale extends CustomCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
     private static final int DAMAGE = 9;
     private static final int BONUS = 6;
-    private static final int UPGRADE_DMG = 0;
+    private static final int UPGRADE_DMG = 1;
     private static final int UPG_MAGIC = 4;
 
 
@@ -60,9 +60,9 @@ public class Impale extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if(p.hasOrb())
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage+baseMagicNumber, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+            addToBot(new DamageAction(m, new DamageInfo(p, damage+baseMagicNumber, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         else
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+            addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
 
 
     }
@@ -75,7 +75,7 @@ public class Impale extends CustomCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-          //  upgradeDamage(UPGRADE_DMG);
+            upgradeDamage(UPGRADE_DMG);
             upgradeMagicNumber(UPG_MAGIC);
         }
     }

@@ -13,16 +13,16 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import mod.RitualistMod;
 
-public class SoulRotPower extends AbstractPower {
+public class SoulParasitePower extends AbstractPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = RitualistMod.makeID("SoulRotPower");
+    public static final String POWER_ID = RitualistMod.makeID("SoulParasitePower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESC = powerStrings.DESCRIPTIONS;
     public static final String IMG = RitualistMod.makePath("customImages/debuffPower.png");
 
-    public SoulRotPower(final AbstractCreature owner, AbstractCreature source, final int amount) {
+    public SoulParasitePower(final AbstractCreature owner, AbstractCreature source, final int amount) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
@@ -51,7 +51,7 @@ public class SoulRotPower extends AbstractPower {
     public void atStartOfTurn() {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flashWithoutSound();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, source, new PossessionPower(owner, source, amount), amount));
+            addToBot(new ApplyPowerAction(owner, source, new PossessionPower(owner, source, amount), amount));
         }
     }
 

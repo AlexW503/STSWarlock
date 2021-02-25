@@ -31,7 +31,7 @@ public class PullFromBeyond extends AbstractRitual{
 
     public static final String ID = RitualistMod.makeID("PullFromBeyond");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/skill.png");
+    public static final String IMG = RitualistMod.makePath("customImages/pull.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -42,9 +42,9 @@ public class PullFromBeyond extends AbstractRitual{
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     // /Stat Declaration/
 
@@ -58,11 +58,11 @@ public class PullFromBeyond extends AbstractRitual{
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
-        AbstractDungeon.actionManager.addToBottom(new PullFromBeyondAction(upgraded));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        addToBot(new GainAttuneAction(1));
+        addToBot(new PullFromBeyondAction(upgraded));
+        addToBot(new DrawCardAction(p, 1));
         if (AbstractDungeon.player.discardPile.size() > 0 && upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new DiscardPileToDrawAction(1));
+            addToBot(new DiscardPileToDrawAction(1));
         }
     }
 

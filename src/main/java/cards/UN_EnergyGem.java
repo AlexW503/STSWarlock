@@ -34,7 +34,7 @@ public class UN_EnergyGem extends CustomCard {
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 0;
     private static final int MAGIC = 1;
@@ -54,8 +54,8 @@ public class UN_EnergyGem extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
+        addToBot(new GainEnergyAction(1));
+        addToBot(new DrawCardAction(p, magicNumber));
     }
 
     // Which card to return when making a copy of this card.

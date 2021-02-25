@@ -1,5 +1,6 @@
 package cards;
 
+import actions.BanishAction;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -22,7 +23,7 @@ public class EarlyReturn extends CustomCard {
     /*
     * UNCOMMON Attack
     * 4E
-    * Costs 1 less this turn for each Ritual played with this in hand. Deal !D! damage to all enemies.
+    * Costs 1 less this turn for each Ritual played with this in hand. Deal !D! damage to all enemies. Banish.
      */
 
     //Text Declaration
@@ -40,9 +41,9 @@ public class EarlyReturn extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
-    private static final int COST = 4;
+    private static final int COST = 3;
     private static final int DAMAGE = 16;
     private static final int UPGRADE_PLUS_DMG = 5;
 
@@ -65,7 +66,9 @@ public class EarlyReturn extends CustomCard {
     //Actions the card does
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+        addToBot(new BanishAction(1));
+
 
     }
 

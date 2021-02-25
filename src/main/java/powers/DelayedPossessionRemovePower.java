@@ -31,7 +31,7 @@ public class DelayedPossessionRemovePower extends AbstractPower {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
-        this.amount = amount; // displayed amount is total amount of bomb damage
+        this.amount = amount; // displayed amount is total amount of poss
         this.amounts = new int[MAX_TURNS+1];
         this.amounts[turns] = amount;
         updateDescription();
@@ -72,12 +72,13 @@ public class DelayedPossessionRemovePower extends AbstractPower {
         return total;
     }
 
+
     @Override
     public void atStartOfTurn() {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flashWithoutSound();
             if (amounts[0] > 0) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new PossessionPower(owner, owner, -amounts[0]), -amounts[0]));
+                addToBot(new ApplyPowerAction(owner, owner, new PossessionPower(owner, owner, -amounts[0]), -amounts[0]));
             }
             // shift one over
             for (int i = 1; i < amounts.length; ++i) {
@@ -87,7 +88,7 @@ public class DelayedPossessionRemovePower extends AbstractPower {
             // total amount to display
             this.amount = totalAmount();
             if (this.amount == 0) {
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+                addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
             } else {
                 this.updateDescription();
             }

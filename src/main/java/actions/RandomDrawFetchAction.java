@@ -1,6 +1,7 @@
 package actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -32,11 +33,12 @@ public class RandomDrawFetchAction extends AbstractGameAction {
             else {
                 c = p.drawPile.getRandomCard(true);
                 p.drawPile.removeCard(c);
-                p.hand.addToTop(c);
+                p.drawPile.addToTop(c);
+                AbstractDungeon.actionManager.addToTop(new DrawCardAction(p, 1));
+
 
             }
         }
-        p.hand.refreshHandLayout();
         isDone = true;
     }
  }

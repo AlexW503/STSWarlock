@@ -37,10 +37,10 @@ public class LongCon extends CustomCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 7;
     private static final int UPGRADE_PLUS_BLOCK = 3;
     private static final int MAGIC = 2;
 
@@ -56,9 +56,8 @@ public class LongCon extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ApplyEnergizedPower(p, magicNumber), magicNumber));
+        addToBot(new GainBlockAction(p, p, block));
+        addToBot(new ApplyPowerAction(p, p, new ApplyEnergizedPower(p, magicNumber), magicNumber));
     }
 
     // Which card to return when making a copy of this card.

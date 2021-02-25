@@ -40,11 +40,11 @@ public class TransientGhost extends CustomCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
     private static final int POS_AMT = 5;
-    private static final int UPGRADE_MAGIC= 2;
+    private static final int UPGRADE_MAGIC= 1;
     private static final int TURNS = 2;
 
     // /Stat Declaration/
@@ -61,14 +61,14 @@ public class TransientGhost extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m){
         AbstractPower power = p.getPower(DelayedPossessionRemovePower.POWER_ID);
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PossessionPower(m, p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(m, p, new PossessionPower(m, p, magicNumber), magicNumber));
         if (!m.hasPower("Artifact")) {
             if (power != null) {
                 ((DelayedPossessionRemovePower)power).stackPower(magicNumber, TURNS);
                 power.updateDescription();
             }
             else
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new DelayedPossessionRemovePower(m, magicNumber, TURNS), magicNumber));
+                addToBot(new ApplyPowerAction(m, p, new DelayedPossessionRemovePower(m, magicNumber, TURNS), magicNumber));
 
 
         }

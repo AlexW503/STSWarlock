@@ -33,7 +33,7 @@ public class DrainStrength extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("DrainStrength");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/skill.png");
+    public static final String IMG = RitualistMod.makePath("customImages/drain.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -43,12 +43,12 @@ public class DrainStrength extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
     private static final int UPG_COST = 0;
-    private static final int MAGIC = 10;
-    private static final int UPG = 5;
+    private static final int MAGIC = 15;
+    private static final int UPG = 15;
 
 
     // /Stat Declaration/
@@ -64,7 +64,7 @@ public class DrainStrength extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
+        addToBot(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
 
        int str; //amount of strength to gain
 
@@ -73,11 +73,11 @@ public class DrainStrength extends CustomCard {
             str = m.getPower(PossessionPower.POWER_ID).amount;
             if(str > baseMagicNumber)
                 str = baseMagicNumber;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, str), str));
+            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, str), str));
             if(m.getPower(PossessionPower.POWER_ID).amount <= str)
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(m, m, PossessionPower.POWER_ID));
+                addToBot(new RemoveSpecificPowerAction(m, m, PossessionPower.POWER_ID));
             else
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new PossessionPower(m, m, -str), -str));
+                addToBot(new ApplyPowerAction(m, m, new PossessionPower(m, m, -str), -str));
 
         }
 

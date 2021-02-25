@@ -29,7 +29,7 @@ public class Extradition extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("Extradition");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/strike.png");
+    public static final String IMG = RitualistMod.makePath("customImages/extradition.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
   //  static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -40,10 +40,10 @@ public class Extradition extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 9;
     private static final int UPGRADE_PLUS_DMG = 3;
 
     // /Stat Declaration/
@@ -57,8 +57,8 @@ public class Extradition extends CustomCard {
     //Actions the card does
     @Override
     public void use(AbstractPlayer p, AbstractMonster m){
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new ExtraditionPower(m, 1), 1));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        addToBot(new ApplyPowerAction(m, p, new ExtraditionPower(m, 1), 1));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
     @Override
     public AbstractCard makeCopy() { return new Extradition(); }

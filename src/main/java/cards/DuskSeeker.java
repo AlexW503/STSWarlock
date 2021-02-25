@@ -24,7 +24,7 @@ public class DuskSeeker extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("DuskSeeker");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/power.png");
+    public static final String IMG = RitualistMod.makePath("customImages/dusk.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -34,11 +34,11 @@ public class DuskSeeker extends CustomCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final int MAGIC = 1;
-    private static final int UPG = 0;
+    private static final int UPG = 1;
 
 
     // /Stat Declaration/
@@ -53,7 +53,7 @@ public class DuskSeeker extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuskSeekerPower(p, magicNumber), magicNumber));
+            addToBot(new ApplyPowerAction(p, p, new DuskSeekerPower(p, magicNumber), magicNumber));
     }
 
     // Which card to return when making a copy of this card.

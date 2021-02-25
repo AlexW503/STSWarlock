@@ -41,6 +41,7 @@ public class PossessionPower extends AbstractPower implements HealthBarRenderPow
 
     }
 
+
     @Override
     public int getHealthBarAmount()
     {
@@ -68,7 +69,7 @@ public class PossessionPower extends AbstractPower implements HealthBarRenderPow
     public void atStartOfTurn() {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flashWithoutSound();
-            AbstractDungeon.actionManager.addToBottom(new LoseHPAction(owner, source, amount, AbstractGameAction.AttackEffect.POISON ));
+            addToBot(new LoseHPAction(owner, source, amount, AbstractGameAction.AttackEffect.POISON ));
         }
     }
 

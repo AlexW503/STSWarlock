@@ -2,6 +2,7 @@ package powers;
 
 
 import actions.GainAttuneAction;
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.defect.SeekAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -10,6 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import mod.RitualistMod;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class DeepReservesPower extends AbstractPower {
 
@@ -18,6 +21,8 @@ public class DeepReservesPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final Logger logger = LogManager.getLogger(RitualistMod.class.getName());
+
     private int draw;
 
     public DeepReservesPower(final AbstractCreature owner, int amount, int draw) {
@@ -36,9 +41,20 @@ public class DeepReservesPower extends AbstractPower {
     }
     @Override
     public void stackPower(int stackAmount) {
-        this.fontScale = 8.0F;
         this.amount += stackAmount;
         this.draw += 2;
+        BaseMod.MAX_HAND_SIZE += stackAmount;
+        logger.info("Max hand size stack increase: ");
+        logger.info(BaseMod.MAX_HAND_SIZE);
+        updateDescription();
+
+    }
+    @Override
+    public void onInitialApplication() {
+        logger.info(amount);
+        BaseMod.MAX_HAND_SIZE += amount;
+        logger.info("Max hand size post increase: ");
+        logger.info(BaseMod.MAX_HAND_SIZE);
 
     }
 
@@ -50,12 +66,16 @@ public class DeepReservesPower extends AbstractPower {
     @Override
     public void atStartOfTurn() {
 
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, draw));
+        addToBot(new DrawCardAction(AbstractDungeon.player, draw));
         //this.p.hand.refreshHandLayout();
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(amount));
+       // addToBot(new GainAttuneAction(amount));
 
     }
 
-
-
+    @Override
+    public void onVictory() {
+        BaseMod.MAX_HAND_SIZE -= amount;
+        logger.info("Max hand size post decrease: ");
+        logger.info(BaseMod.MAX_HAND_SIZE);
+    }
 }

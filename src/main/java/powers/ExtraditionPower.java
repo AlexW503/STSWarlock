@@ -56,7 +56,7 @@ public class ExtraditionPower extends AbstractPower {
             int pos = owner.getPower(PossessionPower.POWER_ID).amount;
             if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                 this.flash();
-                AbstractDungeon.actionManager.addToBottom(new ExtraditionAction(AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng), pos));
+                addToBot(new ExtraditionAction(AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng), pos));
 
             } else {
                 RitualistMod.logger.info("no target for the extradition");
@@ -68,7 +68,7 @@ public class ExtraditionPower extends AbstractPower {
     public void atEndOfRound() {
         amount--;
         if(amount <= 0)
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
     }
 
 

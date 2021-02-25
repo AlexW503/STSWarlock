@@ -23,39 +23,39 @@ public class ArrivalDrawAction extends AbstractGameAction {
 
     public ArrivalDrawAction() {
         this.p = AbstractDungeon.player;
-        setValues(this.p, AbstractDungeon.player, this.amount);
-        this.actionType = ActionType.CARD_MANIPULATION;
-        this.duration = Settings.ACTION_DUR_FAST;
+        setValues(p, AbstractDungeon.player, amount);
+        actionType = ActionType.CARD_MANIPULATION;
+        duration = Settings.ACTION_DUR_FAST;
     }
 
     public void update() {
         Iterator<AbstractCard> c;
         AbstractCard card;
-        if (this.duration == Settings.ACTION_DUR_FAST) {
+        if (duration == Settings.ACTION_DUR_FAST) {
 
-            if (this.p.drawPile.isEmpty()) {
-                this.isDone = true;
+            if (p.drawPile.isEmpty()) {
+                isDone = true;
                 return;
             }
 
-            if (this.p.drawPile.size() == 1) {
+            if (p.drawPile.size() == 1) {
 
-                card = this.p.drawPile.getTopCard();
+                card = p.drawPile.getTopCard();
 
                 if (card.hasTag(MainEnum.SUMMON_CARD)) {
                     card.unfadeOut();
-                    this.p.hand.addToHand(card);
+                    p.hand.addToHand(card);
 
-                    this.p.drawPile.removeCard(card);
+                    p.drawPile.removeCard(card);
 
                     card.unhover();
                     card.fadingOut = false;
 
                 }
-                this.isDone = true;
+                isDone = true;
                 return;
             } else {
-                c = this.p.drawPile.group.iterator();
+                c = p.drawPile.group.iterator();
 
                 while (c.hasNext()) {
                     card = c.next();
@@ -64,51 +64,50 @@ public class ArrivalDrawAction extends AbstractGameAction {
                     card.unfadeOut();
                 }
 
-                c = this.p.drawPile.group.iterator();
+                c = p.drawPile.group.iterator();
 
                 while(c.hasNext()) {
                     card = c.next();
                     if (!card.hasTag(MainEnum.SUMMON_CARD)) {
                         c.remove();
-                        this.nonSums.add(card);
+                        nonSums.add(card);
                     }
                 }
 
-                if (this.p.drawPile.isEmpty()) {
-                    this.p.drawPile.group.addAll(this.nonSums);
-                    this.nonSums.clear();
-                    this.isDone = true;
+                if (p.drawPile.isEmpty()) {
+                    p.drawPile.group.addAll(nonSums);
+                    nonSums.clear();
+                    isDone = true;
                     return;
                 } else {
-                    AbstractDungeon.gridSelectScreen.open(this.p.drawPile, 1, TEXT, false);
-                    this.tickDuration();
+                    AbstractDungeon.gridSelectScreen.open(p.drawPile, 1, TEXT, false);
+
+                    tickDuration();
                 }
             }
         } else {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 for (c = AbstractDungeon.gridSelectScreen.selectedCards.iterator(); c.hasNext(); card.unhover()) {
                     card = c.next();
-                    this.p.hand.addToHand(card);
+                    p.hand.addToHand(card);
 
-                    this.p.drawPile.removeCard(card);
-                    /*
-                    if (this.upgrade && card.canUpgrade()) {
-                        card.upgrade();
-                    }*/
+                    p.drawPile.removeCard(card);
                 }
 
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
-                this.p.hand.refreshHandLayout();
+                p.hand.refreshHandLayout();
 
+                p.drawPile.group.addAll(nonSums);
+                nonSums.clear();
 
-                for (c = this.p.drawPile.group.iterator(); c.hasNext(); card.target_y = 0.0F) {
+                for (c = p.drawPile.group.iterator(); c.hasNext(); card.target_y = 0.0F) {
                     card = (AbstractCard) c.next();
                     card.unhover();
                     card.target_x = (float) CardGroup.DRAW_PILE_X;
                 }
             }
 
-            this.tickDuration();
+            tickDuration();
         }
 
     }

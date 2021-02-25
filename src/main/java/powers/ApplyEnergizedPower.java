@@ -43,9 +43,9 @@ public class ApplyEnergizedPower extends AbstractPower {
     @Override
     public void atStartOfTurnPostDraw() { //Remove this power and add energized
 
-        AbstractDungeon.actionManager.addToBottom
+        addToBot
                 (new ApplyPowerAction(owner, owner, new EnergizedPower(owner, this.amount)));
-        AbstractDungeon.actionManager.addToBottom
+        addToBot
                 (new RemoveSpecificPowerAction(owner, owner, POWER_ID));
 
 

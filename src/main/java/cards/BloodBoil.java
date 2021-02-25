@@ -1,6 +1,7 @@
 package cards;
 
 import actions.GainAttuneAction;
+import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
@@ -27,7 +28,7 @@ public class BloodBoil extends AbstractRitual{
 
     public static final String ID = RitualistMod.makeID("BloodBoil");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/skill.png");
+    public static final String IMG = RitualistMod.makePath("customImages/boil.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -39,12 +40,12 @@ public class BloodBoil extends AbstractRitual{
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
     private static final int COST = 0;
     private static final int UPG = -1;
     private static final int STR = 1;
     private static final int ENERGY = 1;
-    private static final int LIFE = 3;
+    private static final int LIFE = 2;
 
 
 
@@ -57,14 +58,15 @@ public class BloodBoil extends AbstractRitual{
         magicNumber = baseMagicNumber;
         tags.add(MainEnum.RITUAL_CARD);
         retain = true;
+        ExhaustiveVariable.setBaseValue(this, 1);
 
     }
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
+        addToBot(new GainAttuneAction(1));
 
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY));
+        addToBot(new GainEnergyAction(ENERGY));
 
     }
     @Override
@@ -76,8 +78,8 @@ public class BloodBoil extends AbstractRitual{
     @Override
     public void triggerOnEndOfTurnForPlayingCard() {
         AbstractPlayer p = AbstractDungeon.player;
-        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, STR), STR));
+        addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, STR), STR));
     }
     // Which card to return when making a copy of this card.
     @Override
@@ -97,8 +99,10 @@ public class BloodBoil extends AbstractRitual{
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG);
+          //  upgradeMagicNumber(UPG);
             initializeDescription();
+            ExhaustiveVariable.upgrade(this, 1);
+
         }
     }
 

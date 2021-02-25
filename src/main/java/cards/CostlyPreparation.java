@@ -29,7 +29,7 @@ public class CostlyPreparation extends AbstractRitual {
 
     public static final String ID = RitualistMod.makeID("CostlyPreparation");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/skill.png");
+    public static final String IMG = RitualistMod.makePath("customImages/prep.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -40,9 +40,9 @@ public class CostlyPreparation extends AbstractRitual {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
     private int ATT = 0;
-    private static int MAX = 4;
+    private static int MAX = 3;
     private static int MAGIC = 1;
     private static int BONUS = 1;
     private static int UPG_M = 1;
@@ -62,7 +62,7 @@ public class CostlyPreparation extends AbstractRitual {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //Find number of attune stacks with max of 4, then draw and reduce by it.
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(magicNumber));
+        addToBot(new GainAttuneAction(magicNumber));
         if(p.hasPower(AttunePower.POWER_ID)) {
             ATT = p.getPower(AttunePower.POWER_ID).amount;
 
@@ -70,11 +70,11 @@ public class CostlyPreparation extends AbstractRitual {
                 ATT = MAX;
             }
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new AttunePower(p, -ATT), -ATT));
+            addToBot(new ApplyPowerAction(p, p, new AttunePower(p, -ATT), -ATT));
 
             ATT += BONUS; //One free card.
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, ATT), ATT));
+            addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, ATT), ATT));
         }
 
     }

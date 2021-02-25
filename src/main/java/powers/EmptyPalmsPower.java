@@ -29,8 +29,9 @@ public class EmptyPalmsPower extends AbstractPower {
         updateDescription();
         type = PowerType.BUFF;
         isTurnBased = false;
-        img = new Texture(IMG);
-       // source = source;
+        //img = new Texture(IMG);
+        loadRegion("nightmare");
+        // source = source;
     }
     @Override
     public void updateDescription() {
@@ -46,7 +47,7 @@ public class EmptyPalmsPower extends AbstractPower {
    public void onDrawOrDiscard(){
         if(AbstractDungeon.player.hand.size() <= 0 && (check == false))
         {
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(owner, owner, amount));
+            addToBot(new com.megacrit.cardcrawl.actions.common.GainBlockAction(owner, owner, amount));
             check = true;
         }
     }
@@ -54,7 +55,7 @@ public class EmptyPalmsPower extends AbstractPower {
     public void onExhaust(AbstractCard card) {
         if(AbstractDungeon.player.hand.size() <= 0 && (check == false))
         {
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(owner, owner, amount));
+            addToBot(new com.megacrit.cardcrawl.actions.common.GainBlockAction(owner, owner, amount));
             check = true;
         }
     }
@@ -62,7 +63,7 @@ public class EmptyPalmsPower extends AbstractPower {
     public void onUseCard(AbstractCard card, UseCardAction action) { //Could also use onAfterUse if bloodletter synergy is OP
         if(AbstractDungeon.player.hand.size() <= 1 && (check == false))
         {
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(owner, owner, amount));
+            addToBot(new com.megacrit.cardcrawl.actions.common.GainBlockAction(owner, owner, amount));
             check = true;
         }
     }

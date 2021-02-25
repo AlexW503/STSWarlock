@@ -30,6 +30,8 @@ public class GrowingRites extends CustomCard {
     public static final String IMG = RitualistMod.makePath("customImages/growing.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    private static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
 
     // /Text Declaration/
     //Stat Declaration
@@ -37,7 +39,7 @@ public class GrowingRites extends CustomCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
     private static final int MAGIC = 3;
@@ -56,7 +58,7 @@ public class GrowingRites extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new GrowingRitesPower(p, magicNumber), magicNumber));
+            addToBot(new ApplyPowerAction(p, p, new GrowingRitesPower(p, magicNumber), magicNumber));
     }
 
     // Which card to return when making a copy of this card.
@@ -70,7 +72,9 @@ public class GrowingRites extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG_MAGIC);
+           // upgradeMagicNumber(UPG_MAGIC);
+            isInnate = true;
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

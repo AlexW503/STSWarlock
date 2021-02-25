@@ -2,11 +2,7 @@ package orbs;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -15,14 +11,12 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
 import mod.RitualistMod;
-import powers.AttunePower;
+import powers.SymbiotePower;
 
-public class MaatOrb extends AbstractOrb {
+public class MaatOrb extends AbstractDemonOrb{
     public static final String ORB_ID =  RitualistMod.makeID("MaatOrb");
     private static final OrbStrings orbString = CardCrawlGame.languagePack.getOrbString(ORB_ID);
     public static final String[] DESC = orbString.DESCRIPTION;
@@ -30,21 +24,23 @@ public class MaatOrb extends AbstractOrb {
     private float vfxTimer = 0.5F;
     private static final float VFX_INTERVAL_TIME = 0.25F;
     AbstractPlayer p = AbstractDungeon.player;
-    private static final int STR = 1;
-    public static final String P_ID = PlatedArmorPower.POWER_ID;
+
+    public static final String P_ID = ThornsPower.POWER_ID;
     private int amount = 0;
 
 
-    public MaatOrb(){
+
+    public MaatOrb(int att){
         ID = "Ma'at";
         img = ImageMaster.ORB_DARK;
         name = orbString.NAME;
-        baseEvokeAmount = 1;
+        baseEvokeAmount = att;
         evokeAmount = baseEvokeAmount;
         basePassiveAmount = 1;
         passiveAmount = basePassiveAmount;
         updateDescription();
         channelAnimTimer = 0.5F;
+        //amount = basePassiveAmount;
     }
 
 
@@ -55,34 +51,28 @@ public class MaatOrb extends AbstractOrb {
 
     public void onEvoke() {
 
-        if (p.hasPower(P_ID)) {
-            amount = p.getPower(P_ID).amount;
-            amount /= baseEvokeAmount;
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, P_ID));
-            if(amount > 0)
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, amount), amount));
-        }
+        logger.info("evoked " + ID);
+       // if(AbstractDungeon.player.hasPower(SymbiotePower.POWER_ID) && !isBanished)
+       //     AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, amount));
+
+
     }
+    public void onBanish() {
+        logger.info("banished " + ID);
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, evokeAmount));
+        isBanished = true;
+    }
+    /*
     public void onStartOfTurn() {
         float speedTime = 0.6F / (float)AbstractDungeon.player.orbs.size();
         if (Settings.FAST_MODE) {
             speedTime = 0.0F;
         }
 
-        if (p.hasPower(P_ID)) {
-            if(p.getPower(P_ID).amount == 1)
-                amount = 1;
-            else
-                amount = basePassiveAmount;
-
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, -amount), -amount));
-
-        }
-      
-        updateDescription();
+        addToBot(new ApplyPowerAction(p, p, new ThornsPower(p, passiveAmount), passiveAmount));
 
     }
-
+   */
     public void triggerEvokeAnimation() {
         CardCrawlGame.sound.play("ORB_PLASMA_EVOKE", 0.1F);
         AbstractDungeon.effectsQueue.add(new PlasmaOrbActivateEffect(cX, cY));
@@ -91,7 +81,7 @@ public class MaatOrb extends AbstractOrb {
     public void render(SpriteBatch sb) {
         sb.setColor(c);
         sb.draw(img, cX - 48.0F, cY - 48.0F + bobEffect.y, 48.0F, 48.0F, 96.0F, 96.0F, scale, scale, angle, 0, 0, 96, 96, false, false);
-        sb.setColor(new Color(1.0F, 1.0F, 1.0F, c.a / 3.0F));
+        sb.setColor(new Color(0.1F, 1.0F, 0.1F, c.a / 3.0F));
         sb.setBlendFunction(770, 1);
         sb.draw(img, cX - 48.0F, cY - 48.0F + bobEffect.y, 48.0F, 48.0F, 96.0F, 96.0F, scale * 1.2F, scale * 1.2F, angle / 1.2F, 0, 0, 96, 96, false, false);
         sb.draw(img, cX - 48.0F, cY - 48.0F + bobEffect.y, 48.0F, 48.0F, 96.0F, 96.0F, scale * 1.5F, scale * 1.5F, angle / 1.4F, 0, 0, 96, 96, false, false);
@@ -101,8 +91,8 @@ public class MaatOrb extends AbstractOrb {
     }
 
     protected void renderText(SpriteBatch sb) {
-      //  FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(evokeAmount), cX + NUM_X_OFFSET, cY + bobEffect.y / 2.0F + NUM_Y_OFFSET - 4.0F * Settings.scale, new Color(0.2F, 1.0F, 1.0F, c.a), fontScale);
-        FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(passiveAmount), cX + NUM_X_OFFSET, cY + bobEffect.y / 2.0F + NUM_Y_OFFSET + 20.0F * Settings.scale, c, fontScale);
+      //FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(evokeAmount), cX + NUM_X_OFFSET, cY + bobEffect.y / 2.0F + NUM_Y_OFFSET + 4.0F * Settings.scale, new Color(0.2F, 1.0F, 1.0F, c.a), fontScale);
+       FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(passiveAmount), cX + NUM_X_OFFSET, cY + bobEffect.y / 2.0F + NUM_Y_OFFSET + 4.0F * Settings.scale, c, fontScale);
     }
 
     public void playChannelSFX() {
@@ -110,6 +100,6 @@ public class MaatOrb extends AbstractOrb {
     }
 
     public AbstractOrb makeCopy() {
-        return new MaatOrb();
+        return new MaatOrb(passiveAmount);
     }
 }

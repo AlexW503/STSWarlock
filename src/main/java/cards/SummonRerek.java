@@ -3,6 +3,7 @@ package cards;
 import actions.SetPowerZeroAction;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
@@ -19,8 +20,9 @@ import orbs.AgielOrb;
 import orbs.RerekOrb;
 import patches.MainEnum;
 import powers.AttunePower;
+import variables.MagicPlus2;
 
-public class SummonRerek extends CustomCard {
+public class SummonRerek extends AbstractSummon {
 
     /*
     * UNC Summon Rerek
@@ -32,9 +34,11 @@ public class SummonRerek extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("SummonRerek");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/summonA.png");
+    public static final String IMG = RitualistMod.makePath("customImages/rerek.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
 
     // /Text Declaration/
     //Stat Declaration
@@ -42,16 +46,22 @@ public class SummonRerek extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
     private static final int UPGRADE_COST = 1;
     private static final int MULTI = 2;
-    private static final int COUNT = 3;
+    private static final int DIV = 5;
 
 
-    private int ATT = 0; //player's attune
-    private static final int COST = 2;
-    private static final int DAMAGE = 3;
+    private static final int COST = 3;
+    private static final int DAMAGE = 2;
     private static final int UPG = 2;
+    private static final int MAGIC = 5;
+
+
+    private int COUNT = 3;
+    private final int  UPG_COUNT = 4;
+    private int ATT = 0; //player's attune
+    private int LAST = 0;
 
 
     // /Stat Declaration/
@@ -59,7 +69,7 @@ public class SummonRerek extends CustomCard {
     public SummonRerek() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        baseMagicNumber = COUNT;
+        baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
         exhaust = true;
         tags.add(MainEnum.SUMMON_CARD);
@@ -70,21 +80,24 @@ public class SummonRerek extends CustomCard {
         super.applyPowers();
         if(AbstractDungeon.player.hasPower(AttunePower.POWER_ID)) {
             ATT = AbstractDungeon.player.getPower(AttunePower.POWER_ID).amount;
-            baseDamage = DAMAGE + (ATT/MULTI);
+            baseDamage = DAMAGE + ATT;
+            baseMagicNumber = MAGIC + ATT;
+            magicNumber = baseMagicNumber;
 
         }
 
-        //RitualistMod.logger.info("Made it! " + damage + " ATT:" + ATT);
     }
 
     //Actions the card does
     @Override
     public void use(AbstractPlayer p, AbstractMonster m){
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p,  DamageInfo.createDamageMatrix(damage, true), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
+        addToBot(new DamageAllEnemiesAction(p,  DamageInfo.createDamageMatrix(damage, true), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
+        for (int i = 0; i < this.COUNT; i++) {
+            addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        }
+        addToBot(new ChannelAction(new RerekOrb(magicNumber)));
+        addToBot(new SetPowerZeroAction(p, p, AttunePower.POWER_ID));
 
-        AbstractDungeon.actionManager.addToBottom(new SwordBoomerangAction(AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng), new DamageInfo(p, damage), magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new SetPowerZeroAction(p, p, AttunePower.POWER_ID));
-        AbstractDungeon.actionManager.addToBottom(new ChannelAction(new RerekOrb(ATT)));
     }
     @Override
     public AbstractCard makeCopy() { return new SummonRerek(); }
@@ -94,7 +107,10 @@ public class SummonRerek extends CustomCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeDamage(UPG);
+           // COUNT = UPG_COUNT;
+            //upgradeMagicNumber(UPG);
+            upgradeBaseCost(UPG);
+           // rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

@@ -37,7 +37,7 @@ public class Retreat extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
     private static final int BLOCK = 6;
@@ -57,9 +57,9 @@ public class Retreat extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new DrawPileToTopDrawAction(magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new UpgradeTopDrawAction(magicNumber));
+        addToBot(new GainBlockAction(p, p, block));
+        addToBot(new DrawPileToTopDrawAction(magicNumber));
+        addToBot(new UpgradeTopDrawAction(magicNumber));
     }
 
     // Which card to return when making a copy of this card.

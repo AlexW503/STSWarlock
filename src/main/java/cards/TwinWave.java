@@ -39,7 +39,7 @@ public class TwinWave extends CustomCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
     private static final int DAMAGE = 5;
@@ -57,8 +57,8 @@ public class TwinWave extends CustomCard {
     //Actions the card does
     @Override
     public void use(AbstractPlayer p, AbstractMonster m){
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TwinWavePower(p, damage),1));
+        addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+        addToBot(new ApplyPowerAction(p, p, new TwinWavePower(p, damage),1));
     }
     @Override
     public AbstractCard makeCopy() { return new TwinWave(); }

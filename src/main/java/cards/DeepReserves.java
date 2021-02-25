@@ -24,7 +24,7 @@ public class DeepReserves extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("DeepReserves");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/power.png");
+    public static final String IMG = RitualistMod.makePath("customImages/reserves.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESC = cardStrings.UPGRADE_DESCRIPTION;
@@ -35,12 +35,12 @@ public class DeepReserves extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 2;
     private static final int DRAW = 2;
-    private static final int MAGIC = 1;
-    private static final int UPG = 1;
+    private static final int MAGIC = 2;
+    private static final int UPG = 2;
 
 
     // /Stat Declaration/
@@ -55,7 +55,7 @@ public class DeepReserves extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DeepReservesPower(p, magicNumber, DRAW), magicNumber));
+            addToBot(new ApplyPowerAction(p, p, new DeepReservesPower(p, magicNumber, DRAW), magicNumber));
     }
 
     // Which card to return when making a copy of this card.

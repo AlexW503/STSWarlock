@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 public class MainEnum {
 
     @SpireEnum
-    public static AbstractCard.CardColor PURPLE;
+    public static AbstractCard.CardColor Magenta;
 
     @SpireEnum
     public static AbstractPlayer.PlayerClass RITUALIST;

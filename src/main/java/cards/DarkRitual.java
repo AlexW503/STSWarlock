@@ -38,10 +38,12 @@ public class DarkRitual extends AbstractRitual{
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
     private static final int ENERGY = 2;
 
     private static final int COST = 3;
+    private static final int UPG = 2;
+
 
     // /Stat Declaration/
 
@@ -56,13 +58,13 @@ public class DarkRitual extends AbstractRitual{
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(upgraded)
-            AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
+       // if(upgraded)
+          //  addToBot(new GainAttuneAction(1));
 
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new AdrenalineEffect(), 0.15F));
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ReduceCostAction(uuid, 1)); //increase E by 1
+        addToBot(new GainAttuneAction(2));
+        addToBot(new VFXAction(new AdrenalineEffect(), 0.15F));
+        addToBot(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(magicNumber));
+        addToBot(new ReduceCostAction(uuid, 1)); //reduce cost by 1
 
 
     }
@@ -78,9 +80,9 @@ public class DarkRitual extends AbstractRitual{
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
-            tags.add(MainEnum.RITUAL_CARD);
+            upgradeBaseCost(UPG);
+          //  rawDescription = UPGRADE_DESCRIPTION;
+           //  initializeDescription();
 
         }
     }

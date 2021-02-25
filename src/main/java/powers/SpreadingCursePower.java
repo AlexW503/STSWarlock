@@ -47,7 +47,7 @@ public class SpreadingCursePower extends AbstractPower {
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
+    public void atStartOfTurn() {
 
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flash();
@@ -56,7 +56,7 @@ public class SpreadingCursePower extends AbstractPower {
             while(var1.hasNext()) {
                 AbstractMonster m = (AbstractMonster)var1.next();
                 if (!m.isDead && !m.isDying) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this.owner, new PossessionPower(m, this.owner, this.amount), this.amount));
+                    addToBot(new ApplyPowerAction(m, this.owner, new PossessionPower(m, this.owner, this.amount), this.amount));
                 }
             }
         }

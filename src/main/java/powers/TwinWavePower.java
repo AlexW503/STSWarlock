@@ -46,9 +46,9 @@ public class TwinWavePower extends AbstractPower {
     @Override
     public void atStartOfTurn() { //Remove this power and add Twisted Ecstasy
         for(int i = amount; i >0; i-- )
-            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(owner,  DamageInfo.createDamageMatrix(damageToDisplay, true), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
+            addToBot(new DamageAllEnemiesAction(owner,  DamageInfo.createDamageMatrix(damageToDisplay, true), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
 
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+        addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
 
     }
 

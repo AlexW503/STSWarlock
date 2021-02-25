@@ -1,65 +1,65 @@
 package cards;
 
-import basemod.helpers.BaseModCardTags;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import basemod.abstracts.CustomCard;
-
 import mod.RitualistMod;
 import patches.MainEnum;
+import powers.DeepReservesPower;
+import powers.PoweredBarrierPower;
 
-public class DefendPurple extends CustomCard {
+public class PoweredBarrier extends CustomCard {
     /*
-    * STARTER Skill
+    * UNC Power
     * 1E
-    * Gain 5 (8) block.
+    * EoT convert unused energy into 3 block
      */
 
     //Text Declaration
 
-    public static final String ID = mod.RitualistMod.makeID("DefendPurple");
+    public static final String ID = RitualistMod.makeID("PoweredBarrier");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = mod.RitualistMod.makePath("customImages/defend.png");
+    public static final String IMG = RitualistMod.makePath("customImages/powered.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
     // /Text Declaration/
     //Stat Declaration
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    private static final CardType TYPE = CardType.POWER;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
+    private static final int MAGIC = 4;
+    private static final int UPG = 1;
+
 
     // /Stat Declaration/
 
 
-    public DefendPurple() {
+    public PoweredBarrier() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
-        tags.add(BaseModCardTags.BASIC_DEFEND);
-
+        baseMagicNumber = MAGIC;
+        magicNumber = baseMagicNumber;
     }
+
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+            addToBot(new ApplyPowerAction(p, p, new PoweredBarrierPower(p, magicNumber), magicNumber));
     }
 
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new DefendPurple();
+        return new PoweredBarrier();
     }
 
     //Upgraded stats.
@@ -67,8 +67,7 @@ public class DefendPurple extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
-            initializeDescription();
+            upgradeMagicNumber(UPG);
         }
     }
 

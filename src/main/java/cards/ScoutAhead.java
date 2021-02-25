@@ -32,10 +32,10 @@ public class ScoutAhead extends CustomCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 8;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     // /Stat Declaration/
@@ -48,8 +48,8 @@ public class ScoutAhead extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new PutOnDeckAction(p, p, 1, false));
+        addToBot(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, block));
+        addToBot(new PutOnDeckAction(p, p, 1, false));
     }
 
     // Which card to return when making a copy of this card.

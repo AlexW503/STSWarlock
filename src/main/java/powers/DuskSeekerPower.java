@@ -2,6 +2,7 @@ package powers;
 
 
 import actions.GainAttuneAction;
+import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.actions.defect.SeekAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -27,7 +28,7 @@ public class DuskSeekerPower extends AbstractPower {
         type = PowerType.BUFF;
         isTurnBased = false;
         //img = new Texture(IMG);
-        loadRegion("nightmare");
+        loadRegion("mantra");
        // source = source;
 
     }
@@ -37,9 +38,23 @@ public class DuskSeekerPower extends AbstractPower {
     }
 
     @Override
-    public void atStartOfTurn() {
+    public void onInitialApplication()
+    {
+        AbstractDungeon.player.gameHandSize -= 1;
+    }
 
-        AbstractDungeon.actionManager.addToBottom(new SeekAction(this.amount));
+    @Override
+    public void stackPower(int stackAmount) {
+        amount += stackAmount;
+        AbstractDungeon.player.gameHandSize -= stackAmount;
+    }
+
+
+    @Override
+    public void atStartOfTurnPostDraw() {
+        if(AbstractDungeon.player.drawPile.size() == 0)
+            addToBot(new EmptyDeckShuffleAction());
+        addToBot(new SeekAction(this.amount));
 
 
     }

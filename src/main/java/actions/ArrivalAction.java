@@ -1,6 +1,8 @@
 package actions;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,8 +12,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import patches.MainEnum;
 
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class ArrivalAction extends AbstractGameAction {
 
@@ -29,6 +35,13 @@ public class ArrivalAction extends AbstractGameAction {
     }
 
     public void update() {
+
+        Consumer<List<AbstractCard>> callback =  list ->
+        { addToBot(new LoseHPAction(p, p, list.size())); list.forEach(c -> c.upgrade());
+
+        };
+
+        new SelectCardsAction(p.discardPile.group, 1,"this", true, c->true, callback);
         Iterator<AbstractCard> c;
         AbstractCard card;
         if (this.duration == Settings.ACTION_DUR_FAST) {
@@ -100,6 +113,8 @@ public class ArrivalAction extends AbstractGameAction {
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 this.p.hand.refreshHandLayout();
 
+                this.p.discardPile.group.addAll(this.nonSums);
+                this.nonSums.clear();
 
                 for (c = this.p.discardPile.group.iterator(); c.hasNext(); card.target_y = 0.0F) {
                     card = (AbstractCard) c.next();

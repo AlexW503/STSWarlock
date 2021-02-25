@@ -22,13 +22,14 @@ public class MomentumPower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
     public int energy = 1;
-    public int maxPlay = 5;
+    public int maxPlay = 8;
 
-    public MomentumPower(final AbstractCreature owner) {
+    public MomentumPower(final AbstractCreature owner, int max) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
         this.amount = 1;
+        this.maxPlay = max;
         updateDescription();
         type = PowerType.BUFF;
         isTurnBased = false;
@@ -55,11 +56,12 @@ public class MomentumPower extends AbstractPower {
    @Override
     public void onUseCard(AbstractCard card, UseCardAction action){
         amount++; //stacks shown on power, go up on card play
+        updateDescription();
         if(amount >= maxPlay){ //once it reaches the max set back to 0 and gain energy
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(energy));
+            addToBot(new GainEnergyAction(energy));
             amount = 0;
-        }
 
+        }
    }
 
 }

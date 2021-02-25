@@ -17,19 +17,19 @@ import orbs.AgielOrb;
 import patches.MainEnum;
 import powers.AttunePower;
 
-public class SummonAgiel extends CustomCard {
+public class SummonAgiel extends AbstractSummon {
 
     /*
     * STARTER Summon Agiel
     * 2E
-    * Deal 8+Att*2 damage. Summons a demon which deals 2+Att/5 damage per turn
+    * Deal 14+Att*2 damage. Summons a demon which deals 2+Att/5 damage per turn
      */
 
     //Text Declaration
 
     public static final String ID = RitualistMod.makeID("SummonAgiel");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/summonA.png");
+    public static final String IMG = RitualistMod.makePath("customImages/agiel.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -39,21 +39,22 @@ public class SummonAgiel extends CustomCard {
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = MainEnum.PURPLE;
-    private static final int UPGRADE_COST = 1;
-    private static final int MULTI = 2;
+    public static final CardColor COLOR = MainEnum.Magenta;
+    private static final int UPGRADE = 1;
+    private int MULTI = 2;
 
     private int ATT = 0; //player's attune
     private static final int COST = 2;
-    private static final int DAMAGE = 10;
-
+    private static final int DAMAGE = 14;
+    private int BASE = 5;
+   // private static final int DIV = 3;
 
     // /Stat Declaration/
 
     public SummonAgiel() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        baseMagicNumber = MULTI;
+        baseMagicNumber = BASE;
         magicNumber = baseMagicNumber;
         exhaust = true;
         tags.add(MainEnum.SUMMON_CARD);
@@ -64,11 +65,12 @@ public class SummonAgiel extends CustomCard {
         super.applyPowers();
         if(AbstractDungeon.player.hasPower(AttunePower.POWER_ID)) {
             ATT = AbstractDungeon.player.getPower(AttunePower.POWER_ID).amount;
-            baseDamage = DAMAGE + (ATT*magicNumber);
-
+            if(upgraded)
+                MULTI = 3;
+            baseDamage = DAMAGE + (ATT*MULTI);
+            baseMagicNumber = BASE + ATT;
         }
 
-        //RitualistMod.logger.info("Made it! " + damage + " ATT:" + ATT);
     }
 
     //Actions the card does
@@ -76,10 +78,10 @@ public class SummonAgiel extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m){
 
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
-       // AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, AttunePower.POWER_ID));
-        AbstractDungeon.actionManager.addToBottom(new SetPowerZeroAction(p, p, AttunePower.POWER_ID));
-        AbstractDungeon.actionManager.addToBottom(new ChannelAction(new AgielOrb(ATT)));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
+        addToBot(new ChannelAction(new AgielOrb(baseMagicNumber)));
+        addToBot(new SetPowerZeroAction(p, p, AttunePower.POWER_ID));
+
     }
     @Override
     public AbstractCard makeCopy() { return new SummonAgiel(); }
@@ -89,7 +91,9 @@ public class SummonAgiel extends CustomCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+           // upgradeBaseCost(UPGRADE);
+            this.upgradedDamage = true;
+            MULTI = 3;
             initializeDescription();
         }
     }

@@ -17,14 +17,14 @@ public class QuietMeditation extends AbstractRitual {
     /*
     * UNC Skill
     * 1E Ritual
-    * Ritual Gain 6 block.  Add 2 random ritual card to your hand.
+    * Ritual Gain 3 block.  Add 1 random ritual card to your hand.
      */
 
     //Text Declaration
 
     public static final String ID = RitualistMod.makeID("QuietMeditation");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/defend.png");
+    public static final String IMG = RitualistMod.makePath("customImages/quiet.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESC = cardStrings.UPGRADE_DESCRIPTION;
@@ -35,8 +35,8 @@ public class QuietMeditation extends AbstractRitual {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
-    private static final int BLOCK = 3;
+    public static final CardColor COLOR = MainEnum.Magenta;
+    private static final int BLOCK = 5;
     private static final int UPG_BLOCK_AMT = 3;
     private static final int COST = 1;
     private static final int MAGIC = 1;
@@ -56,10 +56,10 @@ public class QuietMeditation extends AbstractRitual {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
+        addToBot(new GainAttuneAction(1));
 
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new GetRandomRitualAction(magicNumber));
+        addToBot(new GainBlockAction(p, p, block));
+        addToBot(new GetRandomRitualAction(magicNumber));
 
     }
 

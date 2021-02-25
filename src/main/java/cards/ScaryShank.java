@@ -22,7 +22,7 @@ public class ScaryShank extends AbstractRitual {
     /*
     * COMMON Scary Shank
     * 1E Ritual
-    * Deal 3 damage apply 2 weak.
+    * Deal 5 damage apply 2 weak.
      */
 
     //Text Declaration
@@ -40,10 +40,10 @@ public class ScaryShank extends AbstractRitual {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 5;
     private static final int UPGRADE_PLUS_DMG = 3;
     private static int MAGIC = 2;
 
@@ -61,10 +61,10 @@ public class ScaryShank extends AbstractRitual {
     //Actions the card does
     @Override
     public void use(AbstractPlayer p, AbstractMonster m){
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
+        addToBot(new GainAttuneAction(1));
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, magicNumber, false), magicNumber));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        addToBot(new ApplyPowerAction(m, p, new WeakPower(m, magicNumber, false), magicNumber));
     }
     @Override
     public AbstractCard makeCopy() { return new ScaryShank(); }

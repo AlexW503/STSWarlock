@@ -33,7 +33,7 @@ public class Arrival extends AbstractRitual{
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 0;
 
@@ -44,15 +44,21 @@ public class Arrival extends AbstractRitual{
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
         tags.add(MainEnum.RITUAL_CARD);
+        retain = true;
+
+    }
+    @Override
+    public void atTurnStart() {
+        retain = true;
 
     }
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
-        AbstractDungeon.actionManager.addToBottom(new ArrivalAction());
+        addToBot(new GainAttuneAction(1));
+        addToBot(new ArrivalAction());
         if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new ArrivalDrawAction());
+            addToBot(new ArrivalDrawAction());
         }
     }
 

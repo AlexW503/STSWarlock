@@ -53,7 +53,7 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
 
     //Textures and images
         //Character Color
-        public static final Color PURPLE = CardHelper.getColor(52.0f, 4.0f, 142.0f);
+        public static final Color Magenta = CardHelper.getColor(52.0f, 4.0f, 142.0f);
 
         //Image folder to not have to change everywhere
         private static final String MOD_ASSETS_FOLDER = "v_images";
@@ -96,10 +96,10 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         logger.info("Subscribe to BaseMod Hooks");
         BaseMod.subscribe(this);
         logger.info("Done subscribing");
-        logger.info("Creating the color " + MainEnum.PURPLE.toString());
+        logger.info("Creating the color " + MainEnum.Magenta.toString());
 
-        BaseMod.addColor(MainEnum.PURPLE, PURPLE, PURPLE, PURPLE,
-                PURPLE, PURPLE, PURPLE, PURPLE, makePath(ATTACK_DEFAULT_GRAY),
+        BaseMod.addColor(MainEnum.Magenta, Magenta, Magenta, Magenta,
+                Magenta, Magenta, Magenta, Magenta, makePath(ATTACK_DEFAULT_GRAY),
                 makePath(SKILL_DEFAULT_GRAY), makePath(POWER_DEFAULT_GRAY),
                 makePath(ENERGY_ORB_DEFAULT_GRAY), makePath(ATTACK_DEFAULT_GRAY_PORTRAIT),
                 makePath(SKILL_DEFAULT_GRAY_PORTRAIT), makePath(POWER_DEFAULT_GRAY_PORTRAIT),
@@ -157,8 +157,12 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         logger.info("Adding relics");
 
         //Color specific relic
-        BaseMod.addRelicToCustomPool(new StarterRelic(), MainEnum.PURPLE);
+        BaseMod.addRelicToCustomPool(new StarterRelic(), MainEnum.Magenta);
+        BaseMod.addRelicToCustomPool( new FeedingMirror(), MainEnum.Magenta);
+        BaseMod.addRelicToCustomPool( new MortalTether(), MainEnum.Magenta);
 
+        UnlockTracker.markRelicAsSeen(MortalTether.ID);
+        UnlockTracker.markRelicAsSeen(FeedingMirror.ID);
         logger.info("Done adding relics");
 
     }
@@ -177,10 +181,10 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
 
         logger.info("Adding cards");
         //Add the cards
-        BaseMod.addCard(new DefendPurple());
-        BaseMod.addCard(new StrikePurple());
-        BaseMod.addCard(new DefendRitual());
-        BaseMod.addCard(new StrikeRitual());
+        BaseMod.addCard(new DefendMagenta());
+        BaseMod.addCard(new StrikeMagenta());
+      //  BaseMod.addCard(new DefendRitual());
+       // BaseMod.addCard(new StrikeRitual());
         BaseMod.addCard(new PrepareHost());
         BaseMod.addCard(new DarkRitual());
         BaseMod.addCard(new SummonAgiel());
@@ -188,7 +192,7 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         BaseMod.addCard(new RitualBloodletter());
         BaseMod.addCard(new BarrierOfBone());
         BaseMod.addCard(new EmptyPalms());
-        BaseMod.addCard(new QuickStudy());
+     //   BaseMod.addCard(new QuickStudy());
         BaseMod.addCard(new ImpFeast());
         BaseMod.addCard(new CostlyPreparation());
         BaseMod.addCard(new TemporalRites());
@@ -214,8 +218,8 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         BaseMod.addCard(new TwinWave());
         BaseMod.addCard(new StrategicCut());
         BaseMod.addCard(new SpreadingCurse());
-        BaseMod.addCard(new SummonBaphomet());
-        BaseMod.addCard(new TransientGhost());
+        //BaseMod.addCard(new SummonBaphomet());
+        //BaseMod.addCard(new TransientGhost());
         BaseMod.addCard(new Impale());
         BaseMod.addCard(new DeadlyBlows());
         BaseMod.addCard(new EvilIntentions());
@@ -232,19 +236,41 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         BaseMod.addCard(new DeepReserves());
         BaseMod.addCard(new SummonMaat());
         BaseMod.addCard(new HeavyInfection());
-        BaseMod.addCard(new SoulBurst());
-        BaseMod.addCard(new RotInPieces());
-        BaseMod.addCard(new SymbioteForm());
+        BaseMod.addCard(new BurstParasite());
+        BaseMod.addCard(new SoulParasite());
+        BaseMod.addCard(new DarkMasterForm());
         BaseMod.addCard(new Extradition());
         BaseMod.addCard(new FuturePlans());
-        BaseMod.addCard(new DevilWill());
+        //BaseMod.addCard(new DevilWill());
+       // BaseMod.addCard(new PoweredBarrier());
+        BaseMod.addCard(new ViolentFlux());
+        BaseMod.addCard(new Symbiote());
+        BaseMod.addCard(new BloodyVigor());
+        BaseMod.addCard(new DeliriumWill());
+        BaseMod.addCard(new SmokeRises());
+        BaseMod.addCard(new Precognition());
+        BaseMod.addCard(new Galvanize());
+        BaseMod.addCard(new Peace());
+        BaseMod.addCard(new ThroughTheBreach());
+        BaseMod.addCard(new Tenderize());
+        BaseMod.addCard(new DoubleVision());
+        BaseMod.addCard(new SummonNergal());
+        BaseMod.addCard(new Hex());
+        BaseMod.addCard(new StygianWellspring());
+        BaseMod.addCard(new Ouroboros());
+        BaseMod.addCard(new Celerity());
+        BaseMod.addCard(new CutOut());
+        BaseMod.addCard(new Vendetta());
+        BaseMod.addCard(new BookOfNames());
+        BaseMod.addCard(new Repatriate());
+
 
         logger.info("Unlocking cards");
         //Unlock the cards
-        UnlockTracker.unlockCard(DefendPurple.ID);
-        UnlockTracker.unlockCard(StrikePurple.ID);
-        UnlockTracker.unlockCard(DefendRitual.ID);
-        UnlockTracker.unlockCard(StrikeRitual.ID);
+        UnlockTracker.unlockCard(DefendMagenta.ID);
+        UnlockTracker.unlockCard(StrikeMagenta.ID);
+     //   UnlockTracker.unlockCard(DefendRitual.ID);
+       // UnlockTracker.unlockCard(StrikeRitual.ID);
         UnlockTracker.unlockCard(PrepareHost.ID);
         UnlockTracker.unlockCard(DarkRitual.ID);
         UnlockTracker.unlockCard(SummonAgiel.ID);
@@ -252,7 +278,7 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         UnlockTracker.unlockCard(RitualBloodletter.ID);
         UnlockTracker.unlockCard(BarrierOfBone.ID);
         UnlockTracker.unlockCard(EmptyPalms.ID);
-        UnlockTracker.unlockCard(QuickStudy.ID);
+      //  UnlockTracker.unlockCard(QuickStudy.ID);
         UnlockTracker.unlockCard(ImpFeast.ID);
         UnlockTracker.unlockCard(CostlyPreparation.ID);
         UnlockTracker.unlockCard(TemporalRites.ID);
@@ -278,8 +304,8 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         UnlockTracker.unlockCard(TwinWave.ID);
         UnlockTracker.unlockCard(StrategicCut.ID);
         UnlockTracker.unlockCard(SpreadingCurse.ID);
-        UnlockTracker.unlockCard(SummonBaphomet.ID);
-        UnlockTracker.unlockCard(TransientGhost.ID);
+        //UnlockTracker.unlockCard(SummonBaphomet.ID);
+        //UnlockTracker.unlockCard(TransientGhost.ID);
         UnlockTracker.unlockCard(Impale.ID);
         UnlockTracker.unlockCard(DeadlyBlows.ID);
         UnlockTracker.unlockCard(EvilIntentions.ID);
@@ -295,13 +321,34 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         UnlockTracker.unlockCard(Sabbath.ID);
         UnlockTracker.unlockCard(DeepReserves.ID);
         UnlockTracker.unlockCard(SummonMaat.ID);
-        UnlockTracker.unlockCard(SoulBurst.ID);
-        UnlockTracker.unlockCard(RotInPieces.ID);
+        UnlockTracker.unlockCard(BurstParasite.ID);
+        UnlockTracker.unlockCard(SoulParasite.ID);
         UnlockTracker.unlockCard(HeavyInfection.ID);
-        UnlockTracker.unlockCard(SymbioteForm.ID);
+        UnlockTracker.unlockCard(DarkMasterForm.ID);
         UnlockTracker.unlockCard(Extradition.ID);
         UnlockTracker.unlockCard(FuturePlans.ID);
-        UnlockTracker.unlockCard(DevilWill.ID);
+        //UnlockTracker.unlockCard(DevilWill.ID);
+        //UnlockTracker.unlockCard(PoweredBarrier.ID);
+        UnlockTracker.unlockCard(ViolentFlux.ID);
+        UnlockTracker.unlockCard(Symbiote.ID);
+        UnlockTracker.unlockCard(BloodyVigor.ID);
+        UnlockTracker.unlockCard(DeliriumWill.ID);
+        UnlockTracker.unlockCard(SmokeRises.ID);
+        UnlockTracker.unlockCard(Precognition.ID);
+        UnlockTracker.unlockCard(Galvanize.ID);
+        UnlockTracker.unlockCard(Peace.ID);
+        UnlockTracker.unlockCard(ThroughTheBreach.ID);
+        UnlockTracker.unlockCard(Tenderize.ID);
+        UnlockTracker.unlockCard(DoubleVision.ID);
+        UnlockTracker.unlockCard(SummonNergal.ID);
+        UnlockTracker.unlockCard(Hex.ID);
+        UnlockTracker.unlockCard(StygianWellspring.ID);
+        UnlockTracker.unlockCard(Ouroboros.ID);
+        UnlockTracker.unlockCard(Celerity.ID);
+        UnlockTracker.unlockCard(CutOut.ID);
+        UnlockTracker.unlockCard(Vendetta.ID);
+        UnlockTracker.unlockCard(BookOfNames.ID);
+        UnlockTracker.unlockCard(Repatriate.ID);
 
         logger.info("Done adding cards");
     }
@@ -335,13 +382,24 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
             final String[] RitualKW = { "ritual", "rituals", "Ritual", "Rituals", "Ritual." };
             BaseMod.addKeyword("warlock", "Ritual", RitualKW, "Whenever you play a ritual, gain 1 Attunement. Attunement increases the effects of Summons.");
             final String[] PossessKW = { "possess", "possession", "Possession", "possessed" };
-            BaseMod.addKeyword("warlock", "Possess", PossessKW, "At the start of turn, take damage equal to your possession.");
+            BaseMod.addKeyword("warlock", "Possession", PossessKW, "At the start of turn, take damage equal to your possession.");
             final String[] AttuneKW = { "attune", "Attune", "Attunement", "attunement" };
-            BaseMod.addKeyword("warlock", "Attune", AttuneKW, "Increase the effects of Summons.");
-            final String[] SummonKW = { "Summon:", "Summon", "summon"};
-            BaseMod.addKeyword("warlock", "Summon", SummonKW, "Fills an orb slot. Evoked by Banish cards or other summons. Start with 1 Summon Slot");
-            final String[] BanishKW = { "Banish", "Banishment", "banish"};
-            BaseMod.addKeyword("warlock", "Banish", BanishKW, "Removes a summoned demon from it's orb slot");
+            BaseMod.addKeyword("warlock", "Attunement", AttuneKW, "Increase the power of Summon cards and their banish effects");
+            final String[] SummonKW = { "Summon:", "Summon", "summon", "summons", "Summons"};
+            BaseMod.addKeyword("warlock", "Summon", SummonKW, "Special cards that increase in power through Attunement and leave an orb behind when played.");
+            final String[] BanishKW = { "Banish", "Banishment", "banish", "banishes"};
+            BaseMod.addKeyword("warlock", "Banish", BanishKW, "Removes a summoned demon from it's orb slot, triggering it's Banish effect. Does not happen when replaced normally.");
+
+            final String[] AgielKW = { "Agiel:", "Agiel", "agiel", "agiels", "Agiels"};
+            BaseMod.addKeyword("warlock", "Agiel", AgielKW, "Gains 2(3) Damage(upgraded) per Attunement. Banish: Gain 1 Damage per Attunement.");
+            final String[] RerekKW = { "Rerek:", "Rerek", "rerek", "rereks", "Rereks" };
+            BaseMod.addKeyword("warlock", "Rerek", RerekKW, "Gains 1 Damage per Attunement. Banish: Gain 1 Damage per Attunement.");
+            final String[] BaphometKW = { "Baphomet:", "Baphomet", "baphomet", "baphomets", "Baphomets"};
+            BaseMod.addKeyword("warlock", "Baphomet", BaphometKW, "Plays 1 card per Attunement. ");
+            final String[] MaatKW = { "Ma'at:", "Ma'at", "ma'at", "ma'ats", "Ma'ats" };
+            BaseMod.addKeyword("warlock", "Ma'at", MaatKW, "Gains 1 Block per Attunement, 1 Thorns per 4 Attunement. Banish: Gain 1 Block per Attunement.");
+            final String[] NergalKW = { "Nergal:", "Nergal", "nergal", "nergals", "Nergals"};
+            BaseMod.addKeyword("warlock", "Nergal", NergalKW, "Gains 1 debuff per Attunement.");
 
     }
     // ================ /LOAD THE KEYWORDS/ ===================
@@ -359,7 +417,7 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
     public static void AttuneAdd() {
             //if(!AbstractDungeon.player.hasPower(AttunePower.POWER_ID)) {
               //  logger.info("No Attune found");
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AttunePower(AbstractDungeon.player, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AttunePower(AbstractDungeon.player, 1), 1));
         }
 
     public ArrayList getPool()

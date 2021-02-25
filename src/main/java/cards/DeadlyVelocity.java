@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import mod.RitualistMod;
 import patches.MainEnum;
+import powers.DeadlyVelocityPlusPower;
 import powers.DeadlyVelocityPower;
 import powers.EmptyPalmsPower;
 
@@ -39,10 +40,10 @@ public class DeadlyVelocity extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 2;
-    private static final int UPG = 1;
+    private static final int UPG = 2;
     private static final int AMOUNT = 1;
 
     // /Stat Declaration/
@@ -58,7 +59,10 @@ public class DeadlyVelocity extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DeadlyVelocityPower(p, magicNumber), magicNumber));
+        if(!upgraded)
+            addToBot(new ApplyPowerAction(p, p, new DeadlyVelocityPower(p, magicNumber), magicNumber));
+        else
+            addToBot(new ApplyPowerAction(p, p, new DeadlyVelocityPlusPower(p, magicNumber), magicNumber));
 
     }
 
@@ -73,9 +77,9 @@ public class DeadlyVelocity extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPG);
-           // rawDescription = UPGRADE_DESCRIPTION;
-         //   initializeDescription();
+           // upgradeBaseCost(UPG);
+           rawDescription = UPGRADE_DESCRIPTION;
+           initializeDescription();
         }
     }
 

@@ -37,7 +37,7 @@ public class TwistedPower extends AbstractPower {
 
     public void atEndOfTurn(boolean isPlayer)
     {
-        AbstractDungeon.actionManager.addToBottom
+        addToBot
                 (new RemoveSpecificPowerAction(owner, owner, POWER_ID));
     }
 }

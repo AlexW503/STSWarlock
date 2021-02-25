@@ -1,7 +1,11 @@
 package powers;
 
 
+import actions.GainAttuneAction;
 import actions.RandomDrawFetchAction;
+import basemod.BaseMod;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -39,12 +43,26 @@ public class SabbathPower extends AbstractPower {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
+    /*
+    @Override
+    public void onInitialApplication() {
+        BaseMod.MAX_HAND_SIZE += 3;
+    }
+    */
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if(card.hasTag(RITUAL_CARD))
-            AbstractDungeon.actionManager.addToBottom(new RandomDrawFetchAction(amount));
+            // addToBot(new RandomDrawFetchAction(amount));
+            addToBot(new GainAttuneAction(amount));
     }
 
+    /*
+    @Override
+    public void atStartOfTurn() {
+        addToBot(new GainAttuneAction(amount));
+
+    }
+    */
 
 
 }

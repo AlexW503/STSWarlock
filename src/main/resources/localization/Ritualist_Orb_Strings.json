@@ -8,33 +8,37 @@
   "Ritualist:AgielOrb": {
     "NAME": "Agiel",
     "DESCRIPTION": [
-      "#yPassive: At the start of your turn, deal #b",
-      " damage to a random enemy. NL #yBanish: Deal #b",
+      "#yBanish: Deal #b",
       " damage to a random enemy. "
     ]
   },
   "Ritualist:BaphOrb": {
     "NAME": "Baphomet",
     "DESCRIPTION": [
-      "#yPassive: At the start of your turn, lose #b",
-      " energy. NL #yBanish: Gain #b",
-      " energy. "
+      "#yPassive: Play the top #b",
+	 " cards of deck. NL #yBanish: Play the top #b",
+      " cards of deck. "
     ]
   },
   "Ritualist:RerekOrb": {
     "NAME": "Rerek",
     "DESCRIPTION": [
-      "#yPassive: At the start of your turn, gain #b",
-      " Strength and lose ",
-      " Dexterity NL #yBanish: Deal #y",
+      "#yBanish: Deal #b",
       " damage to all enemies. "
+    ]
+  },
+    "Ritualist:NergalOrb": {
+    "NAME": "Nergal",
+    "DESCRIPTION": [
+      "#yBanish: Apply #b",
+	  " Possession to all enemies. "
     ]
   },
   "Ritualist:MaatOrb": {
     "NAME": "Ma'at",
     "DESCRIPTION": [
-      "#yPassive: At the start of your turn, lose #b",
-      " Plated Armor. NL #yBanish: Transform your Plated Armor into half Dexterity. "
+      "#yBanish: Gain #b",
+	  " Block. "
 
     ]
   }

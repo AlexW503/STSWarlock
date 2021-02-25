@@ -15,9 +15,9 @@ import powers.SabbathPower;
 
 public class Sabbath extends CustomCard {
     /*
-    * UNC Power
+    * RARE Power
     * 1E
-    * When you play a ritual draw 1(2) card.
+    * When you play a ritual gain 1 att
      */
 
     //Text Declaration
@@ -32,14 +32,14 @@ public class Sabbath extends CustomCard {
     // /Text Declaration/
     //Stat Declaration
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
-    private static final int COST = 3;
+    private static final int COST = 1;
     private static final int MAGIC = 1;
-    private static final int UPG = 2;
+    private static final int UPG = 1;
 
 
     // /Stat Declaration/
@@ -54,7 +54,7 @@ public class Sabbath extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SabbathPower(p, magicNumber), magicNumber));
+            addToBot(new ApplyPowerAction(p, p, new SabbathPower(p, magicNumber), 1));
     }
 
     // Which card to return when making a copy of this card.
@@ -68,7 +68,8 @@ public class Sabbath extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPG);
+           // upgradeBaseCost(UPG);
+            isInnate = true;
             rawDescription = UPGRADE_DESC;
             initializeDescription();
         }

@@ -1,9 +1,23 @@
 {
   "Ritualist:StarterRelic": {
     "NAME": "Book of Incantations",
-    "FLAVOR": "A tome of rituals.",
+    "FLAVOR": "A tome of rites and demons.",
     "DESCRIPTIONS": [
         "Draw 1 extra card your first and every other turn."
+    ]
+  },
+    "Ritualist:FeedingMirror": {
+    "NAME": "Feeding Mirror",
+    "FLAVOR": "Feeds on its holder's energy. Produces a barrier to protect it's host. ",
+    "DESCRIPTIONS": [
+        "At the end of your turn, convert each remaining Energy into 4 Block."
+    ]
+  },
+      "Ritualist:MortalTether": {
+    "NAME": "Mortal Tether",
+    "FLAVOR": "Keeps you grounded in this dimension. Curiously, holding it makes you lighter.",
+    "DESCRIPTIONS": [
+        "Gain [G] and lose 10 Attunement at the start of each turn."
     ]
   },
   "Ritualist:EnergyExampleRelic": {

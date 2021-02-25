@@ -43,9 +43,9 @@ public class ApplyTwistedPower extends AbstractPower {
     @Override
     public void atStartOfTurn() { //Remove this power and add Twisted Ecstasy
 
-        AbstractDungeon.actionManager.addToBottom
+        addToBot
                 (new ApplyPowerAction(owner, owner, new TwistedPower(owner)));
-        AbstractDungeon.actionManager.addToBottom
+        addToBot
                 (new RemoveSpecificPowerAction(owner, owner, POWER_ID));
 
 

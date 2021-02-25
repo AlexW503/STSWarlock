@@ -3,6 +3,7 @@ package cards;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -39,10 +40,10 @@ public class RitualBloodletter extends AbstractRitual {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 7;
     private static final int ENERGY = 2; //used as magic number
     private static final int UPGRADE_PLUS_DMG = 2;
     private static final int UPGRADE_MAGIC = 1; //+ energy
@@ -61,13 +62,13 @@ public class RitualBloodletter extends AbstractRitual {
     //Actions the card does
     @Override
     public void use(AbstractPlayer p, AbstractMonster m){
-        AbstractDungeon.actionManager.addToBottom(new GainAttuneAction(1));
-        AbstractDungeon.actionManager.addToBottom(new  com.megacrit.cardcrawl.actions.common.DamageAction(m,
+        addToBot(new GainAttuneAction(1));
+        addToBot(new DamageAction(m,
                         new DamageInfo(p, damage, damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         if(p.hand.size() <= 1) {
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(magicNumber));
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW));
+            addToBot(new GainEnergyAction(magicNumber));
+            addToBot(new DrawCardAction(p, DRAW));
         }
 
     }

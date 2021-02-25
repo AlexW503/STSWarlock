@@ -28,16 +28,22 @@
       "DESCRIPTIONS": ["Your Rituals cost 0 this turn." ]
     },
     "Ritualist:DelayedStrengthRemovePower": {
-      "NAME": "Strength Remove",
-      "DESCRIPTIONS": ["In #b",
-                        " turns, lose #y",
-                        " Strength."]
-    },
+    "NAME": "Strength Remove",
+    "DESCRIPTIONS": ["Remove #b"," Strength this turn."," Strength in "," turn."," turns."]
+	},
     "Ritualist:DeadlyVelocityPower": {
       "NAME": "Deadly Velocity",
       "DESCRIPTIONS": [
         "When you play a card gain #y",
-        " Strength and Dexterity until end of turn."]
+        " Strength and gain Dexterity in #b",
+		" card(s) until end of turn."]
+    },
+	 "Ritualist:DeadlyVelocityPlusPower": {
+      "NAME": "Deadly Velocity+",
+      "DESCRIPTIONS": [
+        "When you play a card gain #y",
+        " Strength and gain Dexterity in #b",
+		" card(s) until end of turn."]
     },
       "Ritualist:DemonArmPower": {
       "NAME": "Demon Arm",
@@ -68,8 +74,8 @@
   "Ritualist:DuskSeekerPower": {
     "NAME": "Dusk Seeker",
     "DESCRIPTIONS": [
-      "At the start of your turn add #b",
-      " card from your draw pile into your hand."]
+      "You choose #b",
+      " card you draw each turn."]
   },
   "Ritualist:TwinWavePower": {
     "NAME": "Twin Wave",
@@ -81,7 +87,21 @@
     "NAME": "Spreading Curse",
     "DESCRIPTIONS": [
       "At the start of your turn apply #b",
-      " possess to all enemies."]
+      " Possession to all enemies."]
+  },
+    "Ritualist:VendettaPower": {
+    "NAME": "Vendetta",
+    "DESCRIPTIONS": [
+      "In #y",
+      " more attacks apply #b",
+	  " Possession to all enemies and gain #b",
+	  " Attunement."]
+  },
+    "Ritualist:SpreadingCursePlusPower": {
+    "NAME": "Spreading Curse+",
+    "DESCRIPTIONS": [
+      "At the end of your turn apply #b",
+      " Possession to all enemies."]
   },
   "Ritualist:DelayedPossessionRemovePower": {
     "NAME": "Possession Remove",
@@ -101,34 +121,131 @@
   "Ritualist:SabbathPower": {
     "NAME": "Sabbath",
     "DESCRIPTIONS": [
-      "Whenever you play a Ritual draw #b",
-      " cards."]
+      "Whenever you play a Ritual gain #b",
+      " Attunement."]
   },
   "Ritualist:DeepReservesPower": {
     "NAME": "Deep Reserves",
     "DESCRIPTIONS": [
       "At the start of your turn draw #b",
-      " cards and gain #y",
-      " Attunement."]
+      " cards. You have + #y",
+      " Max Hand Size."]
   },
-  "Ritualist:SoulRotPower": {
-    "NAME": "Soul Rot",
+  "Ritualist:SoulParasitePower": {
+    "NAME": "Soul Parasite",
     "DESCRIPTIONS": [
       "At the start of the turn, gain #b",
       " Possession."
     ]
   },
-    "Ritualist:SymbioteFormPower": {
-      "NAME": "Symbiote Form",
+    "Ritualist:DarkMasterFormPower": {
+      "NAME": "Dark Master Form",
       "DESCRIPTIONS": [
-        "Summons refund half Attunement and don't exhaust."
+        "Summons cost 1 less, playing a summon gives #b",
+		" Attunement and adds #y",
+		" random summon to your deck."
       ]
   },
   "Ritualist:ExtraditionPower": {
-    "NAME": "Extradition Power",
+    "NAME": "Extradition",
     "DESCRIPTIONS": [
       "If the enemy dies by the end of #b",
       " turns spread their Possession to a random enemy."
     ]
+  },
+  "Ritualist:PoweredBarrierPower": {
+    "NAME": "Powered Barrier",
+    "DESCRIPTIONS": [
+      "At your end of turn convert all Energy into #b",
+      " Block each."
+    ]
+  },
+    "Ritualist:OuroborosPower": {
+    "NAME": "Ouroboros",
+    "DESCRIPTIONS": [
+      "At the end of your turn",
+      " gain #b",
+	  " Block.",
+	  " deal #y",
+	  " damage to a random enemy."
+    ]
+  },
+  "Ritualist:SymbiotePower": {
+    "NAME": "Symbiote",
+    "DESCRIPTIONS": [
+      " refunds their Attunement at the end of turn and don't exhaust.",
+	  " Gain #b",
+	  " Attunemnt at the end of your turn."
+    ]
+  },
+  "Ritualist:BloodyVigorPower": {
+    "NAME": "Bloody Vigor",
+    "DESCRIPTIONS": [
+      "At the start of your turn, discard #b",
+	  " card and gain #b",
+      " Strength."
+    ]
+  },
+  "Ritualist:DeliriumWillPower": {
+    "NAME": "Delirium Will",
+    "DESCRIPTIONS": [
+      "At the start of your next #b",
+      " turns, add a Soul Ward to your hand."
+    ]
+  },
+    "Ritualist:StygianWellspringPower": {
+    "NAME": "Stygian Wellspring",
+    "DESCRIPTIONS": [
+      "At the start of your next #b",
+      " turns, add a random card to your hand."
+    ]
+  },
+    "Ritualist:BurstParasitePower": {
+    "NAME": "Burst Parasite",
+    "DESCRIPTIONS": [
+      "When possession is applied to this target deal #b",
+      " damage to all enemies."
+    ]
+  },
+  "Ritualist:MaatPower": {
+    "NAME": "Shield of Ma'at",
+    "DESCRIPTIONS": ["Gain #b",
+	" block this turn.",
+	" block in ",
+	" turn.",
+	" turns."]
+    
+  },
+    "Ritualist:MaatThornPower": {
+    "NAME": "Thorns of Ma'at",
+    "DESCRIPTIONS": ["Gain #y",
+	" Thorns this turn.",
+	" Thorn in ",
+	" turn.",
+	" turns."]
+    
+  },
+  "Ritualist:DoubleVisionPower": {
+    "NAME": "Double Vision",
+    "DESCRIPTIONS": [
+      "The next #b",
+      " Summons you play are played again."
+    ]
+  },
+  "Ritualist:StrengthDownSpecial": {
+	"NAME": "Temporary Weakness",
+	"DESCRIPTIONS": [
+		"At the start of your next turn, regain #b",
+		"strength."
+	]
+  },
+
+   "Ritualist:RemoveThornsPower": {
+	"NAME": "Remove Ma'at Thorns",
+	"DESCRIPTIONS": [
+		"At the start of your next turn, remove #y",
+		" Thorns."
+	]
   }
+  
 }

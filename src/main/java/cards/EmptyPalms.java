@@ -26,7 +26,7 @@ public class EmptyPalms extends CustomCard {
 
     public static final String ID = RitualistMod.makeID("EmptyPalms");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String IMG = RitualistMod.makePath("customImages/power.png");
+    public static final String IMG = RitualistMod.makePath("customImages/empty.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
@@ -36,7 +36,7 @@ public class EmptyPalms extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = MainEnum.PURPLE;
+    public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
     private static final int BLOCK = 10;
@@ -66,7 +66,7 @@ public class EmptyPalms extends CustomCard {
         }
         */
       //  if (!powerExists) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EmptyPalmsPower(p, baseBlock), baseBlock));
+            addToBot(new ApplyPowerAction(p, p, new EmptyPalmsPower(p, baseBlock), baseBlock));
       //  }
 
     }

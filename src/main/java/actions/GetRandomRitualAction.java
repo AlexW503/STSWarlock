@@ -38,25 +38,15 @@ public class GetRandomRitualAction extends AbstractGameAction {
 
         AbstractCard card;
 
-        /*
-        for (Map.Entry<String, AbstractCard> c : CardLibrary.cards.entrySet()) {
-            card = c.getValue();
-            AbstractCard.CardColor color = AbstractDungeon.player.getCardColor();
-            if (card.color.equals(color) && card.rarity != AbstractCard.CardRarity.BASIC && card.hasTag(RITUAL_CARD) && (!UnlockTracker.isCardLocked(c.getKey()))) {
-                tmpPool.add(card);
-            }
-        }
-        */
-
         for(AbstractCard c : CardLibrary.getAllCards()) {
-            if(c.hasTag(RITUAL_CARD) &&  c.rarity != AbstractCard.CardRarity.BASIC){
+            if(c.hasTag(RITUAL_CARD) &&  c.rarity != AbstractCard.CardRarity.BASIC && c.rarity != AbstractCard.CardRarity.SPECIAL ){
                 tmpPool.add(c);
             }
         }
 
         for(int i = amount; i>0; i--) {
             card = tmpPool.get(cardRandomRng.random(tmpPool.size() - 1));
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, 1));
+            addToBot(new MakeTempCardInHandAction(card, 1));
         }
         isDone = true;
     }

@@ -19,7 +19,9 @@ public class DeadlyVelocityPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final String IMG = RitualistMod.makePath("customImages/velocityBuff.png");
+    private int count = 0;
+    private int maxCount = 3;
 
     public DeadlyVelocityPower(final AbstractCreature owner, final int amount) {
         name = NAME;
@@ -34,17 +36,28 @@ public class DeadlyVelocityPower extends AbstractPower {
 
 
     }
+
+
+
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + (maxCount-count) + DESCRIPTIONS[2];
     }
 
    @Override
     public void onUseCard(AbstractCard card, UseCardAction action){
-       AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
-       AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount), amount));
-       AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new DexterityPower(owner, amount), amount));
-       AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new LoseDexterityPower(owner, amount), amount));
-   }
+       addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
+       addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount), amount));
+
+       count++;
+       if(count == maxCount){
+           addToBot(new ApplyPowerAction(owner, owner, new DexterityPower(owner, amount), amount));
+           addToBot(new ApplyPowerAction(owner, owner, new LoseDexterityPower(owner, amount), amount));
+            count = 0;
+
+       }
+       updateDescription();
+
+       }
 
 }
