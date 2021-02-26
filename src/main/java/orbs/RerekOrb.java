@@ -89,7 +89,7 @@ public class RerekOrb extends AbstractDemonOrb {
     }
 
     protected void renderText(SpriteBatch sb) {
-        FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(evokeAmount), cX + NUM_X_OFFSET, cY + bobEffect.y / 2.0F + NUM_Y_OFFSET + 0.0F * Settings.scale, new Color(0.2F, 1.0F, 1.0F, c.a), fontScale);
+        FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(evokeAmount), cX + NUM_X_OFFSET, cY + bobEffect.y / 2.0F + NUM_Y_OFFSET + 4.0F * Settings.scale, new Color(0.2F, 1.0F, 1.0F, c.a), fontScale);
        // FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(passiveAmount), cX + NUM_X_OFFSET, cY + bobEffect.y / 2.0F + NUM_Y_OFFSET + 20.0F * Settings.scale, c, fontScale);
     }
 

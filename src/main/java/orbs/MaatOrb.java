@@ -46,7 +46,7 @@ public class MaatOrb extends AbstractDemonOrb{
 
     public void updateDescription() {
         applyFocus();
-        description = DESC[0] + passiveAmount + DESC[1];
+        description = DESC[0] + evokeAmount + DESC[1];
     }
 
     public void onEvoke() {
@@ -92,7 +92,7 @@ public class MaatOrb extends AbstractDemonOrb{
 
     protected void renderText(SpriteBatch sb) {
       //FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(evokeAmount), cX + NUM_X_OFFSET, cY + bobEffect.y / 2.0F + NUM_Y_OFFSET + 4.0F * Settings.scale, new Color(0.2F, 1.0F, 1.0F, c.a), fontScale);
-       FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(passiveAmount), cX + NUM_X_OFFSET, cY + bobEffect.y / 2.0F + NUM_Y_OFFSET + 4.0F * Settings.scale, c, fontScale);
+       FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(evokeAmount), cX + NUM_X_OFFSET, cY + bobEffect.y / 2.0F + NUM_Y_OFFSET + 4.0F * Settings.scale, c, fontScale);
     }
 
     public void playChannelSFX() {

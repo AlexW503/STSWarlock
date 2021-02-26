@@ -37,7 +37,7 @@ public class BarrierOfBone extends CustomCard {
     public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 2;
-    private static final int BLOCK = 14;
+    private static final int BLOCK = 15;
     private static final int UPGRADE_PLUS_BLOCK = 5;
     private static final int MAGIC = 2;
 

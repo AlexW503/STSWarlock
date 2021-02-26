@@ -99,7 +99,7 @@
 	"Ritualist:InitiationRite": {
 		"NAME": "Initiation Rite",
 		"DESCRIPTION": "warlock:Ritual. NL Next turn gain [G].",
-		"UPGRADE_DESCRIPTION": "warlock:Ritual. NL Next turn gain [G] [G]."
+		"UPGRADE_DESCRIPTION": "2 warlock:Ritual. NL Next turn gain [G] [G]."
 	},
 	"Ritualist:PullFromBeyond": {
 		"NAME": "Pull From Beyond",
@@ -207,7 +207,7 @@
 	},
 	"Ritualist:Momentum": {
 		"NAME": "Momentum",
-		"DESCRIPTION":  "Each time you play !M! c0ards gain [G].",
+		"DESCRIPTION":  "Each time you play !M! cards gain [G].",
 		"UPGRADE_DESCRIPTION": "Innate. NL Each time you play !M! cards gain [G]."
 	},
 	"Ritualist:CostlyStrength": {
@@ -238,7 +238,7 @@
 	},
 	"Ritualist:Repatriate": {
 		"NAME": "Repatriate",
-		"DESCRIPTION": "warlock:Banish !M! times. Channel a random demon with the same warlock:Attunement. NL Exhaust."
+		"DESCRIPTION": "warlock:Banish !M! times. Channel a random demon with the same warlock:Banish value. NL Exhaust."
 	},
 	"Ritualist:EarlyReturn": {
 		"NAME": "Early Return",
@@ -272,7 +272,7 @@
 	},
 	"Ritualist:SoulParasite": {
 		"NAME": "Soul Parasite",
-		"DESCRIPTION": "All enemies gain Soul Parasites equal to their possession. NL Soul Rot applies Possession at the start of each of their turns. NL Exhaust."
+		"DESCRIPTION": "All enemies gain Soul Parasites equal to their possession. NL Soul Parasites apply Possession at the start of each of their turns. NL Exhaust."
 	},
 	"Ritualist:DarkMasterForm": {
 		"NAME": "Dark Master Form",

@@ -47,7 +47,8 @@ public class EmptyPalms extends CustomCard {
 
     public EmptyPalms() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
+        baseMagicNumber = BLOCK;
+        magicNumber = baseMagicNumber;
     }
 
     // Actions the card should do.
@@ -66,7 +67,7 @@ public class EmptyPalms extends CustomCard {
         }
         */
       //  if (!powerExists) {
-            addToBot(new ApplyPowerAction(p, p, new EmptyPalmsPower(p, baseBlock), baseBlock));
+            addToBot(new ApplyPowerAction(p, p, new EmptyPalmsPower(p, magicNumber), magicNumber));
       //  }
 
     }
@@ -82,7 +83,7 @@ public class EmptyPalms extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            upgradeMagicNumber(UPGRADE_PLUS_BLOCK);
             initializeDescription();
         }
     }

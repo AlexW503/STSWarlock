@@ -28,7 +28,7 @@ public class VendettaPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final String IMG = RitualistMod.makePath("customImages/venBuff.png");
     public static final Logger logger = LogManager.getLogger(RitualistMod.class.getName());
 
     private static final int maxCount = 3;
@@ -87,10 +87,6 @@ public class VendettaPower extends AbstractPower {
         description = DESCRIPTIONS[0] + (maxCount-count) + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + attune + DESCRIPTIONS[3];
     }
 
-    @Override
-    public void atStartOfTurn() {
-        amount = 0;
-    }
 
     @Override
     public void onVictory() {

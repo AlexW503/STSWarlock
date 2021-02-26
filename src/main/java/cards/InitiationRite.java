@@ -56,7 +56,7 @@ public class InitiationRite extends AbstractRitual{
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainAttuneAction(1));
+        addToBot(new GainAttuneAction(magicNumber));
         addToBot(new ApplyPowerAction(p, p, new EnergizedPower(p, magicNumber), magicNumber));
 
     }
