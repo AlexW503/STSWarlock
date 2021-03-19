@@ -88,10 +88,5 @@ public class VendettaPower extends AbstractPower {
     }
 
 
-    @Override
-    public void onVictory() {
-        BaseMod.MAX_HAND_SIZE -= amount;
-        logger.info("Max hand size post decrease: ");
-        logger.info(BaseMod.MAX_HAND_SIZE);
-    }
+
 }

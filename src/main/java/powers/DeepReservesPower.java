@@ -39,6 +39,7 @@ public class DeepReservesPower extends AbstractPower {
        // source = source;
 
     }
+
     @Override
     public void stackPower(int stackAmount) {
         this.amount += stackAmount;
@@ -49,18 +50,21 @@ public class DeepReservesPower extends AbstractPower {
         updateDescription();
 
     }
+
+
     @Override
     public void onInitialApplication() {
         logger.info(amount);
-        BaseMod.MAX_HAND_SIZE += amount;
-        logger.info("Max hand size post increase: ");
-        logger.info(BaseMod.MAX_HAND_SIZE);
+       BaseMod.MAX_HAND_SIZE += amount;
+       logger.info("Max hand size post increase: ");
+       logger.info(BaseMod.MAX_HAND_SIZE);
+       logger.info(BaseMod.MAX_HAND_SIZE);
 
     }
 
     @Override
     public void updateDescription(){
-        description = DESCRIPTIONS[0] + draw + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + draw + DESCRIPTIONS[1]+ amount;
     }
 
     @Override
@@ -74,8 +78,8 @@ public class DeepReservesPower extends AbstractPower {
 
     @Override
     public void onVictory() {
-        BaseMod.MAX_HAND_SIZE -= amount;
-        logger.info("Max hand size post decrease: ");
-        logger.info(BaseMod.MAX_HAND_SIZE);
+       BaseMod.MAX_HAND_SIZE -= amount;
+      logger.info("Max hand size post decrease: ");
+      logger.info(BaseMod.MAX_HAND_SIZE);
     }
 }

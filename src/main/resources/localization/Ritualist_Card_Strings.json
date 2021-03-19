@@ -21,7 +21,7 @@
 	},
 	"Ritualist:Vendetta": {
 		"NAME": "Vendetta",
-		"DESCRIPTION": "Every time you play 3 Attacks in a single turn, apply !M! warlock:Possession to all enemies and gain 2 warlock:Attunement. "
+		"DESCRIPTION": "Every time you play 3 Attacks in a single turn, apply !M! warlock:Possession to ALL enemies and gain 2 warlock:Attunement. "
 	},
 	"Ritualist:DarkRitual": {
 		"NAME": "Dark Ritual",
@@ -59,7 +59,7 @@
 	},
 	"Ritualist:ImpFeast": { 
 		"NAME": "Imp Feast",
-		"DESCRIPTION": "All enemies lose 7 Strength this turn and gain !M! warlock:Possession. NL Exhaust."
+		"DESCRIPTION": "ALL enemies lose 8 Strength this turn and gain !M! warlock:Possession. NL Exhaust."
 	},
 	"Ritualist:Celerity": {
 		"NAME": "Celerity",
@@ -94,7 +94,7 @@
 	"Ritualist:MassDrainLife": {
 		"NAME": "Mass Drain Life",
 		"DESCRIPTION": "Deal damage equal to and consume all warlock:Possession from each enemy. Heal HP equal to the amount consumed. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Deal damage (+ !M!) equal to and consume all warlock:Possession from each enemy. Heal HP equal to the amount consumed. NL Exhaust."
+		"UPGRADE_DESCRIPTION": "Deal damage + !M!  equal to and consume all warlock:Possession from each enemy. Heal HP equal to the amount consumed. NL Exhaust."
 	},
 	"Ritualist:InitiationRite": {
 		"NAME": "Initiation Rite",
@@ -221,7 +221,7 @@
 	},
 	"Ritualist:SummonRerek": {
 		"NAME": "Summon Rerek",
-		"DESCRIPTION": "warlock:Rerek. Deal !D! damage to all enemies, then deal !D! damage to a random enemy 3 times. NL warlock:Banish: Deal !M! to all enemies. NL Exhaust."
+		"DESCRIPTION": "warlock:Rerek. Deal !D! damage to ALL enemies, then deal !D! damage to a random enemy 3 times. NL warlock:Banish: Deal !M! to ALL enemies. NL Exhaust."
 	},
 	"Ritualist:QuietMeditation": {
 		"NAME": "Quiet Meditation",
@@ -242,7 +242,7 @@
 	},
 	"Ritualist:EarlyReturn": {
 		"NAME": "Early Return",
-		"DESCRIPTION": "warlock:Banish. NL Costs 1 less this turn for each warlock:Ritual played this turn. NL Deal !D! damage to all enemies. "
+		"DESCRIPTION": "warlock:Banish. NL Costs 1 less this turn for each warlock:Ritual played this turn. NL Deal !D! damage to ALL enemies. "
 	},
 	"Ritualist:Sabbath": {
 		"NAME": "Sabbath",
@@ -260,11 +260,11 @@
 	},
 	"Ritualist:SummonNergal": {
 		"NAME": "Summon Nergal",
-		"DESCRIPTION": "warlock:Nergal. Apply !M! Weak, Vulnerable, warlock:Possession, and Strength down(for one turn) to all enemies. NL warlock:Banish: Apply !M! warlock:Possession to all enemies. NL Exhaust."
+		"DESCRIPTION": "warlock:Nergal. Apply !M! Weak, Vulnerable, warlock:Possession, and Strength down(for one turn) to ALL enemies. NL warlock:Banish: Apply !M! warlock:Possession to ALL enemies. NL Exhaust."
 	},
 	"Ritualist:BurstParasite": {
 		"NAME": "Burst Parasite",
-		"DESCRIPTION": "Infect the target with a parasite. Whenever they have  warlock:Possession applied to them, deal !M! damage to all enemies. NL Exhaust."
+		"DESCRIPTION": "Infect the target with a parasite. Whenever they have  warlock:Possession applied to them, deal !M! damage to ALL enemies. NL Exhaust."
 	},
 	"Ritualist:HeavyInfection": {
 		"NAME": "Heavy Infection",
@@ -272,7 +272,7 @@
 	},
 	"Ritualist:SoulParasite": {
 		"NAME": "Soul Parasite",
-		"DESCRIPTION": "All enemies gain Soul Parasites equal to their possession. NL Soul Parasites apply Possession at the start of each of their turns. NL Exhaust."
+		"DESCRIPTION": "ALL enemies gain Soul Parasites equal to their possession. NL Soul Parasites apply Possession at the start of each of their turns. NL Exhaust."
 	},
 	"Ritualist:DarkMasterForm": {
 		"NAME": "Dark Master Form",
@@ -280,7 +280,7 @@
 	},
 	"Ritualist:Extradition": {
 		"NAME": "Extradition",
-		"DESCRIPTION": "Deal !D! damage. If the enemy dies before your next turn transfer their warlock:Possession to a random enemy."
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. When an enemy dies, apply their warlock:Possession to a random enemy."
 	},
 	"Ritualist:EnergyGem": {
 		"NAME": "Energy Gem",
@@ -349,8 +349,8 @@
 	},
 	"Ritualist:StygianWellspring":{
 		"NAME": "Stygian Wellspring",
-		"DESCRIPTION": "Add a random Warlock card to your hand at the start of your next X turns, it costs 0. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Add a random Warlock card to your hand at the start of your next X+1 turns, it costs 0. NL Exhaust."
+		"DESCRIPTION": "Add a random Warlock card to your hand at the start of your next X+1 turns, it costs 0. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Add a random Warlock card to your hand at the start of your next X+2 turns, it costs 0. NL Exhaust."
 	},
 	"Ritualist:Hex":{
 		"NAME": "Hex",

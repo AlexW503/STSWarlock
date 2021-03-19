@@ -5,6 +5,7 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,6 +17,9 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import mod.RitualistMod;
 import patches.MainEnum;
 import powers.ExtraditionPower;
+import powers.PossessionPower;
+
+import java.util.Iterator;
 
 public class Extradition extends CustomCard {
 
@@ -38,12 +42,12 @@ public class Extradition extends CustomCard {
     //Stat Declaration
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 8;
     private static final int UPGRADE_PLUS_DMG = 3;
 
     // /Stat Declaration/
@@ -51,14 +55,28 @@ public class Extradition extends CustomCard {
     public Extradition() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        isMultiDamage = true;
 
     }
 
     //Actions the card does
     @Override
     public void use(AbstractPlayer p, AbstractMonster m){
-        addToBot(new ApplyPowerAction(m, p, new ExtraditionPower(m, 1), 1));
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+
+        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            this.flash();
+            Iterator var1 = AbstractDungeon.getMonsters().monsters.iterator();
+
+            while(var1.hasNext()) {
+                AbstractMonster mo = (AbstractMonster)var1.next();
+                if (!mo.isDead && !mo.isDying) {
+                    addToBot(new ApplyPowerAction(mo, p, new ExtraditionPower(mo, 1), 1));
+                }
+            }
+        }
+        //addToBot(new ApplyPowerAction(m, p, new ExtraditionPower(m, 1), 1));
+        // addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
     }
     @Override
     public AbstractCard makeCopy() { return new Extradition(); }

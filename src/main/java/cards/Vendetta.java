@@ -34,8 +34,8 @@ public class Vendetta extends CustomCard {
     public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
-    private static final int MAGIC = 4;
-    private static final int UPG = 2;
+    private static final int MAGIC = 7;
+    private static final int UPG = 3;
 
 
     // /Stat Declaration/
@@ -65,7 +65,7 @@ public class Vendetta extends CustomCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPG);
+            upgradeMagicNumber(UPG);
             initializeDescription();
         }
     }

@@ -45,7 +45,7 @@ public class DeliriumWillPower extends AbstractPower {
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
+    public void atStartOfTurn() {
         flash();
         AbstractCard card = new UN_SoulWard();
         if(isUpgraded)

@@ -37,8 +37,10 @@ public class StygianWellspringAction extends AbstractGameAction {
             effect += 2;
             this.p.getRelic("Chemical X").flash();
         }
-        if(isUpgraded)
+        if(!isUpgraded)
             effect += 1;
+        else
+            effect += 2;
 
         if (effect > 0)
             addToBot(new ApplyPowerAction(p, p, new StygianWellspringPower(p, effect, false), effect));

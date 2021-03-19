@@ -128,8 +128,7 @@
     "NAME": "Deep Reserves",
     "DESCRIPTIONS": [
       "At the start of your turn draw #b",
-      " cards. You have + #y",
-      " Max Hand Size."]
+      " cards. Your max hand size is increased by #y"]
   },
   "Ritualist:SoulParasitePower": {
     "NAME": "Soul Parasite",
@@ -149,8 +148,9 @@
   "Ritualist:ExtraditionPower": {
     "NAME": "Extradition",
     "DESCRIPTIONS": [
-      "If the enemy dies by the end of #b",
-      " turns spread their Possession to a random enemy."
+      "When you die apply your possession to #b",
+      " random enemy.",
+	  " random enemies."
     ]
   },
   "Ritualist:PoweredBarrierPower": {

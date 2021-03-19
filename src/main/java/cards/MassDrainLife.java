@@ -39,6 +39,8 @@ public class MassDrainLife extends CustomCard {
     public static final String IMG = RitualistMod.makePath("customImages/mass.png");
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESC = cardStrings.UPGRADE_DESCRIPTION;
+
 
     // /Text Declaration/
     //Stat Declaration
@@ -106,6 +108,8 @@ public class MassDrainLife extends CustomCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPG_MAG);
+            rawDescription = UPGRADE_DESC;
+
             initializeDescription();
         }
     }

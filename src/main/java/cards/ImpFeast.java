@@ -46,7 +46,7 @@ public class ImpFeast extends CustomCard {
     public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 2;
-    private static final int STR = 7;
+    private static final int STR = 8;
     private static final int UPGRADE_MAG = 2;
     private static final int POS = 3;
 

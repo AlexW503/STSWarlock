@@ -43,7 +43,7 @@ public class ScaryShank extends AbstractRitual {
     public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 6;
     private static final int UPGRADE_PLUS_DMG = 3;
     private static int MAGIC = 2;
 

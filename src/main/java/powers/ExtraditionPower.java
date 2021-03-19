@@ -39,7 +39,7 @@ public class ExtraditionPower extends AbstractPower {
         this.amount = amount; // displayed amount is total amount of bomb damage
         updateDescription();
         type = PowerType.BUFF;
-        isTurnBased = true;
+        isTurnBased = false;
         //img = new Texture(IMG);
         this.loadRegion("accuracy");
        // source = source;
@@ -47,23 +47,30 @@ public class ExtraditionPower extends AbstractPower {
     }
     @Override
     public void updateDescription(){
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+
+        if(amount <= 1)
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        else
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+
     }
 
     @Override
     public void onDeath() {
-        if (owner.hasPower(PossessionPower.POWER_ID)) {
-            int pos = owner.getPower(PossessionPower.POWER_ID).amount;
-            if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-                this.flash();
-                addToBot(new ExtraditionAction(AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng), pos));
+        for(int i = 0; i < amount; i++) {
+            if (owner.hasPower(PossessionPower.POWER_ID)) {
+                int pos = owner.getPower(PossessionPower.POWER_ID).amount;
+                if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+                    this.flash();
+                    addToBot(new ExtraditionAction(AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng), pos));
 
-            } else {
-                RitualistMod.logger.info("no target for the extradition");
+                } else {
+                    RitualistMod.logger.info("no target for the extradition");
+                }
             }
         }
     }
-
+/*
     @Override
     public void atEndOfRound() {
         amount--;
@@ -71,5 +78,5 @@ public class ExtraditionPower extends AbstractPower {
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
     }
 
-
+*/
 }
