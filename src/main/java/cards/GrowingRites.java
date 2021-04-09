@@ -1,5 +1,6 @@
 package cards;
 
+import actions.RandomCurseToDiscardAction;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -19,8 +20,8 @@ import java.util.Iterator;
 public class GrowingRites extends CustomCard {
     /*
     * RARE Power
-    * 2E
-    * At the start of your turn gain 3 Attunement
+    * 1E
+    * At the start of your turn gain 3 Attunement. Add a random curse to your discard pile.
      */
 
     //Text Declaration
@@ -58,7 +59,8 @@ public class GrowingRites extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-            addToBot(new ApplyPowerAction(p, p, new GrowingRitesPower(p, magicNumber), magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new GrowingRitesPower(p, magicNumber), magicNumber));
+        addToBot(new RandomCurseToDiscardAction(1));
     }
 
     // Which card to return when making a copy of this card.

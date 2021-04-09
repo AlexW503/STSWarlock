@@ -54,21 +54,7 @@ public class EmptyPalms extends CustomCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        /*
-        boolean powerExists = false;
-        Iterator var4 = p.powers.iterator();
-
-        while(var4.hasNext()) {
-            AbstractPower pow = (AbstractPower)var4.next();
-            if (pow.ID.equals("EmptyPalms")) {
-                powerExists = true;
-                break;
-            }
-        }
-        */
-      //  if (!powerExists) {
             addToBot(new ApplyPowerAction(p, p, new EmptyPalmsPower(p, magicNumber), magicNumber));
-      //  }
 
     }
 

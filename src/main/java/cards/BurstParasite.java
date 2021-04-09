@@ -34,9 +34,9 @@ public class BurstParasite extends CustomCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = MainEnum.Magenta;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int UPGRADE_MAG = 3;
-    private static final int MAGIC = 8;
+    private static final int MAGIC = 9;
     private static final int POS = 2;
 
     // /Stat Declaration/

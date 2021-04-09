@@ -36,9 +36,9 @@ public class BloodyVigor extends CustomCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = MainEnum.Magenta;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final int MAGIC = 2;
-    private static final int UPG = 0;
+    private static final int UPG = 1;
 
 
     // /Stat Declaration/

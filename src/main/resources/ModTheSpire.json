@@ -3,7 +3,7 @@
   "name": "The Warlock",
   "author_list": ["Unbeared"],
   "description": "Adds the sinister Warlock character",
-  "version": "0.9.92",
+  "version": "0.9.97",
   "sts_version": "12-22-2020",
   "mts_version": "3.8.0",
   "dependencies": ["basemod", "stslib"],

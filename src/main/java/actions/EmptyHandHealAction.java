@@ -12,7 +12,7 @@ import powers.AttunePower;
 
 public class EmptyHandHealAction extends AbstractGameAction {
     private int amount;
-    public static final Logger logger = LogManager.getLogger(RitualistMod.class.getName());
+  //  public static final Logger logger = LogManager.getLogger(RitualistMod.class.getName());
     AbstractPlayer p = AbstractDungeon.player;
 
 
@@ -22,7 +22,7 @@ public class EmptyHandHealAction extends AbstractGameAction {
     }
 
     public void update() {
-        logger.info(p.hand.size());
+       // logger.info(p.hand.size());
         if(p.hand.size() == 0) {
             addToBot(new HealAction(p, p, amount));
         }

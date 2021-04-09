@@ -58,8 +58,9 @@ public class CutOut extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new CutOutAction());
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
         addToBot(new EmptyHandHealAction(magicNumber));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
+
     }
     @Override
     public AbstractCard makeCopy() { return new CutOut(); }

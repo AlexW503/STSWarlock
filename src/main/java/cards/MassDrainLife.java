@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -63,6 +64,7 @@ public class MassDrainLife extends CustomCard {
         baseMagicNumber = MAGIC;
         magicNumber = baseMagicNumber;
         baseDamage = 0; //unused
+        DMG = 0;
         exhaust = true;
     }
     // Actions the card should do.
@@ -80,15 +82,17 @@ public class MassDrainLife extends CustomCard {
         while(var3.hasNext()) {
             mo = (AbstractMonster)var3.next();
             if(mo.hasPower(PossessionPower.POWER_ID))
-            {
                 DMG = mo.getPower(PossessionPower.POWER_ID).amount;
-                DMG += magicNumber;
-                total += DMG;
-                addToBot(new  com.megacrit.cardcrawl.actions.common.DamageAction(mo, new DamageInfo(p, DMG, DamageInfo.DamageType.NORMAL),
-                        AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-                addToBot(new RemoveSpecificPowerAction(mo, mo, PossessionPower.POWER_ID));
+            else
+                DMG = 0;
 
-            }
+            DMG += magicNumber;
+            total += DMG;
+            addToBot(new DamageAction(mo, new DamageInfo(p, DMG, DamageInfo.DamageType.NORMAL),
+                    AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+            addToBot(new RemoveSpecificPowerAction(mo, mo, PossessionPower.POWER_ID));
+
+
         }
 
         addToBot(new HealAction(p, p, total));

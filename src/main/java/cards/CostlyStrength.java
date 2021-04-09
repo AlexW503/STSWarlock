@@ -40,9 +40,10 @@ public class CostlyStrength extends AbstractRitual {
     public static final CardColor COLOR = MainEnum.Magenta;
     private int ATT = 0;
     private static final int MAGIC = 1;
-    private static final int MAX = 5;
+    private static final int MAX = 3;
     private static final int UPG_MAGIC = 1;
     private static final int COST = 0;
+    private static final int BONUS = 2;
 
     // /Stat Declaration/
 
@@ -68,9 +69,8 @@ public class CostlyStrength extends AbstractRitual {
 
             addToBot(new ApplyPowerAction(p, p, new AttunePower(AbstractDungeon.player, -ATT), -ATT));
 
-            ATT *= 2;
-            //if(upgraded)
-              //  ATT += baseMagicNumber;
+          //  ATT *= 2;
+            ATT += BONUS;
 
             addToBot(new ApplyPowerAction(p, p, new ApplyStrengthPower(p, ATT), ATT));
 

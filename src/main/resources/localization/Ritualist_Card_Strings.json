@@ -30,7 +30,7 @@
 	},
 	"Ritualist:SummonAgiel": {
 		"NAME": "Summon Agiel",
-		"DESCRIPTION": "warlock:Agiel. Deal !D! damage. NL warlock:Banish: Deal !M! damage to a random enemy. NL Exhaust."
+		"DESCRIPTION": "warlock:Agiel. Deal !D!* damage. NL warlock:Banish: Deal !M! damage to a random enemy. NL Exhaust."
 	},
 	"Ritualist:ScaryShank": {
 		"NAME": "Scary Shank",
@@ -81,6 +81,10 @@
 	"Ritualist:BranchingPaths": {
 		"NAME": "Branching Paths",
 		"DESCRIPTION": "warlock:Ritual. NL Draw !M! cards. NL Put a card from your hand on top of your draw pile."
+	},
+	"Ritualist:FranticSearch": {
+		"NAME": "Frantic Search",
+		"DESCRIPTION": "warlock:Ritual. NL Gain [G] [G]. NL Draw !M! cards, then discard 2 cards."
 	},
 	"Ritualist:SoulOpening": {
 		"NAME": "Soul Opening",
@@ -153,8 +157,8 @@
 	},
 	"Ritualist:GrowingRites": {
 		"NAME": "Growing Rites",
-		"DESCRIPTION": "At the start of your turn, gain !M! warlock:Attunement.",
-		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! warlock:Attunement."
+		"DESCRIPTION": "At the start of your turn, gain !M! warlock:Attunement. NL Add a random curse to your discard pile.",
+		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! warlock:Attunement. NL Add a random temporary curse to your discard pile."
 	},
 	"Ritualist:DuskSeeker": {
 		"NAME": "Dusk Seeker",
@@ -212,8 +216,8 @@
 	},
 	"Ritualist:CostlyStrength": {
 		"NAME": "Costly Strength",
-		"DESCRIPTION": "warlock:Ritual. NL Lose up to 5 warlock:Attunement. Gain twice that much Strength next turn only.",
-		"UPGRADE_DESCRIPTION": "2 warlock:Ritual. NL Lose up to 5 warlock:Attunement. Gain twice that much Strength next turn only."
+		"DESCRIPTION": "warlock:Ritual. NL Lose up to 3 warlock:Attunement. Gain that much Strength PLUS 2 next turn only.",
+		"UPGRADE_DESCRIPTION": "2 warlock:Ritual. NL Lose up to 3 warlock:Attunement. Gain that much Strength PLUS 2 next turn only."
 	},
 	"Ritualist:ShallowCut": {
 		"NAME": "Shallow Cut",
@@ -329,7 +333,7 @@
 	},
 	"Ritualist:Precognition": {
 		"NAME": "Precognition",
-		"DESCRIPTION": "Next turn, gain !B! block."
+		"DESCRIPTION": "Next turn, gain !B! Block."
 	},
 	"Ritualist:Galvanize": {
 		"NAME": "Galvanize",

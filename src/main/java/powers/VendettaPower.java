@@ -83,6 +83,11 @@ public class VendettaPower extends AbstractPower {
     }
 
     @Override
+    public void atStartOfTurn() {
+        count = 0;
+    }
+
+    @Override
     public void updateDescription(){
         description = DESCRIPTIONS[0] + (maxCount-count) + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + attune + DESCRIPTIONS[3];
     }

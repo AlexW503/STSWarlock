@@ -263,6 +263,7 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         BaseMod.addCard(new Vendetta());
         BaseMod.addCard(new BookOfNames());
         BaseMod.addCard(new Repatriate());
+        BaseMod.addCard(new FranticSearch());
 
 
         logger.info("Unlocking cards");
@@ -349,6 +350,7 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         UnlockTracker.unlockCard(Vendetta.ID);
         UnlockTracker.unlockCard(BookOfNames.ID);
         UnlockTracker.unlockCard(Repatriate.ID);
+        UnlockTracker.unlockCard(FranticSearch.ID);
 
         logger.info("Done adding cards");
     }

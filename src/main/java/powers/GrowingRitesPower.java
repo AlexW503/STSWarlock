@@ -29,7 +29,7 @@ public class GrowingRitesPower extends AbstractPower {
         type = PowerType.BUFF;
         isTurnBased = false;
         //img = new Texture(IMG);
-        loadRegion("nightmare");
+        loadRegion("evolve");
        // source = source;
 
     }
