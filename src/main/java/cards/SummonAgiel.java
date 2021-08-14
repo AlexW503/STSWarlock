@@ -2,6 +2,7 @@ package cards;
 
 import actions.SetPowerZeroAction;
 import basemod.abstracts.CustomCard;
+import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
@@ -40,12 +41,12 @@ public class SummonAgiel extends AbstractSummon {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = MainEnum.Magenta;
-    private static final int UPGRADE = 1;
+    private static final int UPGRADE = 3;
     private int MULTI = 2;
 
     private int ATT = 0; //player's attune
     private static final int COST = 2;
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 11;
     private int BASE = 5;
    // private static final int DIV = 3;
 
@@ -56,7 +57,7 @@ public class SummonAgiel extends AbstractSummon {
         baseDamage = DAMAGE;
         baseMagicNumber = BASE;
         magicNumber = baseMagicNumber;
-        exhaust = true;
+        ExhaustiveVariable.setBaseValue(this, 2);
         tags.add(MainEnum.SUMMON_CARD);
     }
 
@@ -91,7 +92,7 @@ public class SummonAgiel extends AbstractSummon {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-           // upgradeBaseCost(UPGRADE);
+            upgradeDamage(UPGRADE);
             this.upgradedDamage = true;
             MULTI = 3;
             initializeDescription();

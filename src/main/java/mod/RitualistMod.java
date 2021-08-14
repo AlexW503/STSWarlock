@@ -197,7 +197,7 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         BaseMod.addCard(new CostlyPreparation());
         BaseMod.addCard(new TemporalRites());
         BaseMod.addCard(new ScoutAhead());
-        BaseMod.addCard(new BranchingPaths());
+        BaseMod.addCard(new Brainstorm());
         BaseMod.addCard(new SoulOpening());
         BaseMod.addCard(new TwistedEcstasy());
         BaseMod.addCard(new MassDrainLife());
@@ -284,7 +284,7 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
         UnlockTracker.unlockCard(CostlyPreparation.ID);
         UnlockTracker.unlockCard(TemporalRites.ID);
         UnlockTracker.unlockCard(ScoutAhead.ID);
-        UnlockTracker.unlockCard(BranchingPaths.ID);
+        UnlockTracker.unlockCard(Brainstorm.ID);
         UnlockTracker.unlockCard(SoulOpening.ID);
         UnlockTracker.unlockCard(TwistedEcstasy.ID);
         UnlockTracker.unlockCard(MassDrainLife.ID);
@@ -399,7 +399,7 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
             final String[] BaphometKW = { "Baphomet:", "Baphomet", "baphomet", "baphomets", "Baphomets"};
             BaseMod.addKeyword("warlock", "Baphomet", BaphometKW, "Plays 1 card per Attunement. ");
             final String[] MaatKW = { "Ma'at:", "Ma'at", "ma'at", "ma'ats", "Ma'ats" };
-            BaseMod.addKeyword("warlock", "Ma'at", MaatKW, "Gains 1 Block per Attunement, 1 Thorns per 4 Attunement. Banish: Gain 1 Block per Attunement.");
+            BaseMod.addKeyword("warlock", "Ma'at", MaatKW, "Gains 1 Block per Attunement, 1 Thorns per 4 Attunement. Banish: Gain 1 Thorns per 4 Attunement.");
             final String[] NergalKW = { "Nergal:", "Nergal", "nergal", "nergals", "Nergals"};
             BaseMod.addKeyword("warlock", "Nergal", NergalKW, "Gains 1 debuff per Attunement.");
 

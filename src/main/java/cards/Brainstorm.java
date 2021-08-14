@@ -1,20 +1,17 @@
 package cards;
 
-import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.actions.common.PutOnDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import mod.RitualistMod;
 import patches.MainEnum;
 import actions.GainAttuneAction;
 
-public class BranchingPaths extends AbstractRitual {
+public class Brainstorm extends AbstractRitual {
     /*
     * Common Skill
     * 1E Ritual
@@ -23,7 +20,7 @@ public class BranchingPaths extends AbstractRitual {
 
     //Text Declaration
 
-    public static final String ID = RitualistMod.makeID("BranchingPaths");
+    public static final String ID = RitualistMod.makeID("Brainstorm");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String IMG = RitualistMod.makePath("customImages/branching.png");
     public static final String NAME = cardStrings.NAME;
@@ -44,7 +41,7 @@ public class BranchingPaths extends AbstractRitual {
     // /Stat Declaration/
 
 
-    public BranchingPaths() {
+    public Brainstorm() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = DRAW;
         magicNumber = baseMagicNumber;
@@ -63,7 +60,7 @@ public class BranchingPaths extends AbstractRitual {
     // Which card to return when making a copy of this card.
     @Override
     public AbstractCard makeCopy() {
-        return new BranchingPaths();
+        return new Brainstorm();
     }
 
     //Upgraded stats.

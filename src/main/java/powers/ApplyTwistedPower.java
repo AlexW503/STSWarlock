@@ -25,7 +25,7 @@ public class ApplyTwistedPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final String IMG = RitualistMod.makePath("customImages/twistedPrePower.png");
 
     public ApplyTwistedPower(final AbstractCreature owner) {
         name = NAME;

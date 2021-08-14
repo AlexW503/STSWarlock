@@ -21,7 +21,7 @@
 	},
 	"Ritualist:Vendetta": {
 		"NAME": "Vendetta",
-		"DESCRIPTION": "Every time you play 3 Attacks in a single turn, apply !M! warlock:Possession to ALL enemies and gain 2 warlock:Attunement. "
+		"DESCRIPTION": "Whenever you play 3 Attacks in a single turn, apply !M! warlock:Possession to ALL enemies and gain 2 warlock:Attunement. "
 	},
 	"Ritualist:DarkRitual": {
 		"NAME": "Dark Ritual",
@@ -30,7 +30,7 @@
 	},
 	"Ritualist:SummonAgiel": {
 		"NAME": "Summon Agiel",
-		"DESCRIPTION": "warlock:Agiel. Deal !D!* damage. NL warlock:Banish: Deal !M! damage to a random enemy. NL Exhaust."
+		"DESCRIPTION": "warlock:Agiel. Deal !D! damage. NL warlock:Banish: Deal !M! damage to a random enemy. NL Exhaustive !stslib:ex!."
 	},
 	"Ritualist:ScaryShank": {
 		"NAME": "Scary Shank",
@@ -63,7 +63,7 @@
 	},
 	"Ritualist:Celerity": {
 		"NAME": "Celerity",
-		"DESCRIPTION": "Gain !M! Dexterity. This card triggers it's effects when discarded or exhausted by another card. NL Exhaust."
+		"DESCRIPTION": "Gain !M! Dexterity. When discarded or exhausted by another source, gain !M! Dexterity.  NL Exhaust."
 	},
 	"Ritualist:CostlyPreparation": {
 		"NAME": "Costly Preparation",
@@ -78,8 +78,8 @@
 		"NAME": "Scout Ahead",
 		"DESCRIPTION": "Gain !B! Block. NL Put a card from your hand onto the top of your draw pile."
 	},
-	"Ritualist:BranchingPaths": {
-		"NAME": "Branching Paths",
+	"Ritualist:Brainstorm": {
+		"NAME": "Brainstorm",
 		"DESCRIPTION": "warlock:Ritual. NL Draw !M! cards. NL Put a card from your hand on top of your draw pile."
 	},
 	"Ritualist:FranticSearch": {
@@ -157,8 +157,8 @@
 	},
 	"Ritualist:GrowingRites": {
 		"NAME": "Growing Rites",
-		"DESCRIPTION": "At the start of your turn, gain !M! warlock:Attunement. NL Add a random curse to your discard pile.",
-		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! warlock:Attunement. NL Add a random temporary curse to your discard pile."
+		"DESCRIPTION": "At the start of your turn, gain !M! warlock:Attunement. NL Add a temporary curse to your discard pile.",
+		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! warlock:Attunement. NL Add a temporary curse to your discard pile."
 	},
 	"Ritualist:DuskSeeker": {
 		"NAME": "Dusk Seeker",
@@ -207,7 +207,7 @@
 	},
 	"Ritualist:BloodBoil": {
 		"NAME": "Blood Boil",
-		"DESCRIPTION": "warlock:Ritual. Retain. NL Gain [G] . If you retain this card lose !M! life and gain 1 Strength. NL Exhaustive !stslib:ex!."
+		"DESCRIPTION": "warlock:Ritual. Retain. NL Gain [G] . When you retain this card lose !M! life and gain 1 Strength. NL Exhaustive !stslib:ex!."
 	},
 	"Ritualist:Momentum": {
 		"NAME": "Momentum",
@@ -216,16 +216,16 @@
 	},
 	"Ritualist:CostlyStrength": {
 		"NAME": "Costly Strength",
-		"DESCRIPTION": "warlock:Ritual. NL Lose up to 3 warlock:Attunement. Gain that much Strength PLUS 2 next turn only.",
-		"UPGRADE_DESCRIPTION": "2 warlock:Ritual. NL Lose up to 3 warlock:Attunement. Gain that much Strength PLUS 2 next turn only."
+		"DESCRIPTION": "warlock:Ritual. NL Lose up to 3 warlock:Attunement. Gain that much Strength +2 next turn only.",
+		"UPGRADE_DESCRIPTION": "2 warlock:Ritual. NL Lose up to 3 warlock:Attunement. Gain that much Strength +2 next turn only."
 	},
 	"Ritualist:ShallowCut": {
 		"NAME": "Shallow Cut",
-		"DESCRIPTION":  "warlock:Ritual. NL Deal !D! Damage. NL Draw !M! card."
+		"DESCRIPTION":  "warlock:Ritual. NL Deal !D! damage. NL Draw !M! card."
 	},
 	"Ritualist:SummonRerek": {
 		"NAME": "Summon Rerek",
-		"DESCRIPTION": "warlock:Rerek. Deal !D! damage to ALL enemies, then deal !D! damage to a random enemy 3 times. NL warlock:Banish: Deal !M! to ALL enemies. NL Exhaust."
+		"DESCRIPTION": "warlock:Rerek. Deal !D! damage to ALL enemies, then deal !D! damage to a random enemy 4 times. NL warlock:Banish: Deal !M! to ALL enemies. NL Exhaust."
 	},
 	"Ritualist:QuietMeditation": {
 		"NAME": "Quiet Meditation",
@@ -260,11 +260,11 @@
 	},
 	"Ritualist:SummonMaat": {
 		"NAME": "Summon Ma'at",
-		"DESCRIPTION": "warlock:Ma'at. Gain !B! Block and !M! Thorns at the end of your next 3 turns. Lose the gained Thorns after. NL warlock:Banish: Gain !B! Block. NL Exhaust."
+		"DESCRIPTION": "warlock:Ma'at. Gain !B! Block and !M! Thorns at the end of your next 3 turns. Lose the gained Thorns after. NL warlock:Banish: Gain !M! Thorns. NL Exhaust."
 	},
 	"Ritualist:SummonNergal": {
 		"NAME": "Summon Nergal",
-		"DESCRIPTION": "warlock:Nergal. Apply !M! Weak, Vulnerable, warlock:Possession, and Strength down(for one turn) to ALL enemies. NL warlock:Banish: Apply !M! warlock:Possession to ALL enemies. NL Exhaust."
+		"DESCRIPTION": "warlock:Nergal. Apply !M! Weak, Vulnerable, warlock:Possession, and Strength-Down(for one turn) to ALL enemies. NL warlock:Banish: Apply !M! warlock:Possession to ALL enemies. NL Exhaust."
 	},
 	"Ritualist:BurstParasite": {
 		"NAME": "Burst Parasite",
@@ -276,7 +276,7 @@
 	},
 	"Ritualist:SoulParasite": {
 		"NAME": "Soul Parasite",
-		"DESCRIPTION": "ALL enemies gain Soul Parasites equal to their possession. NL Soul Parasites apply Possession at the start of each of their turns. NL Exhaust."
+		"DESCRIPTION": "Infect ALL enemies with Soul Parasites equal to their warlock:Possession. NL Soul Parasites apply warlock:Possession at the start of their turn. NL Exhaust."
 	},
 	"Ritualist:DarkMasterForm": {
 		"NAME": "Dark Master Form",
@@ -306,12 +306,12 @@
 	},
 	"Ritualist:ViolentFlux": {
 		"NAME": "Violent Flux",
-		"DESCRIPTION": "Deal !D! Damage to the closest enemy, then deal that damage plus !M! to the next enemy, repeating."
+		"DESCRIPTION": "Deal !D! damage to the closest enemy, then deal that damage plus !M! to the next enemy, repeating."
 	},
 	"Ritualist:Symbiote": {
 		"NAME": "Symbiote",
-		"DESCRIPTION": "Select a warlock:Summon. This combat, it doesn't exhaust and returns it's warlock:Attunement cost at the end of your turn.",
-		"UPGRADE_DESCRIPTION": "Innate. NL Select a warlock:Summon. This combat, it doesn't exhaust and returns it's warlock:Attunement cost at the end of your turn."
+		"DESCRIPTION": "Select a warlock:Summon. It doesn't exhaust and refunds it's warlock:Attunement cost at the end of your turn.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Select a warlock:Summon. It doesn't exhaust and refunds it's warlock:Attunement cost at the end of your turn."
 
 	},
 	"Ritualist:BloodyVigor": {
@@ -329,7 +329,7 @@
 	},
 	"Ritualist:SmokeRises": {
 		"NAME": "Smoke Rises",
-		"DESCRIPTION": "Deal !D! damage. Permanently increase this card's Damage by !M!. NL Exhaustive !stslib:ex!."
+		"DESCRIPTION": "Deal !D! damage. Permanently increase this card's damage by !M!. NL Exhaustive !stslib:ex!."
 	},
 	"Ritualist:Precognition": {
 		"NAME": "Precognition",

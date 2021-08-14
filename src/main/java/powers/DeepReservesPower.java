@@ -3,6 +3,7 @@ package powers;
 
 import actions.GainAttuneAction;
 import basemod.BaseMod;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.defect.SeekAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -20,7 +21,7 @@ public class DeepReservesPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final String IMG = RitualistMod.makePath("customImages/deep.png");
     public static final Logger logger = LogManager.getLogger(RitualistMod.class.getName());
 
     private int draw;
@@ -34,8 +35,8 @@ public class DeepReservesPower extends AbstractPower {
         updateDescription();
         type = PowerType.BUFF;
         isTurnBased = false;
-        //img = new Texture(IMG);
-        loadRegion("darkembrace");
+        img = new Texture(IMG);
+       // loadRegion("darkembrace");
        // source = source;
 
     }

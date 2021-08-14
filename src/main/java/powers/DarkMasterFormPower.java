@@ -4,6 +4,7 @@ package powers;
 import actions.GainAttuneAction;
 import actions.RandomDrawFetchAction;
 import actions.RandomSummonToDeckAction;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -24,7 +25,7 @@ public class DarkMasterFormPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    //public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final String IMG = RitualistMod.makePath("customImages/darkMaster.png");
     public int count;
     public static final Logger logger = LogManager.getLogger(RitualistMod.class.getName());
 
@@ -38,8 +39,8 @@ public class DarkMasterFormPower extends AbstractPower {
         updateDescription();
         type = PowerType.BUFF;
         isTurnBased = false;
-        //img = new Texture(IMG);
-        loadRegion("demonForm");
+        img = new Texture(IMG);
+        //loadRegion("demonForm");
        // source = source;
 
     }

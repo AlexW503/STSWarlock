@@ -1,15 +1,14 @@
 package powers;
 
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.defect.SeekAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.PoisonPower;
 import mod.RitualistMod;
 
 import java.util.Iterator;
@@ -20,7 +19,7 @@ public class SpreadingCursePower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final String IMG = RitualistMod.makePath("customImages/spreadingPower.png");
 
     public SpreadingCursePower(final AbstractCreature owner, int amount) {
         name = NAME;
@@ -30,8 +29,8 @@ public class SpreadingCursePower extends AbstractPower {
         updateDescription();
         type = PowerType.BUFF;
         isTurnBased = false;
-        //img = new Texture(IMG);
-        loadRegion("fumes");
+        img = new Texture(IMG);
+        //loadRegion("fumes");
        // source = source;
 
     }

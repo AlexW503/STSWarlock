@@ -42,7 +42,7 @@ public class DeadlyVelocity extends CustomCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = MainEnum.Magenta;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int UPG = 2;
     private static final int AMOUNT = 1;
 

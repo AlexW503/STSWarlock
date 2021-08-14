@@ -40,7 +40,7 @@ public class DeepReserves extends CustomCard {
     private static final int COST = 2;
     private static final int DRAW = 2;
     private static final int MAGIC = 2;
-    private static final int UPG = 2;
+    private static final int UPG = 3;
 
 
     // /Stat Declaration/

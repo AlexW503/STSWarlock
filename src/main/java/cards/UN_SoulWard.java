@@ -37,7 +37,7 @@ public class UN_SoulWard extends CustomCard {
     public static final CardColor COLOR = MainEnum.Magenta;
 
     private static final int COST = 0;
-    private static final int BLOCK = 9;
+    private static final int BLOCK = 8;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     // /Stat Declaration/

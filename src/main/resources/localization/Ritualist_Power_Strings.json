@@ -116,7 +116,10 @@
   },
   "Ritualist:ApplyStrengthPower": {
     "NAME": "Apply Temp. Strength",
-    "DESCRIPTIONS": ["Next turn gain "," temporary Strength."]
+    "DESCRIPTIONS": [
+	"Next turn gain #b",
+	" temporary Strength."
+	]
   },
   "Ritualist:SabbathPower": {
     "NAME": "Sabbath",
@@ -173,7 +176,7 @@
   "Ritualist:SymbiotePower": {
     "NAME": "Symbiote",
     "DESCRIPTIONS": [
-      " refunds their Attunement at the end of turn and don't exhaust.",
+      " refunds their Attunement at the end of turn and doesn't exhaust.",
 	  " Gain #b",
 	  " Attunemnt at the end of your turn."
     ]
@@ -210,8 +213,8 @@
   "Ritualist:MaatPower": {
     "NAME": "Shield of Ma'at",
     "DESCRIPTIONS": ["Gain #b",
-	" block this turn.",
-	" block in ",
+	" Block this turn.",
+	" Block in ",
 	" turn.",
 	" turns."]
     

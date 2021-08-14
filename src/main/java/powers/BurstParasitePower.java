@@ -1,6 +1,7 @@
 package powers;
 
 
+import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnReceivePowerPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -24,7 +25,7 @@ public class BurstParasitePower extends AbstractPower implements OnReceivePowerP
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final String IMG = RitualistMod.makePath("customImages/burstPower.png");
     public static final Logger logger = LogManager.getLogger(RitualistMod.class.getName());
 
     public BurstParasitePower(final AbstractCreature owner, int amount) {
@@ -35,8 +36,8 @@ public class BurstParasitePower extends AbstractPower implements OnReceivePowerP
         updateDescription();
         type = PowerType.DEBUFF;
         isTurnBased = false;
-        loadRegion("cExplosion");
-        //img = new Texture(IMG);
+        //loadRegion("cExplosion");
+        img = new Texture(IMG);
        // source = source;
         logger.info(ID);
     }

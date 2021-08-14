@@ -18,7 +18,7 @@ public class GrowingRitesPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final String IMG = RitualistMod.makePath("customImages/growingPower.png");
 
     public GrowingRitesPower(final AbstractCreature owner, int amount) {
         name = NAME;
@@ -28,8 +28,8 @@ public class GrowingRitesPower extends AbstractPower {
         updateDescription();
         type = PowerType.BUFF;
         isTurnBased = false;
-        //img = new Texture(IMG);
-        loadRegion("evolve");
+        img = new Texture(IMG);
+        //loadRegion("evolve");
        // source = source;
 
     }

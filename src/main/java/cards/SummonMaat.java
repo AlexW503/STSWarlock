@@ -26,9 +26,9 @@ import variables.MagicPlus2;
 
 public class SummonMaat extends AbstractSummon {
     /*
-    * Rare Skill
+    * UNC  Skill
     * 2E Summon
-    * Gain ATT block at the end of the next 3 turns.  Summon: Gain ATT/5 thorns. Banishes after 3 turns.
+    * Gain ATT block at the end of the next 3 turns.  Summon: Gain ATT/4 thorns. Banishes after 3 turns.
      */
 
     //Text Declaration
@@ -54,10 +54,9 @@ public class SummonMaat extends AbstractSummon {
     private static final int TURNS = 3;
     private static final int DIV = 4;
     private static final int UPG = 2;
-    private static final int BASE = 2;
+    private static final int BASE = 5;
     private int ATT = 1; //player's attune
     // /Stat Declaration/
-
 
     public SummonMaat() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
@@ -90,7 +89,7 @@ public class SummonMaat extends AbstractSummon {
         addToBot(new ApplyPowerAction(p, p, new MaatPower(p, block, TURNS), block));
         addToBot(new ApplyPowerAction(p, p, new MaatThornPower(p, magicNumber, TURNS), magicNumber));
 
-        addToBot(new ChannelAction(new MaatOrb(block)));
+        addToBot(new ChannelAction(new MaatOrb(magicNumber)));
         addToBot(new SetPowerZeroAction(p, p, AttunePower.POWER_ID));
     }
 

@@ -2,6 +2,7 @@ package powers;
 
 
 import actions.GainAttuneAction;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.actions.defect.SeekAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -17,7 +18,7 @@ public class DuskSeekerPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final String IMG = RitualistMod.makePath("customImages/duskPower.png");
 
     public DuskSeekerPower(final AbstractCreature owner, int amount) {
         name = NAME;
@@ -27,8 +28,8 @@ public class DuskSeekerPower extends AbstractPower {
         updateDescription();
         type = PowerType.BUFF;
         isTurnBased = false;
-        //img = new Texture(IMG);
-        loadRegion("mantra");
+        img = new Texture(IMG);
+        //loadRegion("mantra");
        // source = source;
 
     }

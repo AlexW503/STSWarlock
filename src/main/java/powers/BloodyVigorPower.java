@@ -2,6 +2,7 @@ package powers;
 
 
 import actions.GainAttuneAction;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -20,7 +21,7 @@ public class BloodyVigorPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final String IMG = RitualistMod.makePath("customImages/bloodyPower.png");
     public static int discard;
 
     public BloodyVigorPower(final AbstractCreature owner, int amount) {
@@ -32,8 +33,8 @@ public class BloodyVigorPower extends AbstractPower {
         updateDescription();
         type = PowerType.BUFF;
         isTurnBased = false;
-        //img = new Texture(IMG);
-        loadRegion("mayhem");
+        img = new Texture(IMG);
+        //loadRegion("mayhem");
        // source = source;
 
     }

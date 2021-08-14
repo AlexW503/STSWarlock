@@ -19,18 +19,18 @@ public class ApplyStrengthPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final String IMG = RitualistMod.makePath("customImages/applyStr.png");
 
     public ApplyStrengthPower(final AbstractCreature owner, int amount) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
-        description = DESCRIPTIONS[0];
+        updateDescription();
         type = PowerType.BUFF;
         isTurnBased = false;
-        loadRegion("noPain");
-        //img = new Texture(IMG);
+        //loadRegion("noPain");
+        img = new Texture(IMG);
        // source = source;
 
     }

@@ -27,7 +27,7 @@ public class SymbiotePower extends AbstractPower implements NonStackablePower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    //public static final String IMG = RitualistMod.makePath("customImages/buffPower.png");
+    public static final String IMG = RitualistMod.makePath("customImages/symbiotePower.png");
     int att = 0;
     int index = 0;
     UUID id;
@@ -41,8 +41,8 @@ public class SymbiotePower extends AbstractPower implements NonStackablePower {
         this.amount = 0;
         type = PowerType.BUFF;
         isTurnBased = false;
-       // img = new Texture(IMG);
-        loadRegion("beat");
+        img = new Texture(IMG);
+        //loadRegion("beat");
         id = uuid;
         cName= cardName;
         refund = false;

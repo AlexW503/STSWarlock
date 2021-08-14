@@ -4,6 +4,7 @@ package powers;
 import actions.GainAttuneAction;
 import actions.RandomDrawFetchAction;
 import basemod.BaseMod;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -23,7 +24,7 @@ public class SabbathPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final String IMG = RitualistMod.makePath("customImages/sabbath.png");
 
     public SabbathPower(final AbstractCreature owner, int amount) {
         name = NAME;
@@ -33,8 +34,8 @@ public class SabbathPower extends AbstractPower {
         updateDescription();
         type = PowerType.BUFF;
         isTurnBased = false;
-        //img = new Texture(IMG);
-        loadRegion("cExplosion");
+        img = new Texture(IMG);
+        //loadRegion("cExplosion");
        // source = source;
 
     }

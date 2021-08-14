@@ -2,6 +2,7 @@ package powers;
 
 
 import actions.GainAttuneAction;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -19,7 +20,7 @@ public class TwinWavePower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final String IMG = RitualistMod.makePath("customImages/twin.png");
     int[] multiDamage;
     int damageToDisplay;
 
@@ -33,8 +34,8 @@ public class TwinWavePower extends AbstractPower {
         updateDescription();
         type = PowerType.BUFF;
         isTurnBased = true;
-        //img = new Texture(IMG);
-        loadRegion("combust");
+        img = new Texture(IMG);
+        //loadRegion("combust");
        // source = source;
 
     }

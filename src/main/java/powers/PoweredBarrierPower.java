@@ -28,7 +28,7 @@ public class PoweredBarrierPower extends AbstractPower {
         updateDescription();
         type = PowerType.BUFF;
         isTurnBased = false;
-        //img = new Texture(IMG);
+        /*img = new Texture(IMG);*/
         loadRegion("mastery");
        // source = source;
 

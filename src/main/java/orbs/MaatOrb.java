@@ -30,11 +30,11 @@ public class MaatOrb extends AbstractDemonOrb{
 
 
 
-    public MaatOrb(int att){
+    public MaatOrb(int value){
         ID = "Ma'at";
         img = ImageMaster.ORB_DARK;
         name = orbString.NAME;
-        baseEvokeAmount = att;
+        baseEvokeAmount = value;
         evokeAmount = baseEvokeAmount;
         basePassiveAmount = 1;
         passiveAmount = basePassiveAmount;
@@ -59,7 +59,9 @@ public class MaatOrb extends AbstractDemonOrb{
     }
     public void onBanish() {
         logger.info("banished " + ID);
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, evokeAmount));
+       //klio AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, evokeAmount));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, evokeAmount), evokeAmount));
+
         isBanished = true;
     }
     /*

@@ -58,8 +58,8 @@ public class SummonRerek extends AbstractSummon {
     private static final int MAGIC = 5;
 
 
-    private int COUNT = 3;
-    private final int  UPG_COUNT = 4;
+    private int COUNT = 4;
+    private final int  UPG_COUNT = 5;
     private int ATT = 0; //player's attune
     private int LAST = 0;
 

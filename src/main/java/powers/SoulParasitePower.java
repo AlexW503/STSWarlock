@@ -20,7 +20,7 @@ public class SoulParasitePower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESC = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/debuffPower.png");
+    public static final String IMG = RitualistMod.makePath("customImages/soulPara.png");
 
     public SoulParasitePower(final AbstractCreature owner, AbstractCreature source, final int amount) {
         name = NAME;
@@ -32,8 +32,8 @@ public class SoulParasitePower extends AbstractPower {
         isTurnBased = false;
         this.loadRegion("burst");
 
-      //  img = new Texture(IMG);
-        this.source = source;
+       img = new Texture(IMG);
+        //this.source = source;
 
     }
 

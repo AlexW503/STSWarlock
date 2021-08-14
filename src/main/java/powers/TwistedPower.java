@@ -18,7 +18,7 @@ public class TwistedPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/debuffPower.png");
+    public static final String IMG = RitualistMod.makePath("customImages/twistedPower.png");
 
     public TwistedPower(final AbstractCreature owner) {
         name = NAME;
@@ -33,7 +33,7 @@ public class TwistedPower extends AbstractPower {
     }
 
     //Ritual cards are hard-coded in their abstract to cost 0 while this power is applied
-    //Yes. I would do that. No, I don't feel shame.
+    //lmao
 
     public void atEndOfTurn(boolean isPlayer)
     {

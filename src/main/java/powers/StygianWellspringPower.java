@@ -2,6 +2,7 @@ package powers;
 
 
 import cards.UN_SoulWard;
+import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -19,7 +20,7 @@ public class StygianWellspringPower extends AbstractPower implements NonStackabl
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public static final String IMG = RitualistMod.makePath("customImages/buffTest.png");
+    public static final String IMG = RitualistMod.makePath("customImages/stygianPower.png");
     public boolean isUpgraded = false;
 
     public StygianWellspringPower(final AbstractCreature owner, int amount, boolean upgrade) {
@@ -31,8 +32,8 @@ public class StygianWellspringPower extends AbstractPower implements NonStackabl
         type = PowerType.BUFF;
         isTurnBased = true;
         isUpgraded = upgrade;
-        //img = new Texture(IMG);
-        loadRegion("juggernaut");
+        img = new Texture(IMG);
+        //loadRegion("juggernaut");
        // source = source;
 
     }

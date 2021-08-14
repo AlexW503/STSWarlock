@@ -30,7 +30,7 @@ public class StrengthDownSpecial extends AbstractPower {
         type = PowerType.DEBUFF;
         isTurnBased = false;
         loadRegion("noPain");
-        //img = new Texture(IMG);
+        /*img = new Texture(IMG);*/
        // source = source;
 
     }
