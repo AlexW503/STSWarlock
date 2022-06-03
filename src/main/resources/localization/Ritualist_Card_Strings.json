@@ -184,8 +184,8 @@
 	},
 	"Ritualist:SummonBaphomet": {
 		"NAME": "Summon Baphomet",
-		"DESCRIPTION": "warlock:Baphomet. Play the top !M! cards of your draw pile. NL warlock:Summon: Play the top card of your draw pile. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Play the top !M! cards of your draw pile. NL warlock:Summon: Play the top card of your draw pile. NL Exhaust."
+		"DESCRIPTION": "warlock:Baphomet. Play the top !M! cards of your draw pile. NL warlock:Banish: Play the top card of your draw pile. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Play the top !M! cards of your draw pile. NL warlock:Banish: Play the top card of your draw pile. NL Exhaust."
 	},
 	"Ritualist:TransientGhost": {
 		"NAME": "Transient Ghost",

@@ -399,7 +399,7 @@ public class RitualistMod implements EditCardsSubscriber, EditRelicsSubscriber, 
             final String[] BaphometKW = { "Baphomet:", "Baphomet", "baphomet", "baphomets", "Baphomets"};
             BaseMod.addKeyword("warlock", "Baphomet", BaphometKW, "Plays 1 card per Attunement. ");
             final String[] MaatKW = { "Ma'at:", "Ma'at", "ma'at", "ma'ats", "Ma'ats" };
-            BaseMod.addKeyword("warlock", "Ma'at", MaatKW, "Gains 1 Block per Attunement, 1 Thorns per 4 Attunement. Banish: Gain 1 Thorns per 4 Attunement.");
+            BaseMod.addKeyword("warlock", "Ma'at", MaatKW, "Gains 1 Block per Attunement, 1 Thorns per 3 Attunement. Banish: Gain 1 Thorns per 3 Attunement.");
             final String[] NergalKW = { "Nergal:", "Nergal", "nergal", "nergals", "Nergals"};
             BaseMod.addKeyword("warlock", "Nergal", NergalKW, "Gains 1 debuff per Attunement.");
 

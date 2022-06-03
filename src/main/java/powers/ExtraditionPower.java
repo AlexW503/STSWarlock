@@ -38,7 +38,7 @@ public class ExtraditionPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount; // displayed amount is total amount of bomb damage
         updateDescription();
-        type = PowerType.BUFF;
+        type = PowerType.DEBUFF;
         isTurnBased = false;
         img = new Texture(IMG);
         //this.loadRegion("accuracy");

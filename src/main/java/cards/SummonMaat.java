@@ -52,7 +52,7 @@ public class SummonMaat extends AbstractSummon {
 
     private static final int COST = 2;
     private static final int TURNS = 3;
-    private static final int DIV = 4;
+    private static final int DIV = 3;
     private static final int UPG = 2;
     private static final int BASE = 5;
     private int ATT = 1; //player's attune
